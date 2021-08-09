@@ -152,13 +152,11 @@ Somewhat ironically, the utility of graphical models to aid causal inference has
 &gt; *Partly as a result of the focus on empirical examples, the econometrics literature has developed a small number of canonical settings where researchers view the specific causal models and associated statistical methods as well-established and understood. These causal models correspond to what is nowadays often referred to as* **identification strategies**
 &gt;&gt;Guido Imbens (2020)
 
---
 
 .pull-left[
 Credible designs (*identification strategies*) are well-understood without DAGs
 ]
 
---
 
 .pull-right[
 &lt;img src="AngristPischke_Harmless.png" height="300"&gt;
@@ -168,17 +166,16 @@ Credible designs (*identification strategies*) are well-understood without DAGs
 
 ## Too simple for DAGs to be useful
 
-&gt; *No one should ever write down a 100 variable DAG and do inference based on that. That would be an insane approach because the analysis would be totally impenetrable. Develop a research design where that 100 variable DAG trivially reduces to a familiar problem (e.g. IV!)*
-&gt;&gt; Jason Abaluck (2020)
+&gt; *This setting, where the critical assumption is ignorability or unconfoundedness, is so common and well studied, that merely referring to its label is probably sufficient for researchers to understand what is being assumed. Adding a DAG, or for that matter adding a proof that the average causal effect is identified in that setting, is superfluous because researchers are familiar with the setting and its implications*
+&gt;&gt; Guido Imbens (2020)
 
---
 
 .pull-left[
 DAGs might be helpful to build intuition, but only as temporary scaffolding 
 ]
 
 .pull-right[
-&lt;img src="Scott_Mixtape.png" height="350"&gt;
+&lt;img src="Scott_Mixtape.png" height="300"&gt;
 ]
 
 ---
@@ -195,7 +192,7 @@ DAG practitioners only offer toy examples! That's not useful for **actual resear
 ]
 
 .pull-right[
-&lt;img src="Pearl_Why.png" height="350"&gt;
+&lt;img src="Pearl_Why.png" height="300"&gt;
 ]
 
 ---
@@ -205,14 +202,13 @@ DAG practitioners only offer toy examples! That's not useful for **actual resear
 &gt; *No one should ever write down a 100 variable DAG and do inference based on that. That would be an insane approach because the analysis would be totally impenetrable. Develop a research design where that 100 variable DAG trivially reduces to a familiar problem (e.g. IV!)*
 &gt;&gt; Jason Abaluck (2020)
 
---
 
 .pull-left[
 DAGs are useful when dealing with complex causal models (many variables, intricate relationships, over-time processes), but in those setting causal inference is a **dead end**
 ]
 
 .pull-right[
-&lt;img src="Pearl_Why.png" height="350"&gt;
+&lt;img src="Pearl_Why.png" height="300"&gt;
 ]
 
 
@@ -226,12 +222,9 @@ Somewhat ironically, the utility of graphical models to aid causal inference has
 
 * DAGs are not useful for empirical research because they are **too complex**!
 
-`\(\color{red}{\text{Graphical models are either too simple to be useful, or too complex to be credible!}}\)`
-
 &lt;br&gt;
 
-&gt; *This setting, where the critical assumption is ignorability or unconfoundedness, is so common and well studied, that merely referring to its label is probably sufficient for researchers to understand what is being assumed. Adding a DAG, or for that matter adding a proof that the average causal effect is identified in that setting, is superfluous because researchers are familiar with the setting and its implications*
-&gt;&gt; Guido Imbens (2020)
+`\(\color{red}{\text{Graphical models are either too simple to be useful, or too complex to be credible!}}\)`
 
 
 ---
@@ -278,9 +271,9 @@ In between, graphical models have been very fruitful among researchers. This als
   
   + College and intergenerational mobility ([Zhou, 2019](https://scholar.harvard.edu/files/xzhou/files/zhou2019_college.pdf))
   
-  + Social genomics
+  + Social genomics ([Burgess et al., 2021](https://link.springer.com/article/10.1007/s10654-021-00726-8), [Morris et al., 2020](https://advances.sciencemag.org/content/6/16/eaay0328))
   
-  + COVID-19 risk factors
+  + COVID-19 risk factors ([Griffith et al., 2020](https://www.nature.com/articles/s41467-020-19478-2))
   
 --
 
@@ -315,7 +308,7 @@ An **agnostic** use of causal graphical models would start from the assumptions 
 
   + Construct the DAG inductively, without committing to a generative model **ex ante**
   
-  + Reverse-engineering their implied causal model
+  + Reverse-engineering their implied causal model (surprising results!)
   
   + Assess the credibility of the assumptions in the resulting model(s)
   
@@ -326,36 +319,154 @@ Departing from design templates, as common in practice, implies that assumptions
 
   + Mixed strategies (conditional-IV, conditional-RD, conditional-DD) require special attention
   
-  + **A chain is not stronger than the weakest of its links** (SOO!)
+  + **A chain is not stronger than the weakest of its links**
 
 ---
 
 
 class: center, middle
 
-# Empirical Illustrations
+# Empirical Illustration
 
 ---
 
 ## Community and the Crime Decline
 ### (Sharkey et al. 2017)
 
+The authors aim to identify the effect of "informal sources of social control arising from residents and organization internal to communities" in the 1990-2010 period.
+
+* **Outcome**: various measures of violent crime
+
+* **Exposure**: non-profits focused on reducing violence and building stronger communities
+
+&gt; *Because community organizations are formed at least partly in response to social problems like violence, it is not possible to rely on cross-sectional data and standard analytic methods to identify the effect of nonprofit formation on crime rates. To account for the endogeneity of nonprofit formation we use variation in the prevalence of nonprofits across cities and over time in a fixed-effects framework and adapt an instrumental variable (IV) strategy to identify the causal effect of nonprofits on crime* (p.1215)
+
+* **Instrument**: non-profits for the arts, medical research, and environment
+
+&gt; *first study that provides a plausible causal estimate of the impact of such organizations on crime* (p.1219)
+
+---
+## Community and the Crime Decline
+
+How can graphical models help us to assess the credibility of the authors' claims?
+
+* Despite being describe as a case of instrumental variable, the setting does not perfectly fits the template:
+
+.pull-left[
+&lt;img src="img/id_iv.png"&gt;
+
+
+* The IV does not cause the exposure nor is exogenous
+
+* The IV is only **conditionally** valid:
+  
+  + pop. density, ethnic, education, immigration, occupation, unemployment, and sex by age composition.
+]
+
+.pull-right[
+&lt;img src="img/Sharkey_1.png"&gt;
+]
 
 ---
 
-## Does Educational Equality increase Mobility?
-### (Rauscher 2016)
+## Community and the Crime Decline
+
+&gt; *the core assumption is that changes in the prevalence of arts, medical, and evironmental nonprofits have no direct effect on crime and violence but are associated with changes in the prevalence of nonprofits designed to address violence and rebuild communities —which, for simplicity, we refer to as “community” nonprofits— through common mechanisms of funding availability* (p. 1215)
+
+.pull-left[
+&lt;img src="img/id_iv.png"&gt;
+
+
+* The IV does not cause the exposure nor is exogenous
+
+* The IV is only **conditionally** valid
+]
+
+.pull-right[
+&lt;img src="img/Sharkey_1.png"&gt;
+]
+
+
+
+---
+## Community and the Crime Decline
+
+As shown, the setting does not fit the template, but it can still be valid.
+
+A second step, after reconstructing the DAG, is to assess the credibility of the assumptions.
+
+* **Is the (surrogate) instrument confounded?**
+
+* **Does the (surrogate) instrument has a causal effect on the outcome?**
+
+* **Does the instrument has a causal effect on the outcome?**
+
+  + No detailed rationale is provided for the inclusion of the "control" variables (p.1219)
+  
+  + The validity of the design critically rely on this **selection on observables** step!
+  
+      + In other words, this is an *observational study* embedded within the *quasi-experimental* design that provides the framing of the article
+  
+  + We are left wondering what the inclusion of such "controls" is trying to control for (endogeneity of the instrument, the surrogate, other potential mechanism?)
+  
+* **How sensitive are the results to violations of this assumptions?**
 
 ---
 
-##
+## Community and the Crime Decline
+
+.center[
+&lt;img src="img/Sharkey_exogeneity.png" style="width: 90%"&gt;
+]
+
+--
+
+&gt; *Organization within a community are embedded within larger networks of public and private agencies and organizations extending across a city’s neighborhoods and beyong the city limits. These extra-local networks connect communities to external sources of influence, resources, and political power, all of which strengthen the capacity to achieve common goals and values*
 
 ---
-##
+
+## Community and the Crime Decline
+
+.center[
+&lt;img src="img/Sharkey_collider.png" style="width: 85%"&gt;
+]
+
+--
+
+&gt; *In examining the role of community organizations in crime prevention, Skohan (1988) distinguishes between actions that focus directly on reducing criminal activity in the neighborhood (e.g., requesting more policing or engaging in collective surveillance practiecs) and actions that tackle the underlying social and economic factors that lead to crime (e.g., providing employment opportunities). These crime-reducing efforts emerge from communities’ ability to capture problem-solving resources and from the activation of a series of mechanisms of informal internal control*
 
 ---
+
+
 
 ## Conclusion
+
+
+How can researchers use graphical models to encode **what we already know** (or what we are willing to assume) in order to decide if we can learn **what we still don't know**?
+
+  * Start from scratch and write down all possible variables and causal relations?
+  
+  * Stick to already proven templates and research designs?
+  
+--
+
+&lt;br&gt;
+
+**There is a middle ground!**
+
+Graphical models can be very helpful to:
+
+  * encode your assumptions transparently
+  
+  * make clear how a specific application departs from a template
+  
+    + We are often **not** in the trivial case "where identification questions have been worked out once and for all" (Imbens, 2020)
+    
+    + Make justice to the application building a DAG tailored to your application! 
+  
+---
+
+class: center, middle
 
 &gt; *About 20 years ago, when asked in a meeting what can be done in observational studies to clarify the step from association to causation, Sir Ronald Fisher replied: “Make your theories elaborate.” The reply puzzled me at first, since by Occam’s razor, the advice usually given is to make theories as simple as is consistent with known data. What Sir Ronald meant, as subsequent discussion showed, was that when constructing a causal hypothesis one should envisage as many different consequences of its truth as possible, and plan observational studies to discover whether each of these is found to hold*
 &gt;&gt; B. G. Cochran (cited in Rosenbaum, 1995)
@@ -366,9 +477,6 @@ class: center, middle
 class: center, middle
 
 # Thank you!
----
-
-
     </textarea>
 <style data-target="print-only">@media screen {.remark-slide-container{display:block;}.remark-slide-scaler{box-shadow:none;}}</style>
 <script src="https://remarkjs.com/downloads/remark-latest.min.js"></script>
