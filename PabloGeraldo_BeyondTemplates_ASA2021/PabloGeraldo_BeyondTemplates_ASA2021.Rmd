@@ -144,13 +144,85 @@ background-size: cover
 
 ## The case for templates
 
+Somewhat ironically, the utility of graphical models to aid causal inference has been questioned based on two different premises:
+
+--
+
+* DAGs are not useful for empirical research because they are **too simple**!
+
+--
+
+* DAGs are not useful for empirical research because they are **too complex**!
+
+---
+
+## Too simple for DAGs to be useful
+
 > *Partly as a result of the focus on empirical examples, the econometrics literature has developed a small number of canonical settings where researchers view the specific causal models and associated statistical methods as well-established and understood. These causal models correspond to what is nowadays often referred to as* **identification strategies**
 >>Guido Imbens (2020)
 
 --
 
+.pull-left[
+Credible designs (*identification strategies*) are well-understood without DAGs
+]
+
+--
+
+.pull-right[
+<img src="AngristPischke_Harmless.png" height="300">
+]
+
+---
+
+## Too simple for DAGs to be useful
+
 > *No one should ever write down a 100 variable DAG and do inference based on that. That would be an insane approach because the analysis would be totally impenetrable. Develop a research design where that 100 variable DAG trivially reduces to a familiar problem (e.g. IV!)*
 >> Jason Abaluck (2020)
+
+--
+
+.pull-left[
+DAGs might be helpful to build intuition, but only as temporary scaffolding 
+]
+
+.pull-right[
+<img src="Scott_Mixtape.png" height="350">
+]
+
+---
+
+## Too simple for DAGs to be useful
+
+> *No one should ever write down a 100 variable DAG and do inference based on that. That would be an insane approach because the analysis would be totally impenetrable. Develop a research design where that 100 variable DAG trivially reduces to a familiar problem (e.g. IV!)*
+>> Jason Abaluck (2020)
+
+
+
+.pull-left[
+DAG practitioners only offer toy examples! That's not useful for **actual research**
+]
+
+.pull-right[
+<img src="Pearl_Why.png" height="350">
+]
+
+---
+
+## Too complex for DAGs to be credible
+
+> *No one should ever write down a 100 variable DAG and do inference based on that. That would be an insane approach because the analysis would be totally impenetrable. Develop a research design where that 100 variable DAG trivially reduces to a familiar problem (e.g. IV!)*
+>> Jason Abaluck (2020)
+
+--
+
+.pull-left[
+DAGs are useful when dealing with complex causal models (many variables, intricate relationships, over-time processes), but in those setting causal inference is a **dead end**
+]
+
+.pull-right[
+<img src="Pearl_Why.png" height="350">
+]
 
 
 ---
@@ -159,25 +231,17 @@ background-size: cover
 
 Somewhat ironically, the utility of graphical models to aid causal inference has been questioned based on two different premises:
 
---
+* DAGs are not useful for empirical research because they are **too simple**!
 
-* DAG practitioners only offer toy examples! That's not useful for **actual research**
-  
-  + Credible designs (*identification strategies*) are well-understood without DAGs
-  
-  + DAGs might be helpful to build intuition, but only as temporary scaffolding 
+* DAGs are not useful for empirical research because they are **too complex**!
 
+$\color{red}{\text{Graphical models are either too simple to be useful, or too complex to be credible!}}$
+
+<br>
 
 > *This setting, where the critical assumption is ignorability or unconfoundedness, is so common and well studied, that merely referring to its label is probably sufficient for researchers to understand what is being assumed. Adding a DAG, or for that matter adding a proof that the average causal effect is identified in that setting, is superfluous because researchers are familiar with the setting and its implications*
 >> Guido Imbens (2020)
 
---
-
-* DAGs are useful when dealing with complex causal models (many variables, intricate relationships, over-time processes), but in those setting causal inference is a dead end
-
---
-
-$\color{red}{\text{Graphical models are either too simple to be useful, or too complex to be credible!}}$
 
 ---
 
@@ -192,34 +256,36 @@ $\color{red}{\text{Graphical models are either too simple to be useful, or too c
 
 But credibility cannot be derived just by looking at the corresponding template DAG!
 
-* The DAG is not always sufficient to encode all identifying assumptions
+* A DAG is not always sufficient to encode all identifying assumptions
 
-* The DAG says nothing about estimation issues
+* A DAG says nothing about estimation issues
 
 * The credibility we care about is of the **empirical analysis**, not an ideal template
 
-  + Templates can be used to **claim** certain level of credibility
+  + Templates can be used to **claim** certain level of credibility (**signaling**)
   
-  + The gap between the template and the instance can be quite dramatic
+  + Claiming a template can shift attention from some assumptions to others (**framing**)
+  
+  + But the gap between the template and the instance can be quite dramatic
 
 
 ---
 
 ## Actually existing uses of DAGs
 
-In between, a very fruitful use of graphical models has been adopted among researchers. This also entails constructing **templates**, but in a very different sense:
+In between, graphical models have been very fruitful among researchers. This also entails constructing **templates**, but in a very different sense:
 
-* A graphical catalog of threats to validity (Matthay and Glymour, 2020)
+* A graphical catalog of threats to validity ([Matthay and Glymour, 2020](https://pubmed.ncbi.nlm.nih.gov/31977593/))
 
 * Identifying structural issues in empirical research
   
-  + Contagion in networks
+  + Contagion in networks ([Shalizi and Thomas, 2011](https://journals.sagepub.com/doi/10.1177/0049124111404820))
   
-  + Multigenerational mobility
+  + Multigenerational mobility ([Breen, 2018](https://academic.oup.com/esr/article-abstract/34/6/603/5094485))
   
-  + Police brutality
+  + Police brutality ([Knox, Lowe, Mummolo, 2020](https://scholar.princeton.edu/sites/default/files/jmummolo/files/klm.pdf))
   
-  + Education and mobility
+  + College and intergenerational mobility ([Zhou, 2019](https://scholar.harvard.edu/files/xzhou/files/zhou2019_college.pdf))
   
   + Social genomics
   
