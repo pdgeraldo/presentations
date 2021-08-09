@@ -1,40 +1,31 @@
----
-title: "Moving beyond templates of empirical research"
-subtitle: "(A guide to graphical models for the skeptic)"
-author: "Pablo Geraldo (pdgeraldo@ucla.edu)"
-institute: "ASA, Quantitative Methodology Session"
-date: "August 9, 2021"
-output:
-  xaringan::moon_reader:
-    css: xaringan-themer.css
-    lib_dir: libs
-    nature:
-      ratio: '16:10'
-      highlightStyle: tomorrow
-      highlightLines: true
-      countIncrementalSlides: false
+<!DOCTYPE html>
+<html xmlns="http://www.w3.org/1999/xhtml" lang="" xml:lang="">
+  <head>
+    <title>Moving beyond templates of empirical research</title>
+    <meta charset="utf-8" />
+    <meta name="author" content="Pablo Geraldo (pdgeraldo@ucla.edu)" />
+    <meta name="date" content="2021-08-09" />
+    <script src="libs/header-attrs-2.7/header-attrs.js"></script>
+    <link rel="stylesheet" href="xaringan-themer.css" type="text/css" />
+  </head>
+  <body>
+    <textarea id="source">
+class: center, middle, inverse, title-slide
+
+# Moving beyond templates of empirical research
+## (A guide to graphical models for the skeptic)
+### Pablo Geraldo (<a href="mailto:pdgeraldo@ucla.edu" class="email">pdgeraldo@ucla.edu</a>)
+### ASA, Quantitative Methodology Session
+### August 9, 2021
+
 ---
 
-$$\newcommand\indep{\perp\!\!\!\perp}$$
-$$\newcommand\nindep{\not\!\perp\!\!\!\perp}$$
-```{r xaringan-themer, include=FALSE, warning=FALSE}
-library(xaringanthemer)
-style_duo_accent(
-  # Colors
-  primary_color = "#2d68c4", 
-  secondary_color = "#f2a900",
-  link_color = "#f2a900",
-  title_slide_text_color = "#f2a900",
-  # Fonts
-  header_font_google = google_font("Josefin Sans"),
-  text_font_google   = google_font("Montserrat", "300", "300i"),
-  code_font_google   = google_font("Fira Mono"))
-```
 
-```{r setup, include=FALSE}
-library(tidyverse)
-library(ggdag)
-```
+`$$\newcommand\indep{\perp\!\!\!\perp}$$`
+`$$\newcommand\nindep{\not\!\perp\!\!\!\perp}$$`
+
+
+
 
 
 ## Outline
@@ -47,7 +38,7 @@ library(ggdag)
 
 ## Introduction
 
-<br>
+&lt;br&gt;
 
 The social sciences are experimenting what some authors have called a "credibility revolution" (Angrist and Pischke, 2010), the rise of "causal empiricism" (Samii, 2016), or simply a "causal revolution" (Pearl and MacKenzie, 2018).
 
@@ -171,7 +162,7 @@ class: center, middle
 
 Introduced by Neyman (1923) in the context of experimental design. They remained only used in that context for decades!
 
-<br>
+&lt;br&gt;
 
 * Imported and developed by Donald Rubin for observational studies (c. 1974)
 
@@ -191,17 +182,17 @@ Introduced by Neyman (1923) in the context of experimental design. They remained
 
 Let's start with some definitions: 
 
-<br>
+&lt;br&gt;
 
-$Y$ is the outcome variable *as we observe it*
+`\(Y\)` is the outcome variable *as we observe it*
 
-$X$ is the variable whose effect we want to study (treatment, exposure)
+`\(X\)` is the variable whose effect we want to study (treatment, exposure)
 
-$Y_x$ is the potential outcome when we **set** $X=x$. For example, when $X \in \{0,1\}$:
+`\(Y_x\)` is the potential outcome when we **set** `\(X=x\)`. For example, when `\(X \in \{0,1\}\)`:
 
-  * $Y_1$ is the potential outcome under "treatment"
+  * `\(Y_1\)` is the potential outcome under "treatment"
 
-  * $Y_0$ is the potential outcome under "control"
+  * `\(Y_0\)` is the potential outcome under "control"
 
 
 ---
@@ -212,11 +203,11 @@ $Y_x$ is the potential outcome when we **set** $X=x$. For example, when $X \in \
 
 You will find a lot of equivalent notations for potential outcomes. It could be confusing, but it is good to get practice working with different variants (at least if you want to read the papers!)
 
-$$Y(x) = Y_x = Y^x$$
+`$$Y(x) = Y_x = Y^x$$`
 
 **Read it like this**: 
 
-The value that the variable $Y$ would take if we set the variable $X$ to the value $x$.
+The value that the variable `\(Y\)` would take if we set the variable `\(X\)` to the value `\(x\)`.
 
 .center[Can you ever observe any of those potential outcomes?]
 
@@ -224,11 +215,11 @@ The value that the variable $Y$ would take if we set the variable $X$ to the val
 
 **Consistency** (also known as SUTVA)
 
-$$X = x \rightarrow Y = Y_x$$
+`$$X = x \rightarrow Y = Y_x$$`
 
 For the binary treatment case, we have:
 
-$$Y = XY_1 + (1-X)Y_0$$
+`$$Y = XY_1 + (1-X)Y_0$$`
 
 What are the assumptions built in this notation? What type of dependence are we ruling out?
 
@@ -238,13 +229,13 @@ What are the assumptions built in this notation? What type of dependence are we 
 
 Researchers, at least in sociology, tend to formalize their effect of interest as **regression coefficients** (i.e., their hypothesis are formulated within a statistical model)
 
-<br>
+&lt;br&gt;
 Potential outcomes offer a way to formalize what do we mean by a causal effect outside any statistical model. This allows us to clearly separate *what do we want* (a certain **estimand**), the statistical machinery to answer our question (an **estimator**) and the particular answer we get (our empirical **estimate**).
 
-<br>
+&lt;br&gt;
 Lundberg, Johnson, and Stewart (2021) discuss in great detail this point. Absolutely worth reading! Ungated version [here](https://osf.io/preprints/socarxiv/ba67n/).
 
-<br>
+&lt;br&gt;
 Take a moment to think in your own research:
 
 * What **causal** question is relevant for you to study? 
@@ -256,34 +247,12 @@ Take a moment to think in your own research:
 
 ## Potential Outcomes: The Science Table
 
-```{r, echo=FALSE}
-data <- 
-  tibble(X=c(rep("A",5),rep("B",5)),
-         Ya=c(1,0,0,1,1,1,1,0,0,1),
-         Yb=c(1,0,1,0,1,0,0,0,1,1),
-         W=c("quant","quant","qual","quant","qual",
-             "qual","quant","qual","qual","quant")) %>%
-  mutate(Y = ifelse(X=="A",Ya,Yb))
 
-ATE <- mean(data$Ya-data$Yb)
-ATE_qual <- mean(data$Ya[data$W=="qual"]) -
-  mean(data$Yb[data$W=="qual"])
-ATE_quant <- mean(data$Ya[data$W=="quant"]) -
-  mean(data$Yb[data$W=="quant"])
-DIM <- mean(data$Y[data$X=="A"]) - mean(data$Y[data$X=="B"])
-DIM_quant <- mean(data$Y[data$X=="A" & data$W=="quant"]) - 
-  mean(data$Y[data$X=="B" & data$W=="quant"])
-DIM_qual <- mean(data$Y[data$X=="A" & data$W=="qual"]) - 
-  mean(data$Y[data$X=="B" & data$W=="qual"])
-weights_quant <- sum(data$W=="quant")/nrow(data)
-weights_qual <- sum(data$W=="qual")/nrow(data)
-DIM_w <- DIM_quant*weights_quant + DIM_qual*weights_qual
-```
 
 One advantage of PO is that we can treat them directly as random variables! So, everything we already know related to probability manipulation still applies here.
 
 .pull-left[
-| Unit | $X_i$ | $Y_i$ | $Y_{ai}$ | $Y_{bi}$ | $\tau_i$ |
+| Unit | `\(X_i\)` | `\(Y_i\)` | `\(Y_{ai}\)` | `\(Y_{bi}\)` | `\(\tau_i\)` |
 |----|---|---|-----|-------|--------|
 | 1 | A | 1 | 1 | 1 | 0 |
 | 2 | A | 0 | 0 | 0 | 0 |
@@ -312,7 +281,7 @@ The basic calculation device (usually implicit) for that matter is the **science
 One advantage of PO is that we can treat them directly as random variables! So, everything we already know related to probability manipulation still applies here.
 
 .pull-left[
-| Unit | $X_i$ | $Y_i$ | $Y_{ai}$ | $Y_{bi}$ | $\tau_i$ |
+| Unit | `\(X_i\)` | `\(Y_i\)` | `\(Y_{ai}\)` | `\(Y_{bi}\)` | `\(\tau_i\)` |
 |----|---|---|-----|-------|--------|
 | 1 | A | 1 | 1 | 1 | 0 |
 | 2 | A | 0 | 0 | 0 | 0 |
@@ -327,8 +296,8 @@ One advantage of PO is that we can treat them directly as random variables! So, 
 ]
 
 .pull-right[
-$$\text{ATE} = E(Y_{ai}) - E(Y_{bi})$$
-$$(6/10) - (5/10) = \mathbf{\color{blue}{0.1}}$$
+`$$\text{ATE} = E(Y_{ai}) - E(Y_{bi})$$`
+`$$(6/10) - (5/10) = \mathbf{\color{blue}{0.1}}$$`
 ]
 ---
 
@@ -338,7 +307,7 @@ $$(6/10) - (5/10) = \mathbf{\color{blue}{0.1}}$$
 One advantage of PO is that we can treat them directly as random variables! So, everything we already know related to probability manipulation still applies here.
 
 .pull-left[
-| Unit | $X_i$ | $Y_i$ | $Y_{ai}$ | $Y_{bi}$ | $\tau_i$ |
+| Unit | `\(X_i\)` | `\(Y_i\)` | `\(Y_{ai}\)` | `\(Y_{bi}\)` | `\(\tau_i\)` |
 |----|---|---|-----|-------|--------|
 | 1 | A | 1 | 1 | . | . |
 | 2 | A | 0 | 0 | . | . |
@@ -353,14 +322,14 @@ One advantage of PO is that we can treat them directly as random variables! So, 
 ]
 
 .pull-right[
-$$\text{ATE} = E(Y_{ai}) - E(Y_{bi})$$
-$$(6/10) - (5/10) = \mathbf{\color{blue}{0.1}}$$
+`$$\text{ATE} = E(Y_{ai}) - E(Y_{bi})$$`
+`$$(6/10) - (5/10) = \mathbf{\color{blue}{0.1}}$$`
 
-<br>
-$$\text{diff-in-means} = E(Y_i|X=a) - E(Y_i|X=b)$$
-$$(3/5)-(2/5) = \mathbf{\color{red}{0.2}}$$
-<br>
-$$\color{red}{\text{diff-in-means} \neq \text{ATE}}$$
+&lt;br&gt;
+`$$\text{diff-in-means} = E(Y_i|X=a) - E(Y_i|X=b)$$`
+`$$(3/5)-(2/5) = \mathbf{\color{red}{0.2}}$$`
+&lt;br&gt;
+`$$\color{red}{\text{diff-in-means} \neq \text{ATE}}$$`
 
 .center[But why?]
 ]
@@ -372,7 +341,7 @@ $$\color{red}{\text{diff-in-means} \neq \text{ATE}}$$
 One advantage of PO is that we can treat them directly as random variables! So, everything we already know related to probability manipulation still applies here.
 
 .pull-left[
-| Unit | $X_i$ | $Y_i$ | $Y_{ai}$ | $Y_{bi}$ | $\tau_i$ |
+| Unit | `\(X_i\)` | `\(Y_i\)` | `\(Y_{ai}\)` | `\(Y_{bi}\)` | `\(\tau_i\)` |
 |----|---|---|-----|-------|--------|
 | 1 | A | 1 | 1 | . | . |
 | 2 | A | 0 | 0 | . | . |
@@ -387,13 +356,13 @@ One advantage of PO is that we can treat them directly as random variables! So, 
 ]
 
 .pull-right[
-$$E(\text{diff-in-means})$$
-$$= E(Y_i|X=a) - E(Y_i|X=b)$$
-$$= E(Y_a|X=a) - E(Y_b|X=b)$$
-$$= ATE +$$
-$$(E[Y_b|X=a] - E[Y_b|X=b])+$$
-$$(1-P[X])(ATT-ATC)$$
-$$= \mathbf{\color{blue}{0.1}} + \color{red}{0.2 + (0.5)(-0.2) = \mathbf{0.2}}$$
+`$$E(\text{diff-in-means})$$`
+`$$= E(Y_i|X=a) - E(Y_i|X=b)$$`
+`$$= E(Y_a|X=a) - E(Y_b|X=b)$$`
+`$$= ATE +$$`
+`$$(E[Y_b|X=a] - E[Y_b|X=b])+$$`
+`$$(1-P[X])(ATT-ATC)$$`
+`$$= \mathbf{\color{blue}{0.1}} + \color{red}{0.2 + (0.5)(-0.2) = \mathbf{0.2}}$$`
 ]
 ---
 
@@ -404,7 +373,7 @@ $$= \mathbf{\color{blue}{0.1}} + \color{red}{0.2 + (0.5)(-0.2) = \mathbf{0.2}}$$
 One advantage of PO is that we can treat them directly as random variables! So, everything we already know related to probability manipulation still applies here.
 
 .pull-left[
-| Unit | $X_i$ | $Y_i$ | $Y_{ai}$ | $Y_{bi}$ | $\tau_i$ |
+| Unit | `\(X_i\)` | `\(Y_i\)` | `\(Y_{ai}\)` | `\(Y_{bi}\)` | `\(\tau_i\)` |
 |----|---|---|-----|-------|--------|
 | 1 | A | 1 | 1 | 1 | 0 |
 | 2 | A | 0 | 0 | 0 | 0 |
@@ -425,11 +394,11 @@ Y_x \indep X
 $$
 
 Do we meet that condition here? No!
-$$(Y_{ai},Y_{bi}) \nindep X$$
+`$$(Y_{ai},Y_{bi}) \nindep X$$`
 
 Because: 
-$$P(Y_a = y | X=a) \neq P(Y_a = y)$$
-$$P(Y_b = y | X=b) \neq P(Y_b = y)$$
+`$$P(Y_a = y | X=a) \neq P(Y_a = y)$$`
+`$$P(Y_b = y | X=b) \neq P(Y_b = y)$$`
 ]
 ---
 
@@ -439,7 +408,7 @@ $$P(Y_b = y | X=b) \neq P(Y_b = y)$$
 One advantage of PO is that we can treat them directly as random variables! So, everything we already know related to probability manipulation still applies here.
 
 .pull-left[
-| Unit | $X_i$ | $Y_i$ | $Y_{ai}$ | $Y_{bi}$ | $\tau_i$ | $W_i$ |
+| Unit | `\(X_i\)` | `\(Y_i\)` | `\(Y_{ai}\)` | `\(Y_{bi}\)` | `\(\tau_i\)` | `\(W_i\)` |
 |----|---|---|-----|-------|--------| --- |
 | 1 | A | 1 | 1 | 1 | 0 | Quant |
 | 2 | A | 0 | 0 | 0 | 0 | Quant |
@@ -454,7 +423,7 @@ One advantage of PO is that we can treat them directly as random variables! So, 
 ]
 
 .pull-right[
-What about including another covariate $W$?
+What about including another covariate `\(W\)`?
 
 Does the following condition holds?
 $$
@@ -463,10 +432,10 @@ $$
 
 Not quite either! But still "better" than before, right? Let's define:
 
-$$\text{ATE}_{W} = E(Y_a-Y_b|W=w)$$
+`$$\text{ATE}_{W} = E(Y_a-Y_b|W=w)$$`
 and the estimator
-$$\widehat{\text{ATE}}_{W} =$$ 
-$$E(Y_i|X=a,W=w) - E(Y_i|X=b,W=w)$$
+`$$\widehat{\text{ATE}}_{W} =$$` 
+`$$E(Y_i|X=a,W=w) - E(Y_i|X=b,W=w)$$`
 ]
 ---
 
@@ -477,7 +446,7 @@ $$E(Y_i|X=a,W=w) - E(Y_i|X=b,W=w)$$
 One advantage of PO is that we can treat them directly as random variables! So, everything we already know related to probability manipulation still applies here.
 
 .pull-left[
-| Unit | $X_i$ | $Y_i$ | $Y_{ai}$ | $Y_{bi}$ | $\tau_i$ | $W_i$ |
+| Unit | `\(X_i\)` | `\(Y_i\)` | `\(Y_{ai}\)` | `\(Y_{bi}\)` | `\(\tau_i\)` | `\(W_i\)` |
 |----|---|---|-----|-------|--------| --- |
 | 1 | A | 1 | 1 | 1 | 0 | Quant |
 | 2 | A | 0 | 0 | 0 | 0 | Quant |
@@ -492,13 +461,13 @@ One advantage of PO is that we can treat them directly as random variables! So, 
 ]
 
 .pull-right[
-$$\widehat{\text{ATE}}_{W=quant} = 0.16$$
-$$\widehat{\text{ATE}}_{W=qual} = 0.16$$
-$$\widehat{\text{ATE}} = (0.5)(0.16) + (0.5)(0.16) = 0.16$$
-However, look a the true $\text{ATE}_W$:
-$$\text{ATE}_{W=quant} = -0.2$$
-$$\text{ATE}_{W=qual} = 0.4$$
-$$\text{ATE} = (0.5)(-0.2) + (0.5)(0.4) = \color{blue}{\mathbf{0.1}}$$
+`$$\widehat{\text{ATE}}_{W=quant} = 0.16$$`
+`$$\widehat{\text{ATE}}_{W=qual} = 0.16$$`
+`$$\widehat{\text{ATE}} = (0.5)(0.16) + (0.5)(0.16) = 0.16$$`
+However, look a the true `\(\text{ATE}_W\)`:
+`$$\text{ATE}_{W=quant} = -0.2$$`
+`$$\text{ATE}_{W=qual} = 0.4$$`
+`$$\text{ATE} = (0.5)(-0.2) + (0.5)(0.4) = \color{blue}{\mathbf{0.1}}$$`
 ]
 ---
 
@@ -509,7 +478,7 @@ $$\text{ATE} = (0.5)(-0.2) + (0.5)(0.4) = \color{blue}{\mathbf{0.1}}$$
 One advantage of PO is that we can treat them directly as random variables! So, everything we already know related to probability manipulation still applies here.
 
 .pull-left[
-| Unit | $X_i$ | $Y_i$ | $Y_{ai}$ | $Y_{bi}$ | $\tau_i$ | $W_i$ |
+| Unit | `\(X_i\)` | `\(Y_i\)` | `\(Y_{ai}\)` | `\(Y_{bi}\)` | `\(\tau_i\)` | `\(W_i\)` |
 |----|---|---|-----|-------|--------| ---|
 | 1 | A | 1 | 1 | . | . | Quant |
 | 2 | A | 0 | 0 | . | . | Quant |
@@ -526,11 +495,11 @@ One advantage of PO is that we can treat them directly as random variables! So, 
 .pull-right[
 In general, we rely on **extra-statistical assumptions** about the data generating process to claim causal identification.
 
-<br>
->"No causes in, no cases out"
->> Nancy Cartwright
+&lt;br&gt;
+&gt;"No causes in, no cases out"
+&gt;&gt; Nancy Cartwright
 
-<br>
+&lt;br&gt;
 
 Is there a way to design an study in which we know, **by design**, that the needed assumptions hold?
 ]
@@ -547,16 +516,16 @@ class: center, middle
 
 If we want to **predict under interventions**, then the best way to do it is **interveening**!
 
-<br>
+&lt;br&gt;
 Random assignment (more specifically, RCTs) has been called the **gold standard** for causal inference: it guarantees the necessary assumptions for causal inference hold by design.
 
-<br>
+&lt;br&gt;
 When unfesible, imagining a hypothetical experiment still offers a useful benchmark to assess the validity of causal claims, and even to clarify what do we mean by a particular causal effect.
 
-<br>
+&lt;br&gt;
 Experiments come in many different flavours: lab, field, survey, and even quasi-experimentss!
 
-<br>
+&lt;br&gt;
 Here we will only scratch the surface of social science experiments: the idea is to get you interested and point you to the resources out there! Maybe sometime soon you will be running your own experiment! (Or at least someone else's experiment)
 
 
@@ -566,13 +535,13 @@ Here we will only scratch the surface of social science experiments: the idea is
 
 Sometimes it is hard to imagine an experiment that would be relevant for the type of questions we care about. 
 
-<br>
+&lt;br&gt;
 Some people even say (and I for sure partially agree!) that experiments tend to emphasize "small" versus "big" questions, promoting incremental/testable policies. 
 
-<br>
+&lt;br&gt;
 However, there are tons of examples of researchers using experiments to address important, **big** and difficult questions. **Do you know of any example?**
 
-<br>
+&lt;br&gt;
 Take a moment to check the syllabus of UCLA professor Graeme Blair's Experimental Design class [here](https://graemeblair.com/teaching/UCLA_PS200E_Syllabus.pdf). He put together a list of experiments conducted by UCLA faculty, and by graduate students.
 
 .center[**Any comments?**]
@@ -582,19 +551,19 @@ Take a moment to check the syllabus of UCLA professor Graeme Blair's Experimenta
 ## Why randomization 
 ### (more formally)
 
-We already saw that we can identify the causal effect of $X$ on $Y$ if the treatment assignment is independent of the potential outcomes. Formally $$(Y_x,Y_{x^*}) \indep X$$
+We already saw that we can identify the causal effect of `\(X\)` on `\(Y\)` if the treatment assignment is independent of the potential outcomes. Formally `$$(Y_x,Y_{x^*}) \indep X$$`
 
 Recall the diff-in-means decomposition we review earlier. Given the **ignorability** of the treatment assignment, we have can further write it as:
 
 By consistency
 
-$$E(Y_i|X=x) - E(Y_i|X=x^*) = E(Y_x|X=x) - E(Y_{x^*}|X=x^*)$$
+`$$E(Y_i|X=x) - E(Y_i|X=x^*) = E(Y_x|X=x) - E(Y_{x^*}|X=x^*)$$`
 With some algebra
 
-$$= E(Y_x - Y_{x^*}) + (E[Y_{x^*}|X=x] - E[Y_{x^*}|X=x^*])+(1-P[X])(ATT-ATC)$$
+`$$= E(Y_x - Y_{x^*}) + (E[Y_{x^*}|X=x] - E[Y_{x^*}|X=x^*])+(1-P[X])(ATT-ATC)$$`
 By ignorability, this simplifies to
 
-$$E(Y_x - Y_{x^*}) = ATE$$
+`$$E(Y_x - Y_{x^*}) = ATE$$`
 
 ---
 
@@ -602,16 +571,16 @@ $$E(Y_x - Y_{x^*}) = ATE$$
 
 Traditionally, researchers argue about the validity of a study's causal conclusion (and, more generally, about the validity of different research designs) based on the potential biases that pose **threats to validity**. Check [this](https://journals.lww.com/epidem/Fulltext/2020/05000/A_Graphical_Catalog_of_Threats_to_Validity_.11.aspx) amazing paper by Matthay and Glymour for a review.
 
-<br>
+&lt;br&gt;
 We reviewed the bias in the difference-in-means estimator: baseline differences (under the control condition), and differential response to the treatment (under the exposure condition).
 
-<br>
+&lt;br&gt;
 But when we randomize an exposure, we know that who ends up in each treatment arm has nothing to do with their potential outcomes!
 
-<br>
+&lt;br&gt;
 This is why we generally say that experiments are great for **internal validity**: among the people that participated in our study, we can rule out systematic sources of bias. 
 
-<br>
+&lt;br&gt;
 However, this does not imply that our results are **externally valid**, i.e., that they apply to people outside our study! We need further assumptions to move from one to another.
 
 ---
@@ -620,10 +589,10 @@ However, this does not imply that our results are **externally valid**, i.e., th
 
 Many times, we use randomization not just for identification (**ignorability**), but also for estimation! 
 
-<br>
+&lt;br&gt;
 If we assume the potential outcomes are fixed, and the only thing that varies is the treatment assignment scheme, we can derive a **permutation distribution** and use it for inference.
 
-<br>
+&lt;br&gt;
 How much dispersion (i.e. uncertainty) is in our distribution will be affected by **the level** at which randomization (or, more precisely, the treatment) happens: is it at the individual level? or at a cluster/group level?
 
 * The more the aggregation, the more uncertainty. So why would we want to randomize at the cluster level?
@@ -638,7 +607,7 @@ Conditional randomization (i.e., blocking) increase efficiency, when we have var
 
 ## Types of experiments
 
-<br>
+&lt;br&gt;
 * **Laboratory experiments**: Usually conducted with a small sample (of undergraduate psychology students), many times involving games in a computer. Helpful for cognitive/behavioral questions.
 
 * **Field experiments**: In order to obtain more *externally valid* results, experiments conducted in the field (i.e., under real-world conditions) are the way to go. Definitely more expensive though. Audit studies are a particular type of field experiment.
@@ -651,7 +620,7 @@ Conditional randomization (i.e., blocking) increase efficiency, when we have var
 
 ## Additional Resources 
 
-<br>
+&lt;br&gt;
 ### Online learning
 
 * A selected and annotated bibliography on causality [here](https://www.pablogeraldo.com/pdf/GeraldoBrand_2020_Causality.pdf).
@@ -662,7 +631,7 @@ Conditional randomization (i.e., blocking) increase efficiency, when we have var
 
 ### Textbooks
 
-* Gerber and Green (2012) Field Experiments: Design, Analysis, and Interpretation (check [here](https://www.amazon.com/Field-Experiments-Design-Analysis-Interpretation/dp/0393979954/ref=sr_1_11?dchild=1&keywords=gerber+green&qid=1624466782&sr=8-11))
+* Gerber and Green (2012) Field Experiments: Design, Analysis, and Interpretation (check [here](https://www.amazon.com/Field-Experiments-Design-Analysis-Interpretation/dp/0393979954/ref=sr_1_11?dchild=1&amp;keywords=gerber+green&amp;qid=1624466782&amp;sr=8-11))
 
 
 ---
@@ -717,3 +686,95 @@ Meet with your project group, and think in a research question that you could po
 
 Using your answers to the question above, propose and design a (survey) experiment that could help answering your research questions.
 
+    </textarea>
+<style data-target="print-only">@media screen {.remark-slide-container{display:block;}.remark-slide-scaler{box-shadow:none;}}</style>
+<script src="https://remarkjs.com/downloads/remark-latest.min.js"></script>
+<script>var slideshow = remark.create({
+"ratio": "16:10",
+"highlightStyle": "tomorrow",
+"highlightLines": true,
+"countIncrementalSlides": false
+});
+if (window.HTMLWidgets) slideshow.on('afterShowSlide', function (slide) {
+  window.dispatchEvent(new Event('resize'));
+});
+(function(d) {
+  var s = d.createElement("style"), r = d.querySelector(".remark-slide-scaler");
+  if (!r) return;
+  s.type = "text/css"; s.innerHTML = "@page {size: " + r.style.width + " " + r.style.height +"; }";
+  d.head.appendChild(s);
+})(document);
+
+(function(d) {
+  var el = d.getElementsByClassName("remark-slides-area");
+  if (!el) return;
+  var slide, slides = slideshow.getSlides(), els = el[0].children;
+  for (var i = 1; i < slides.length; i++) {
+    slide = slides[i];
+    if (slide.properties.continued === "true" || slide.properties.count === "false") {
+      els[i - 1].className += ' has-continuation';
+    }
+  }
+  var s = d.createElement("style");
+  s.type = "text/css"; s.innerHTML = "@media print { .has-continuation { display: none; } }";
+  d.head.appendChild(s);
+})(document);
+// delete the temporary CSS (for displaying all slides initially) when the user
+// starts to view slides
+(function() {
+  var deleted = false;
+  slideshow.on('beforeShowSlide', function(slide) {
+    if (deleted) return;
+    var sheets = document.styleSheets, node;
+    for (var i = 0; i < sheets.length; i++) {
+      node = sheets[i].ownerNode;
+      if (node.dataset["target"] !== "print-only") continue;
+      node.parentNode.removeChild(node);
+    }
+    deleted = true;
+  });
+})();</script>
+
+<script>
+(function() {
+  var links = document.getElementsByTagName('a');
+  for (var i = 0; i < links.length; i++) {
+    if (/^(https?:)?\/\//.test(links[i].getAttribute('href'))) {
+      links[i].target = '_blank';
+    }
+  }
+})();
+</script>
+
+<script>
+slideshow._releaseMath = function(el) {
+  var i, text, code, codes = el.getElementsByTagName('code');
+  for (i = 0; i < codes.length;) {
+    code = codes[i];
+    if (code.parentNode.tagName !== 'PRE' && code.childElementCount === 0) {
+      text = code.textContent;
+      if (/^\\\((.|\s)+\\\)$/.test(text) || /^\\\[(.|\s)+\\\]$/.test(text) ||
+          /^\$\$(.|\s)+\$\$$/.test(text) ||
+          /^\\begin\{([^}]+)\}(.|\s)+\\end\{[^}]+\}$/.test(text)) {
+        code.outerHTML = code.innerHTML;  // remove <code></code>
+        continue;
+      }
+    }
+    i++;
+  }
+};
+slideshow._releaseMath(document);
+</script>
+<!-- dynamically load mathjax for compatibility with self-contained -->
+<script>
+(function () {
+  var script = document.createElement('script');
+  script.type = 'text/javascript';
+  script.src  = 'https://mathjax.rstudio.com/latest/MathJax.js?config=TeX-MML-AM_CHTML';
+  if (location.protocol !== 'file:' && /^https?:/.test(script.src))
+    script.src  = script.src.replace(/^https?:/, '');
+  document.getElementsByTagName('head')[0].appendChild(script);
+})();
+</script>
+  </body>
+</html>
