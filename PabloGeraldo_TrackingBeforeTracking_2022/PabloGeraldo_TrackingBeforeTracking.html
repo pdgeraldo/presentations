@@ -325,29 +325,57 @@
 
 <section id="title-slide" class="center">
   <h1 class="title">Tracking Before Tracking?</h1>
+  <p class="subtitle">Academic performance and expectations in secondary vocational schools in Chile</p>
   <p class="author">Pablo Geraldo</p>
+  <p class="date">15/11/2022</p>
 </section>
 
-<section id="quarto" class="slide level2">
-<h2>Quarto</h2>
-<p>Quarto enables you to weave together content and executable code into a finished presentation. To learn more about Quarto presentations see <a href="https://quarto.org/docs/presentations/" class="uri">https://quarto.org/docs/presentations/</a>.</p>
+<section id="quick-intro" class="slide level2">
+<h2>Quick intro</h2>
 </section>
-<section id="bullets" class="slide level2">
-<h2>Bullets</h2>
-<p>When you click the <strong>Render</strong> button a document will be generated that includes:</p>
-<ul>
-<li>Content authored with markdown</li>
-<li>Output from executable code</li>
-</ul>
+<section id="horizontal-stratification" class="slide level2">
+<h2>Horizontal Stratification</h2>
 </section>
-<section id="code" class="slide level2">
-<h2>Code</h2>
-<p>When you click the <strong>Render</strong> button a presentation will be generated that includes both content and the output of embedded code. You can embed code like this:</p>
-<div class="cell">
-<div class="cell-output cell-output-stdout">
-<pre><code>[1] 2</code></pre>
-</div>
-</div>
+<section id="vocational-sorting" class="slide level2">
+<h2>Vocational Sorting</h2>
+</section>
+<section id="achievement-and-expectations" class="slide level2">
+<h2>Achievement and Expectations</h2>
+</section>
+<section id="institutional-context" class="slide level2">
+<h2>Institutional Context</h2>
+<h3 id="tvet-in-chile">TVET in Chile</h3>
+</section>
+<section id="data-and-methods" class="slide level2">
+<h2>Data and Methods</h2>
+<h3 id="sample-construction">Sample construction</h3>
+</section>
+<section id="data-and-methods-1" class="slide level2">
+<h2>Data and Methods</h2>
+<h3 id="identification-strategy">Identification Strategy</h3>
+</section>
+<section id="results" class="slide level2">
+<h2>Results</h2>
+<h3 id="covariate-balance">Covariate Balance</h3>
+</section>
+<section id="results-1" class="slide level2">
+<h2>Results</h2>
+<h3 id="effects-estimates">Effects Estimates</h3>
+</section>
+<section id="results-2" class="slide level2">
+<h2>Results</h2>
+<h3 id="difference-in-difference">Difference-in-difference</h3>
+</section>
+<section id="discussions-and-conclusions" class="slide level2">
+<h2>Discussions and Conclusions</h2>
+</section>
+<section id="section" class="slide level2">
+<h2></h2>
+<p>Thank you!</p>
+</section>
+<section id="results-3" class="slide level2">
+<h2>Results</h2>
+<h3 id="sensitivity-analysis">Sensitivity Analysis</h3>
 <div class="footer footer-default">
 
 </div>
@@ -404,7 +432,7 @@
         progress: true,
 
         // Display the page number of the current slide
-        slideNumber: false,
+        slideNumber: 'c/t',
 
         // 'all', 'print', or 'speaker'
         showSlideNumber: 'all',
@@ -509,7 +537,7 @@
         previewLinks: false,
 
         // Transition style (none/fade/slide/convex/concave/zoom)
-        transition: 'none',
+        transition: 'slide',
 
         // Transition speed (default/fast/slow)
         transitionSpeed: 'default',
@@ -529,9 +557,9 @@
         // The "normal" size of the presentation, aspect ratio will be preserved
         // when the presentation is scaled to fit different resolutions. Can be
         // specified using percentage units.
-        width: 1050,
+        width: 1600,
 
-        height: 700,
+        height: 900,
 
         // Factor of the display size that should remain empty around the content
         margin: 0.1,
@@ -563,48 +591,6 @@
         ]
       });
     </script>
-    
-    <script>
-      // htmlwidgets need to know to resize themselves when slides are shown/hidden.
-      // Fire the "slideenter" event (handled by htmlwidgets.js) when the current
-      // slide changes (different for each slide format).
-      (function () {
-        function fireSlideChanged(previousSlide, currentSlide) {
-
-          // dispatch for htmlwidgets
-          const event = window.document.createEvent("Event");
-          event.initEvent("slideenter", true, true);
-          window.document.dispatchEvent(event);
-
-          // dispatch for shiny
-          if (window.jQuery) {
-            if (previousSlide) {
-              window.jQuery(previousSlide).trigger("hidden");
-            }
-            if (currentSlide) {
-              window.jQuery(currentSlide).trigger("shown");
-            }
-          }
-        }
-
-        // hookup for reveal
-        if (window.Reveal) {
-          window.Reveal.addEventListener("slidechanged", function(event) {
-            fireSlideChanged(event.previousSlide, event.currentSlide);
-          });
-        }
-
-        // hookup for slidy
-        if (window.w3c_slidy) {
-          window.w3c_slidy.add_observer(function (slide_num) {
-            // slide_num starts at position 1
-            fireSlideChanged(null, w3c_slidy.slides[slide_num - 1]);
-          });
-        }
-
-      })();
-    </script>
-
     <script id="quarto-html-after-body" type="application/javascript">
     window.document.addEventListener("DOMContentLoaded", function (event) {
       const toggleBodyColorMode = (bsSheetEl) => {

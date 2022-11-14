@@ -1,26 +1,48 @@
 ---
 title: "Tracking Before Tracking?"
+subtitle: "Academic performance and expectations in secondary vocational schools in Chile"
 author: "Pablo Geraldo"
-format: revealjs
+date: "15/11/2022"
+format: 
+  revealjs:
+    theme: simple
+    width: 1600
+    height: 900
+    transition: slide
+    slide-number: true
+editor: visual
 ---
 
-## Quarto
+## Quick intro
 
-Quarto enables you to weave together content and executable code into a finished presentation. To learn more about Quarto presentations see <https://quarto.org/docs/presentations/>.
+## Horizontal Stratification
 
-## Bullets
+## Vocational Sorting
 
-When you click the **Render** button a document will be generated that includes:
+## Achievement and Expectations
 
--   Content authored with markdown
--   Output from executable code
+## Institutional Context
+### TVET in Chile
 
-## Code
+## Data and Methods
+### Sample construction
 
-When you click the **Render** button a presentation will be generated that includes both content and the output of embedded code. You can embed code like this:
+## Data and Methods
+### Identification Strategy
 
-```{r}
-1 + 1
-```
+## Results
+### Covariate Balance
 
+## Results
+### Effects Estimates
 
+## Results
+### Difference-in-difference
+
+## Discussions and Conclusions
+
+##
+Thank you!
+
+## Results
+### Sensitivity Analysis
