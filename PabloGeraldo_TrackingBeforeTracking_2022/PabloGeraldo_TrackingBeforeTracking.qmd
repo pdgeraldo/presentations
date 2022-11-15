@@ -272,13 +272,65 @@ There are, however, ways to incorporate at least partially this possibility:
 
 ![](img/effect_math.png){fig-align="center" width=120%}
 
-## Results
+##
 ### Difference-in-difference
 
-## Discussions and Conclusions
+![](img/diff_in_diff_models.png){fig-align="center" width=25%}
+
+* **Model 1**: No Covariates
+
+* **Model 2**: Adjusting for Students' Expectations
+
+* **Model 3**: Adjusting for School level Covariates
+
 
 ##
-Thank you!
+### Difference-in-difference (RM)
 
-## Results
-### Sensitivity Analysis
+![](img/effect_did.png){fig-align="center" width=25%}
+
+
+##
+### Sensitivity Analysis (Math)
+
+![](img/sensitivity_math.png){fig-align="center" width=50%}
+
+
+##
+### Falsification Test
+
+![](img/falsification.png){fig-align="center" width=25%}
+
+
+## Discussion and Conclusions
+
+<br>
+My findings generally support the hypotheses of a negative impact of attending TVET schools, **net of curricular differentiation**, on:
+
+* Students' academic achievement in Mathematics: consistent across models and robust
+
+* Students' academic achievement: not consistent, less robust
+
+* Students' expectations: moderate, but robust 
+
+. . . 
+
+Promoting TVET for its labor market benefits, not considering other educational consequences, serves to the reproduction of social inequality
+
+## Discussion and Conclusions
+
+<br>
+As expected in an observational study, there are several limitations to this study:
+
+* Disagreement about potential omitted variable bias
+
+* Hard to benchmark sensitivity to unobserved confounding
+
+
+Possible ways to deal with these shortcomings:
+
+* Use additional identification strategies, in a quasi-experimental framework (IV, school reform)
+
+* More intense study of the selection process or "assignment mechanism", for example, using (survey) experimental designs
+
+# Thank you!
