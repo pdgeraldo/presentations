@@ -91,13 +91,18 @@ In collaboration with Jacob Foster (Sociology)
 
 ## Institutional Context
 ### TVET in Chile
+![](img/vocational.png){fig-align="center"}
 
-![](TVET_Chile.drawio.svg){fig-align="center"}
 
 ## Institutional Context
 ### TVET in Chile
 
-![](TVET_Chile_post.drawio.svg){fig-align="center"}
+![](img/TVET_Chile.drawio.svg){fig-align="center"}
+
+## Institutional Context
+### TVET in Chile
+
+![](img/TVET_Chile_post.drawio.svg){fig-align="center"}
 
 ## Data and Methods
 ### Sample construction
