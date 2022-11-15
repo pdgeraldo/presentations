@@ -81,7 +81,7 @@ In collaboration with Jacob Foster (Sociology)
   + **Chapter 3**: Secondary effects of Free College in Chile on students' academic plans and decisions
 
   
-# Tracking Before Tracking?
+# Framework
 
 ## Educational Stratification
 
@@ -112,6 +112,7 @@ Combined consequences of selection and track effects: **Schools as Sorting Machi
 
 ## Educational Stratification
 
+<br>
 Previous research estimating the impact of High School TVET:
 
 * More vocationally oriented systems increase achievement gaps^[Bol and van de Werfhorst 2013]
@@ -123,29 +124,114 @@ Previous research estimating the impact of High School TVET:
 
 TVET less studied in the context of adaptation of educational expectations^[Andrew and Hauser 2011; Karlson 2015]
 
-## Institutional Context
-### TVET in Chile
+# Institutional Context
+
+## TVET in Chile
+### Institutional Context
+
+<br>
+Between 40 and 50% of students follow the vocational track:
+
+* Less schools, but substantially bigger
+
+* Some fluctuations in recent years
+
+Around 70% of students expect to continue to higher education :
+
+* Vast majority of them in College; fewer on Tertiary vocational education
+
+* “Tracks” are not fixed/pipelined: one can go from vocational to general as long as you meet the academic requirements (GPA, Test scores)
+
+* Around 40% enrolled in higher education at some point within 5 years. Much less completion.
+
+## TVET in Chile
+### Policy Context
+
+<br>
+Current research on horizontal stratification:
+
+* Mostly focusing on school ownership/administration (public, private, and subsidized)
+* Much less focus on vocational/general education differentiation
+
+Lots of reforming initiatives, from the state and industry:
+
+* Permeability?
+* Vocational emphasis/dual training?
+
+**The promise**: helping socioeconomically disadvantaged students in the labor market, minimizing the negative impact in educational trajectories
+
+
+## TVET in Chile
+### Reform initiatives
+
 ![](img/vocational.png){fig-align="center"}
 
 
-## Institutional Context
+## Institutional Design
 ### 1998 Reform
 
 ![](img/TVET_Chile.drawio.svg){fig-align="center" width=50%}
 
-## Institutional Context
+## Institutional Design
 ### 1998 Reform
 
 ![](img/TVET_Chile_post.drawio.svg){fig-align="center" width=50%}
 
-## Institutional Context
+## Institutional Design
 ### 1998 Reform
 
-* The institutional design usually justified based on a trade-off between educational and labor-market outcomes
-
-. . .
-
 ![](img/effect_reform.png){fig-align="center" width=60%}
+
+## This Study
+
+<br>
+Exploit the decoupling between institutional and curricular setting
+
+* How does attending a vocational school affects
+
+  * Students’ academic performance?
+  * Students’ educational expectations?
+  
+Approach to the observational study
+
+* Different assumptions: conditional ignorability and parallel trends
+* Different estimation procedures: regression, matching, weighting
+* Sensitivity analysis and falsification tests for possible violations of assumptions
+
+
+Data from Chilean census of students (administrative + surveys): 4th grade (2007), 8th grade (2011), 10th grade (2013)
+
+
+# Identification Strategy
+
+## Research design
+
+$\newcommand\indep{\perp\!\!\!\perp}$
+The main problem one faces when trying to identify causal relationships with observational data: **maybe students in general and vocational schools are not comparable!**
+
+**Approach**: conduct the study under different identification assumptions to deal with uncertainty about the "true causal model".
+
+* **Selection on observables**: $\{Y_0, Y_1\} \indep \text{Vocational} ~\mid \text{ X}$
+
+Where $X$ denotes students', parental and schools *observed* characteristics. Implemented using regression, matching and weighting for estimation.
+
+* **Selection on time-invariant confounders**: $\{Y_0, Y_1\} \indep \text{Vocational} ~\mid \text{ X, U}$
+
+Where $U$ denotes students' characteristics that are *unobserved* but constant over time. Implemented using difference-in-differences.
+
+
+## Research design
+
+* **Selection on time-varying confounding**
+
+It is possible to deal with *observed* time-varying confounding using g-methods (Robins et al.), but *unobserved* time varying confounding is basically impossible to deal with. This is the main weakness of observational causal inference.
+
+There are, however, ways to incorporate at least partially this possibility:
+
+  + **Sensitivity Analysis**: How strong should unobserved confounding be to change our study's conclusions? Implemented using Rosenbaum bounds and robustness value (Cinelli and Hazlett)
+  
+  + **Falsification/Placebo Test**: Use a placebo outcome that should not be affected by the exposure of interest, but that one would expect to be affected by time-varying unobserved confounding. I used parental income and education by the time the outcome was measured.
+
 
 ## Assignment mechanism
 
@@ -159,17 +245,32 @@ TVET less studied in the context of adaptation of educational expectations^[Andr
 
 ![](img/selection_educ.png){fig-align="center" width=50%}
 
-## Data and Methods
-### Sample construction
+# Results
 
-## Data and Methods
-### Identification Strategy
+##
+### Covariate Balance: Student level
 
-## Results
-### Covariate Balance
+![](img/balance_student.png){fig-align="center" width=90%}
 
-## Results
+##
+### Covariate Balance: Student level (detail)
+
+![](img/balance_student_detail.png){fig-align="center" width=120%}
+
+##
+### Covariate Balance: School level
+
+![](img/balance_school.png){fig-align="center" width=90%}
+
+##
+### Covariate Balance: School level (detail)
+
+![](img/balance_school_detail.png){fig-align="center" width=120%}
+
+##
 ### Effects Estimates
+
+![](img/effect_math.png){fig-align="center" width=120%}
 
 ## Results
 ### Difference-in-difference
