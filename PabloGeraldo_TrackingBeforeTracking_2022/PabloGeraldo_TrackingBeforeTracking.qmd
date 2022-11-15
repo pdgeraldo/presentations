@@ -13,21 +13,75 @@ format:
 editor: visual
 ---
 
+# A little bit about my research
+
 ## About me
 
-I am a (computational) social scientist conducting research across disciplinary boundaries, with a focus on conceptual and methodological *clarification*.
+I am a computational social scientist conducting research across disciplinary boundaries, with a focus on conceptual and methodological *clarification*.
+
+. . . 
 
 * **Academic background**
   + Currently: PhD Candidate in Sociology and MS in Statistics at UCLA
   + Former: MS in Sociology, work in educational research and public policy (Chile)
-  
+   
+. . .
+
 * **Affiliations**
   + California Center of Population Research (CCPR)
-  + Graduate Certificate in Population Studies (Demography)
-  
+    + Graduate Certificate in Population Studies (Demography)
+    
+. . .
+
 * **Training and collaborations**
-  + Sociology, PoliSci, Statistics, Biostats, Economics, Public Policy
+  + Sociology, PoliSci, Statistics, Biostats, Epidemiology, Economics, Public Policy
   + Collaborators mostly from Statistics and Anthropology
+  
+
+## Research Overview
+
+. . .
+
+### *Feasible* Causal Inference
+
+In collaboration with Chad Hazlett (PoliSci and Statistics)
+
+  + UCLA Causality group (Stats + Epi + CS)
+  + Applied causal inference + teaching focus
+  + ML/DL for heterogeneous treatment effects (with Jennie Brand and Bernie Koch)
+  
+. . .
+
+### Computational Social Science
+
+In collaboration with Jacob Foster (Sociology)
+
+  + "Deflationary" accounts of empirical research (social genomics, MARL)
+  + Methods for animal behavioral innovation and social learning (with Susan Perry)
+  + Co-organizer of the SICSS-UCLA (2019-2021)
+
+## Research Overview
+
+. . .
+
+### Educational Inequality
+
+  + Comparative study of tracking systems
+  + Political economy of skill formation systems
+  + General vs Vocational education in Chile
+  
+. . .
+
+### Dissertation Proposal
+
+  + **Chapter 1**: Moving beyond templates of empirical research
+
+  + [**Chapter 2**: Tracking before tracking? Effects of vocational high schools on students performance and expectations]{.fragment .highlight-blue}
+
+  + **Chapter 3**: Secondary effects of Free College in Chile on students' academic plans and decisions
+
+  
+# Tracking Before Tracking?
 
 ## Horizontal Stratification
 
@@ -37,6 +91,13 @@ I am a (computational) social scientist conducting research across disciplinary 
 
 ## Institutional Context
 ### TVET in Chile
+
+![](TVET_Chile.drawio.svg){fig-align="center"}
+
+## Institutional Context
+### TVET in Chile
+
+![](TVET_Chile_post.drawio.svg){fig-align="center"}
 
 ## Data and Methods
 ### Sample construction
