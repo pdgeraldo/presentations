@@ -83,11 +83,45 @@ In collaboration with Jacob Foster (Sociology)
   
 # Tracking Before Tracking?
 
-## Horizontal Stratification
+## Educational Stratification
 
-## Vocational Sorting
+<br>
+The expansion of secondary education during the 20th century was accompanied by  contrasting  expectations. 
 
-## Achievement and Expectations
+* Equalizing effect on attainment and skills^[Raftery and Hout 1993; Raudenbush and Eschmann 2015]
+
+* Persistent inequality due to:
+  * horizontal stratification^[Lucas 2001; Van der Wefhorst and Mijs 2010]
+  * structurally constrained decisions^[Brand & Xie, 2010; Breen & Goldthorpe, 1997; Grodsky & Riegle-Clumb, 2010]
+
+Evidence supporting the second hypothesis includes Vocational Tracking as a particularly important case^[Bol and Van de Werfhorst 2013; Parker et al. 2016]
+
+
+## Educational Stratification
+
+<br>
+The expansion of secondary education during the 20th century was accompanied by  contrasting  expectations. 
+
+* Equalizing effect on attainment and skills^[Raftery and Hout 1993; Raudenbush and Eschmann 2015]
+
+* Persistent inequality due to:
+  * horizontal stratification^[Lucas 2001; Van der Wefhorst and Mijs 2010]
+  * structurally constrained decisions^[Brand & Xie, 2010; Breen & Goldthorpe, 1997; Grodsky & Riegle-Clumb, 2010]
+
+Combined consequences of selection and track effects: **Schools as Sorting Machines**^[Domina et al. 2017]
+
+## Educational Stratification
+
+Previous research estimating the impact of High School TVET:
+
+* More vocationally oriented systems increase achievement gaps^[Bol and van de Werfhorst 2013]
+
+* Students attending vocational schools decrease their performance^[Farías 2013, Farías and Carrasco 2012]
+
+* Students attending vocational schools are affected in their expectations and self-esteem^[van Houtte et al. 2012, 2013]
+
+
+TVET less studied in the context of adaptation of educational expectations^[Andrew and Hauser 2011; Karlson 2015]
 
 ## Institutional Context
 ### TVET in Chile
@@ -95,14 +129,35 @@ In collaboration with Jacob Foster (Sociology)
 
 
 ## Institutional Context
-### TVET in Chile
+### 1998 Reform
 
-![](img/TVET_Chile.drawio.svg){fig-align="center"}
+![](img/TVET_Chile.drawio.svg){fig-align="center" width=50%}
 
 ## Institutional Context
-### TVET in Chile
+### 1998 Reform
 
-![](img/TVET_Chile_post.drawio.svg){fig-align="center"}
+![](img/TVET_Chile_post.drawio.svg){fig-align="center" width=50%}
+
+## Institutional Context
+### 1998 Reform
+
+* The institutional design usually justified based on a trade-off between educational and labor-market outcomes
+
+. . .
+
+![](img/effect_reform.png){fig-align="center" width=60%}
+
+## Assignment mechanism
+
+* In Chile, around 40% of students attend vocational high schools, that offer labor-oriented certificates(accounting, welding, social service, etc.)
+
+## Assignment mechanism
+
+* Students allowed to select program, but highly influenced by parental SES and education, and students' previous educational trajectories (achievement and expectations)
+
+. . .
+
+![](img/selection_educ.png){fig-align="center" width=50%}
 
 ## Data and Methods
 ### Sample construction
