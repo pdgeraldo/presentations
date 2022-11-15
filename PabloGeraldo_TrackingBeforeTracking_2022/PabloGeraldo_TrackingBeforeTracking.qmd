@@ -1,8 +1,8 @@
 ---
 title: "Tracking Before Tracking?"
 subtitle: "Academic performance and expectations in secondary vocational schools in Chile"
-author: "Pablo Geraldo"
-date: "15/11/2022"
+author: "Pablo Geraldo (pdgeraldo@g.ucla.edu)"
+date: "Nov 15th, 2022"
 format: 
   revealjs:
     theme: simple
