@@ -19,46 +19,45 @@ editor: visual
 
 I am a computational social scientist conducting research across disciplinary boundaries, with a focus on conceptual and methodological *clarification*.
 
-. . . 
-
-* **Academic background**
-  + Currently: PhD Candidate in Sociology and MS in Statistics at UCLA
-  + Former: MS in Sociology, work in educational research and public policy (Chile)
-   
 . . .
 
-* **Affiliations**
-  + California Center of Population Research (CCPR)
-    + Graduate Certificate in Population Studies (Demography)
-    
+-   **Academic background**
+    -   Currently: PhD Candidate in Sociology and MS in Statistics at UCLA
+    -   Former: MS in Sociology, work in educational research and public policy (Chile)
+
 . . .
 
-* **Training and collaborations**
-  + Sociology, PoliSci, Statistics, Biostats, Epidemiology, Economics, Public Policy
-  + Collaborators mostly from Statistics and Anthropology
-  
+-   **Affiliations**
+    -   California Center of Population Research (CCPR)
+        -   Graduate Certificate in Population Studies (Demography)
+
+. . .
+
+-   **Training and collaborations**
+    -   Sociology, PoliSci, Statistics, Biostats, Epidemiology, Economics, Public Policy
+    -   Collaborators mostly from Statistics and Anthropology
 
 ## Research Overview
 
 . . .
 
-### *Feasible* Causal Inference
+### Credible Causal Inference
 
-In collaboration with Chad Hazlett (PoliSci and Statistics)
+(In collaboration with Jennie Brand and Chad Hazlett)
 
-  + UCLA Causality group (Stats + Epi + CS)
-  + Applied causal inference + teaching focus
-  + ML/DL for heterogeneous treatment effects (with Jennie Brand and Bernie Koch)
-  
+-   UCLA Causality group (Stats + Epi + CS)
+-   Applied causal inference + teaching focus
+-   ML/DL for heterogeneous treatment effects
+
 . . .
 
 ### Computational Social Science
 
-In collaboration with Jacob Foster (Sociology)
+(In collaboration with Jacob Foster)
 
-  + "Deflationary" accounts of empirical research (social genomics, MARL)
-  + Methods for animal behavioral innovation and social learning (with Susan Perry)
-  + Co-organizer of the SICSS-UCLA (2019-2021)
+-   "Deflationary" accounts of empirical research (social genomics, MARL)
+-   Methods for animal behavioral innovation and social learning (with Susan Perry)
+-   Co-organizer of the SICSS-UCLA (2019-2021)
 
 ## Research Overview
 
@@ -66,271 +65,289 @@ In collaboration with Jacob Foster (Sociology)
 
 ### Educational Inequality
 
-  + Comparative study of tracking systems
-  + Political economy of skill formation systems
-  + General vs Vocational education in Chile
-  
+-   Comparative study of tracking systems
+-   Political economy of skill formation systems
+-   General vs Vocational education in Chile
+
 . . .
 
 ### Dissertation Proposal
 
-  + **Chapter 1**: Moving beyond templates of empirical research
+-   **Chapter 1**: Moving beyond templates of empirical research
 
-  + [**Chapter 2**: Tracking before tracking? Effects of vocational high schools on students performance and expectations]{.fragment .highlight-blue}
+-   [**Chapter 2**: Tracking before tracking? Effects of vocational high schools on students performance and expectations]{.fragment .highlight-blue}
 
-  + **Chapter 3**: Secondary effects of Free College in Chile on students' academic plans and decisions
+-   **Chapter 3**: Secondary effects of Free College in Chile on students' academic plans and decisions
 
-  
 # Framework
 
 ## Educational Stratification
 
-<br>
-The expansion of secondary education during the 20th century was accompanied by  contrasting  expectations. 
+<br> The expansion of secondary education during the 20th century was accompanied by contrasting expectations.
 
-* Equalizing effect on attainment and skills^[Raftery and Hout 1993; Raudenbush and Eschmann 2015]
+-   Equalizing effect on attainment and skills[^1]
 
-* Persistent inequality due to:
-  * horizontal stratification^[Lucas 2001; Van der Wefhorst and Mijs 2010]
-  * structurally constrained decisions^[Brand & Xie, 2010; Breen & Goldthorpe, 1997; Grodsky & Riegle-Clumb, 2010]
+-   Persistent inequality due to:
 
-Evidence supporting the second hypothesis includes Vocational Tracking as a particularly important case^[Bol and Van de Werfhorst 2013; Parker et al. 2016]
+    -   horizontal stratification[^2]
+    -   structurally constrained decisions[^3]
 
+[^1]: Raftery and Hout 1993; Raudenbush and Eschmann 2015
 
-## Educational Stratification
+[^2]: Lucas 2001; Van der Wefhorst and Mijs 2010
 
-<br>
-The expansion of secondary education during the 20th century was accompanied by  contrasting  expectations. 
+[^3]: Brand & Xie, 2010; Breen & Goldthorpe, 1997; Grodsky & Riegle-Clumb, 2010
 
-* Equalizing effect on attainment and skills^[Raftery and Hout 1993; Raudenbush and Eschmann 2015]
+Evidence supporting the second hypothesis includes Vocational Tracking as a particularly important case[^4]
 
-* Persistent inequality due to:
-  * horizontal stratification^[Lucas 2001; Van der Wefhorst and Mijs 2010]
-  * structurally constrained decisions^[Brand & Xie, 2010; Breen & Goldthorpe, 1997; Grodsky & Riegle-Clumb, 2010]
-
-Combined consequences of selection and track effects: **Schools as Sorting Machines**^[Domina et al. 2017]
+[^4]: Bol and Van de Werfhorst 2013; Parker et al. 2016
 
 ## Educational Stratification
 
-<br>
-Previous research estimating the impact of High School TVET:
+<br> The expansion of secondary education during the 20th century was accompanied by contrasting expectations.
 
-* More vocationally oriented systems increase achievement gaps^[Bol and van de Werfhorst 2013]
+-   Equalizing effect on attainment and skills[^5]
 
-* Students attending vocational schools decrease their performance^[Farías 2013, Farías and Carrasco 2012]
+-   Persistent inequality due to:
 
-* Students attending vocational schools are affected in their expectations and self-esteem^[van Houtte et al. 2012, 2013]
+    -   horizontal stratification[^6]
+    -   structurally constrained decisions[^7]
 
+[^5]: Raftery and Hout 1993; Raudenbush and Eschmann 2015
 
-TVET less studied in the context of adaptation of educational expectations^[Andrew and Hauser 2011; Karlson 2015]
+[^6]: Lucas 2001; Van der Wefhorst and Mijs 2010
+
+[^7]: Brand & Xie, 2010; Breen & Goldthorpe, 1997; Grodsky & Riegle-Clumb, 2010
+
+Combined consequences of selection and track effects: **Schools as Sorting Machines**[^8]
+
+[^8]: Domina et al. 2017
+
+## Educational Stratification
+
+<br> Previous research estimating the impact of High School TVET:
+
+-   More vocationally oriented systems increase achievement gaps[^9]
+
+-   Students attending vocational schools decrease their performance[^10]
+
+-   Students attending vocational schools are affected in their expectations and self-esteem[^11]
+
+[^9]: Bol and van de Werfhorst 2013
+
+[^10]: Farías 2013, Farías and Carrasco 2012
+
+[^11]: van Houtte et al. 2012, 2013
+
+TVET less studied in the context of adaptation of educational expectations[^12]
+
+[^12]: Andrew and Hauser 2011; Karlson 2015
 
 # Institutional Context
 
 ## TVET in Chile
+
 ### Institutional Context
 
-<br>
-Between 40 and 50% of students follow the vocational track:
+<br> Between 40 and 50% of students follow the vocational track:
 
-* Less schools, but substantially bigger
+-   Less schools, but substantially bigger
 
-* Some fluctuations in recent years
+-   Some fluctuations in recent years
 
 Around 70% of students expect to continue to higher education :
 
-* Vast majority of them in College; fewer on Tertiary vocational education
+-   Vast majority of them in College; fewer on Tertiary vocational education
 
-* “Tracks” are not fixed/pipelined: one can go from vocational to general as long as you meet the academic requirements (GPA, Test scores)
+-   "Tracks" are not fixed/pipelined: one can go from vocational to general as long as you meet the academic requirements (GPA, Test scores)
 
-* Around 40% enrolled in higher education at some point within 5 years. Much less completion.
+-   Around 40% enrolled in higher education at some point within 5 years. Much less completion.
 
 ## TVET in Chile
+
 ### Policy Context
 
-<br>
-Current research on horizontal stratification:
+<br> Current research on horizontal stratification:
 
-* Mostly focusing on school ownership/administration (public, private, and subsidized)
-* Much less focus on vocational/general education differentiation
+-   Mostly focusing on school ownership/administration (public, private, and subsidized)
+-   Much less focus on vocational/general education differentiation
 
 Lots of reforming initiatives, from the state and industry:
 
-* Permeability?
-* Vocational emphasis/dual training?
+-   Permeability?
+-   Vocational emphasis/dual training?
 
 **The promise**: helping socioeconomically disadvantaged students in the labor market, minimizing the negative impact in educational trajectories
 
-
 ## TVET in Chile
+
 ### Reform initiatives
 
 ![](img/vocational.png){fig-align="center"}
 
-
 ## Institutional Design
+
 ### 1998 Reform
 
-![](img/TVET_Chile.drawio.svg){fig-align="center" width=50%}
+![](img/TVET_Chile.drawio.svg){fig-align="center" width="50%"}
 
 ## Institutional Design
+
 ### 1998 Reform
 
-![](img/TVET_Chile_post.drawio.svg){fig-align="center" width=50%}
+![](img/TVET_Chile_post.drawio.svg){fig-align="center" width="50%"}
 
 ## Institutional Design
+
 ### 1998 Reform
 
-![](img/effect_reform.png){fig-align="center" width=60%}
+![](img/effect_reform.png){fig-align="center" width="60%"}
 
 ## This Study
 
-<br>
-Exploit the decoupling between institutional and curricular setting
+<br> Exploit the decoupling between institutional and curricular setting
 
-* How does attending a vocational school affects
+-   How does attending a vocational school affects
 
-  * Students’ academic performance?
-  * Students’ educational expectations?
-  
+    -   Students' academic performance?
+    -   Students' educational expectations?
+
 Approach to the observational study
 
-* Different assumptions: conditional ignorability and parallel trends
-* Different estimation procedures: regression, matching, weighting
-* Sensitivity analysis and falsification tests for possible violations of assumptions
-
+-   Different assumptions: conditional ignorability and parallel trends
+-   Different estimation procedures: regression, matching, weighting
+-   Sensitivity analysis and falsification tests for possible violations of assumptions
 
 Data from Chilean census of students (administrative + surveys): 4th grade (2007), 8th grade (2011), 10th grade (2013)
-
 
 # Identification Strategy
 
 ## Research design
 
-$\newcommand\indep{\perp\!\!\!\perp}$
-The main problem one faces when trying to identify causal relationships with observational data: **maybe students in general and vocational schools are not comparable!**
+$\newcommand\indep{\perp\!\!\!\perp}$ The main problem one faces when trying to identify causal relationships with observational data: **maybe students in general and vocational schools are not comparable!**
 
 **Approach**: conduct the study under different identification assumptions to deal with uncertainty about the "true causal model".
 
-* **Selection on observables**: $\{Y_0, Y_1\} \indep \text{Vocational} ~\mid \text{ X}$
+-   **Selection on observables**: $\{Y_0, Y_1\} \indep \text{Vocational} ~\mid \text{ X}$
 
 Where $X$ denotes students', parental and schools *observed* characteristics. Implemented using regression, matching and weighting for estimation.
 
-* **Selection on time-invariant confounders**: $\{Y_0, Y_1\} \indep \text{Vocational} ~\mid \text{ X, U}$
+-   **Selection on time-invariant confounders**: $\{Y_0, Y_1\} \indep \text{Vocational} ~\mid \text{ X, U}$
 
 Where $U$ denotes students' characteristics that are *unobserved* but constant over time. Implemented using difference-in-differences.
 
-
 ## Research design
 
-* **Selection on time-varying confounding**
+-   **Selection on time-varying confounding**
 
 It is possible to deal with *observed* time-varying confounding using g-methods (Robins et al.), but *unobserved* time varying confounding is basically impossible to deal with. This is the main weakness of observational causal inference.
 
 There are, however, ways to incorporate at least partially this possibility:
 
-  + **Sensitivity Analysis**: How strong should unobserved confounding be to change our study's conclusions? Implemented using Rosenbaum bounds and robustness value (Cinelli and Hazlett)
-  
-  + **Falsification/Placebo Test**: Use a placebo outcome that should not be affected by the exposure of interest, but that one would expect to be affected by time-varying unobserved confounding. I used parental income and education by the time the outcome was measured.
+-   **Sensitivity Analysis**: How strong should unobserved confounding be to change our study's conclusions? Implemented using Rosenbaum bounds and robustness value (Cinelli and Hazlett)
 
-
-## Assignment mechanism
-
-* In Chile, around 40% of students attend vocational high schools, that offer labor-oriented certificates(accounting, welding, social service, etc.)
+-   **Falsification/Placebo Test**: Use a placebo outcome that should not be affected by the exposure of interest, but that one would expect to be affected by time-varying unobserved confounding. I used parental income and education by the time the outcome was measured.
 
 ## Assignment mechanism
 
-* Students allowed to select program, but highly influenced by parental SES and education, and students' previous educational trajectories (achievement and expectations)
+-   In Chile, around 40% of students attend vocational high schools, that offer labor-oriented certificates(accounting, welding, social service, etc.)
+
+## Assignment mechanism
+
+-   Students allowed to select program, but highly influenced by parental SES and education, and students' previous educational trajectories (achievement and expectations)
 
 . . .
 
-![](img/selection_educ.png){fig-align="center" width=50%}
+![](img/selection_educ.png){fig-align="center" width="50%"}
 
 # Results
 
-##
+## 
+
 ### Covariate Balance: Student level
 
-![](img/balance_student.png){fig-align="center" width=90%}
+![](img/balance_student.png){fig-align="center" width="90%"}
 
-##
+## 
+
 ### Covariate Balance: Student level (detail)
 
-![](img/balance_student_detail.png){fig-align="center" width=120%}
+![](img/balance_student_detail.png){fig-align="center" width="120%"}
 
-##
+## 
+
 ### Covariate Balance: School level
 
-![](img/balance_school.png){fig-align="center" width=90%}
+![](img/balance_school.png){fig-align="center" width="90%"}
 
-##
+## 
+
 ### Covariate Balance: School level (detail)
 
-![](img/balance_school_detail.png){fig-align="center" width=120%}
+![](img/balance_school_detail.png){fig-align="center" width="120%"}
 
-##
+## 
+
 ### Effects Estimates
 
-![](img/effect_math.png){fig-align="center" width=120%}
+![](img/effect_math.png){fig-align="center" width="120%"}
 
-##
+## 
+
 ### Difference-in-difference
 
-![](img/diff_in_diff_models.png){fig-align="center" width=25%}
+![](img/diff_in_diff_models.png){fig-align="center" width="25%"}
 
-* **Model 1**: No Covariates
+-   **Model 1**: No Covariates
 
-* **Model 2**: Adjusting for Students' Expectations
+-   **Model 2**: Adjusting for Students' Expectations
 
-* **Model 3**: Adjusting for School level Covariates
+-   **Model 3**: Adjusting for School level Covariates
 
+## 
 
-##
 ### Difference-in-difference (RM)
 
-![](img/effect_did.png){fig-align="center" width=25%}
+![](img/effect_did.png){fig-align="center" width="25%"}
 
+## 
 
-##
 ### Sensitivity Analysis (Math)
 
-![](img/sensitivity_math.png){fig-align="center" width=50%}
+![](img/sensitivity_math.png){fig-align="center" width="50%"}
 
+## 
 
-##
 ### Falsification Test
 
-![](img/falsification.png){fig-align="center" width=25%}
-
+![](img/falsification.png){fig-align="center" width="25%"}
 
 ## Discussion and Conclusions
 
-<br>
-My findings generally support the hypotheses of a negative impact of attending TVET schools, **net of curricular differentiation**, on:
+<br> My findings generally support the hypotheses of a negative impact of attending TVET schools, **net of curricular differentiation**, on:
 
-* Students' academic achievement in Mathematics: consistent across models and robust
+-   Students' academic achievement in Mathematics: consistent across models and robust
 
-* Students' academic achievement: not consistent, less robust
+-   Students' academic achievement: not consistent, less robust
 
-* Students' expectations: moderate, but robust 
+-   Students' expectations: moderate, but robust
 
-. . . 
+. . .
 
 Promoting TVET for its labor market benefits, not considering other educational consequences, serves to the reproduction of social inequality
 
 ## Discussion and Conclusions
 
-<br>
-As expected in an observational study, there are several limitations to this study:
+<br> As expected in an observational study, there are several limitations to this study:
 
-* Disagreement about potential omitted variable bias
+-   Disagreement about potential omitted variable bias
 
-* Hard to benchmark sensitivity to unobserved confounding
-
+-   Hard to benchmark sensitivity to unobserved confounding
 
 Possible ways to deal with these shortcomings:
 
-* Use additional identification strategies, in a quasi-experimental framework (IV, school reform)
+-   Use additional identification strategies, in a quasi-experimental framework (IV, school reform)
 
-* More intense study of the selection process or "assignment mechanism", for example, using (survey) experimental designs
+-   More intense study of the selection process or "assignment mechanism", for example, using (survey) experimental designs
 
 # Thank you!
