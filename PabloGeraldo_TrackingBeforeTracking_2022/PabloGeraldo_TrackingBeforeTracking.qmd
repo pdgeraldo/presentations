@@ -2,7 +2,7 @@
 title: "Tracking Before Tracking?"
 subtitle: "Academic performance and expectations in secondary vocational schools in Chile"
 author: "Pablo Geraldo (pdgeraldo@g.ucla.edu)"
-date: "Nov 15th, 2022"
+date: "Nov 21st, 2022"
 format: 
   revealjs:
     theme: simple
@@ -46,6 +46,7 @@ I am a computational social scientist conducting research across disciplinary bo
 (In collaboration with Jennie Brand and Chad Hazlett)
 
 -   UCLA Causality group (Stats + Epi + CS)
+-   Social Inequality Data Science Lab (SIDS)
 -   Applied causal inference + teaching focus
 -   ML/DL for heterogeneous treatment effects
 
@@ -71,7 +72,7 @@ I am a computational social scientist conducting research across disciplinary bo
 
 . . .
 
-### Dissertation Proposal
+### Dissertation
 
 -   **Chapter 1**: Moving beyond templates of empirical research
 
@@ -98,7 +99,7 @@ I am a computational social scientist conducting research across disciplinary bo
 
 [^3]: Brand & Xie, 2010; Breen & Goldthorpe, 1997; Grodsky & Riegle-Clumb, 2010
 
-Evidence supporting the second hypothesis includes Vocational Tracking as a particularly important case[^4]
+Evidence supporting the second hypothesis includes vocational tracking as a particularly important case[^4]
 
 [^4]: Bol and Van de Werfhorst 2013; Parker et al. 2016
 
@@ -139,13 +140,13 @@ Combined consequences of selection and track effects: **Schools as Sorting Machi
 
 [^11]: van Houtte et al. 2012, 2013
 
-TVET less studied in the context of adaptation of educational expectations[^12]
+Vocational education less studied in the context of adaptation of educational expectations[^12]
 
 [^12]: Andrew and Hauser 2011; Karlson 2015
 
 # Institutional Context
 
-## TVET in Chile
+## Vocational Schools in Chile
 
 ### Institutional Context
 
@@ -157,13 +158,13 @@ TVET less studied in the context of adaptation of educational expectations[^12]
 
 Around 70% of students expect to continue to higher education :
 
--   Vast majority of them in College; fewer on Tertiary vocational education
+-   Vast majority of them in college; fewer on tertiary vocational education
 
 -   "Tracks" are not fixed/pipelined: one can go from vocational to general as long as you meet the academic requirements (GPA, Test scores)
 
--   Around 40% enrolled in higher education at some point within 5 years. Much less completion.
+-   Around 40% enrolled in higher education at some point within 5 years, much less completion
 
-## TVET in Chile
+## Vocational Schools in Chile
 
 ### Policy Context
 
@@ -179,7 +180,7 @@ Lots of reforming initiatives, from the state and industry:
 
 **The promise**: helping socioeconomically disadvantaged students in the labor market, minimizing the negative impact in educational trajectories
 
-## TVET in Chile
+## Vocational Schools in Chile
 
 ### Reform initiatives
 
@@ -207,7 +208,7 @@ Lots of reforming initiatives, from the state and industry:
 
 <br> Exploit the decoupling between institutional and curricular setting
 
--   How does attending a vocational school affects
+-   How attending a vocational school affects
 
     -   Students' academic performance?
     -   Students' educational expectations?
@@ -250,7 +251,7 @@ There are, however, ways to incorporate at least partially this possibility:
 
 ## Assignment mechanism
 
--   In Chile, around 40% of students attend vocational high schools, that offer labor-oriented certificates(accounting, welding, social service, etc.)
+-   In Chile, around 40% of students attend vocational high schools, that offer labor-oriented certificates (accounting, welding, social service, etc.)
 
 ## Assignment mechanism
 
@@ -324,9 +325,9 @@ There are, however, ways to incorporate at least partially this possibility:
 
 ## Discussion and Conclusions
 
-<br> My findings generally support the hypotheses of a negative impact of attending TVET schools, **net of curricular differentiation**, on:
+<br> My findings generally support the hypotheses of a negative impact of attending vocational schools, **net of curricular differentiation**, on:
 
--   Students' academic achievement in Mathematics: consistent across models and robust
+-   Students' academic achievement in mathematics: consistent across models and robust
 
 -   Students' academic achievement: not consistent, less robust
 
@@ -351,3 +352,5 @@ Possible ways to deal with these shortcomings:
 -   More intense study of the selection process or "assignment mechanism", for example, using (survey) experimental designs
 
 # Thank you!
+
+Questions, comments? You can find me at pdgeraldo@ucla.edu
