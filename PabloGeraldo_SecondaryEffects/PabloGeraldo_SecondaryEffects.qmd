@@ -374,18 +374,36 @@ Trajectory balancing
 
 
 ## Subsample analysis
+### Registry sex
+
+![](img/dropout_sex.png){fig-align="left" width="60%"}
+
+## Subsample analysis
 ### School track
 
-![](img/dropout_ownership.png){fig-align="left" width="60%"}
+![](img/dropout_track.png){fig-align="left" width="60%"}
 
 ## Subsample analysis
 ### School ownership
 
-![](img/dropout_ownership.png){fig-align="left" width="60%"}
+![](img/dropout_ownership.png){fig-align="left" width="80%"}
 
 ## Difference-in-difference
 
-## Summary of results
+![](img/dropout_did_check.png){fig-align="left" width="80%"}
+
+## Difference-in-difference
+
+![](img/dropout_did.png){fig-align="left" width="80%"}
+
+## Trajectory balancing
+
+![](img/dropout_mbal_cf.png){fig-align="left" width="80%"}
+
+## Trajectory balancing
+
+![](img/dropout_mbal_ATT.png){fig-align="left" width="80%"}
+
 
 # Conclusions
 
