@@ -405,7 +405,27 @@ Trajectory balancing
 ![](img/dropout_mbal_ATT.png){fig-align="left" width="80%"}
 
 
-# Conclusions
+## Conclusions
+
+
+<br>
+The introduction of tuition-free college in 2016 seems to have benefited high school students, lowering their dropout rates:
+
+- As expected, the effect is more pronounced for the most disadvantaged students
+
+. . .
+
+In other outcomes (retention/promotion, school abandonment, track choice) there is no clear effect of the policy.
+
+. . .
+
+The results highlight the importance of focusing on *broader* impacts of education funding policies, affecting our equity considerations:
+
+- Policies themselves can modify their *at risk* population
+
+. . . 
+
+Future research should address the trajectories of the *induced* students, beyond high school
 
 
 # Thank you!
