@@ -5,7 +5,7 @@ author: "Pablo Geraldo (pdgeraldo@g.ucla.edu)"
 date: "05/31/2023"
 format: 
   revealjs:
-    theme: serif
+    theme: simple
     width: 1600
     height: 900
     transition: slide
@@ -65,6 +65,28 @@ Evidence supporting the second hypothesis includes vocational tracking as a part
 ## Secondary education
 
 ## Tertiary education
+### Public vs private spending (2011)
+
+![](img/HigherEducationFunding_2011_OECD.png){fig-align="center" width="50%"}
+
+## Tertiary education
+### Student mobilization
+
+![](img/GoogleTrends_GratuidadBecas.png){fig-align="center" width="50%"}
+
+
+## Tertiary education
+### Tuition-free college
+
+![](img/GoogleTrends_GratuidadBecas.png){fig-align="center" width="50%"}
+
+
+## Tertiary education
+### Public vs private spending (2019)
+
+![](img/HigherEducationFunding_2019_OECD.png){fig-align="center" width="50%"}
+
+
 
 # Data and Methods
 
@@ -72,7 +94,14 @@ Evidence supporting the second hypothesis includes vocational tracking as a part
 
 ## Identification
 
-![](img/TVET_Chile.drawio.svg){fig-align="center" width="50%"}
+![](img/DAG_obs.png){fig-align="center" width="40%"}
+
+
+## Identification
+
+
+![Target](img/DAG_target.png){#fig-target fig-align="left" width="49%"}
+![Testing](img/DAG_test.png){#fig-test fig-align="right" width="49%"}
 
 
 ## Estimation
