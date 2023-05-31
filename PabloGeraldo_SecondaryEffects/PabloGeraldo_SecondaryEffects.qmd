@@ -258,6 +258,12 @@ Bachelet speech (21st May, 2015)
 
 >“The main goal we have established for ourselves in relation to higher education is achieving quality and tuition-free education for everyone. (. . . ) many times scholarships are not enough to cover all fees, so the most vulnerable students and the middle class have to take on excessive debt to pay for the difference. This is why, moving towards our commitment of having tuition-free higher education for the 70% most vulnerable students at the end of my presidential period, starting in 2016 we will guarantee for the most vulnerable 60% of students enrolled in technical education, accredited and non-for-profit professional schools, or traditioinal universities, to have complete and effective tuition-free education, without scholarships or loans”
 
+
+## Tertiary education
+### Tuition-free college
+
+![](img/GoogleTrends_GratuidadBecas.png){fig-align="center" width="50%"}
+
 ## Tertiary education
 ### Tuition-free college
 
@@ -272,13 +278,9 @@ The policy started in 2016:
 . . .
 
 Following year: 
+
   - more institutions, especially technical
   - expansion to 60% lowest income
-
-## Tertiary education
-### Tuition-free college
-
-![](img/GoogleTrends_GratuidadBecas.png){fig-align="center" width="50%"}
 
 
 ## Tertiary education
@@ -292,7 +294,29 @@ Following year:
 
 ## Data and variables
 
+<br>
+Administrative data from the Chilean Ministry of Education open access initiative
+
+- Enrollment data (April)
+- Promotion data (December)
+- Years 2009-2020
+- Students in the regular system
+
+. . .
+
+**Variables**
+
+- Treatment: exposure to tuition-free college (pre/post 2016)
+
+- Primary outcome: student dropout
+
+- Secondary outcomes: student grade retention, school abandonment, track choice
+
+- Subgroup: registry sex, region, grade, school track and ownership
+
+
 ## Identification
+
 
 ![](img/DAG_obs.png){fig-align="center" width="40%"}
 
@@ -305,6 +329,30 @@ Following year:
 
 
 ## Estimation
+
+. . . 
+
+<br>
+
+**Single-group event study (aka pre/post)**
+
+. . .
+
+Segmented regression analysis
+
+Yearly dummies for time dynamics
+
+. . .
+
+
+<br>
+**With comparison group**
+
+. . .
+
+Difference-in-differences
+
+Trajectory balancing
 
 # Tuition-free college and students' trajectories
 
@@ -324,7 +372,16 @@ Following year:
 
 ![](img/dropout_overall.png){fig-align="left" width="60%"}
 
+
 ## Subsample analysis
+### School track
+
+![](img/dropout_ownership.png){fig-align="left" width="60%"}
+
+## Subsample analysis
+### School ownership
+
+![](img/dropout_ownership.png){fig-align="left" width="60%"}
 
 ## Difference-in-difference
 
