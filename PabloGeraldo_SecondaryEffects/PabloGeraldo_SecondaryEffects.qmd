@@ -162,9 +162,60 @@ Traditionally, emphasis on *information*:
 
 * Certainty of funding to rule them all ( Burland et al., 2023, Dynarski et al., 2021)
 
+# What about anticipatory effects?
+
 # Institutional context: Chilean education system
 
 ## Secondary education
+
+<br> Organization and funding designed during the military dictatorship (1973-1990), reformed during the 90s:
+
+. . . 
+
+- Highly segregated in a three-tier system
+
+  - Ownership: private, subsidized, public
+  - Track: academic, vocational, mixed
+  
+. . . 
+
+-  Funded by quasi-voucher
+
+  - Depends on attendance
+  - Modified in 2008, preferential subsidy
+
+## Secondary education
+
+### Student dropout
+
+<br>
+Still an important issue in Latin America
+
+. . .
+
+- In Chile, primary school graduation almost universal for three decades
+
+- In secondary education, still important:
+
+  - Especially from 8th to 9th grade
+  - Socioeconomic and gender disparities remain
+  
+. . .
+
+*Huge* but *temporary* spike due to student mobilization in 2011
+
+## Tertiary education
+
+<br> Organization and funding designed during the military dictatorship (1973-1990), reformed during the 90s:
+
+- Self financing institutions (tuition)
+- Competition for public funding (AFD and AFI)
+- Mostly private enrollment
+- Struggle to regulate for-profit and quality
+
+. . .
+
+"Massification based on privatization and heterogenisation" (Quaresma and Villalobos, 2022)
 
 ## Tertiary education
 ### Public vs private spending (2011)
