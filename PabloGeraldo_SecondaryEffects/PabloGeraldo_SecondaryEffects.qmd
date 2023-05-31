@@ -1,11 +1,11 @@
 ---
-title: "Secondary effects of tuition-free college on high school trajectories"
-subtitle: "Evidence from Chile"
+title: "Secondary effects of tuition-free college on high school trajectories: Evidence from a Chilean reform"
+#subtitle: "Evidence from Chile"
 author: "Pablo Geraldo (pdgeraldo@g.ucla.edu)"
-date: "May 31st, 2023"
+date: "05/31/2023"
 format: 
   revealjs:
-    theme: simple
+    theme: serif
     width: 1600
     height: 900
     transition: slide
