@@ -122,6 +122,18 @@ Researchers in education usually distinguish between:
   
 Somewhat related: "pull out" vs "push out"
 
+. . . 
+
+- Lifecourse and disruptive events
+- Family, neighborhood, and student factors
+- School experiences 
+  - teacher- and peer-victimization
+  - exclusionary discipline
+  
+. . .
+
+**Are we getting prediction when we want causastion?**
+
 ## From risk factors to policy and interventions
 
 # Institutional context: Chilean education system
