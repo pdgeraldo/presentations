@@ -132,9 +132,35 @@ Somewhat related: "pull out" vs "push out"
   
 . . .
 
-**Are we getting prediction when we want causastion?**
+**Are we getting prediction when we want causation?**
 
 ## From risk factors to policy and interventions
+
+<br>
+
+Experimental and quasi-experimental evaluation of policies and interventions modifying student behavior
+
+. . .
+
+* High school interventions
+
+* Higher education interventions
+
+Traditionally, emphasis on *information*:
+
+. . . 
+
+* Information only: small and inconsistent effects
+
+* Information + counseling: better
+
+. . .
+
+* Financial aid: even better
+
+. . . 
+
+* Certainty of funding to rule them all ( Burland et al., 2023, Dynarski et al., 2021)
 
 # Institutional context: Chilean education system
 
