@@ -1,8 +1,8 @@
 ---
 title: "Secondary effects of tuition-free college on high school trajectories: Evidence from a Chilean reform"
-#subtitle: "Evidence from Chile"
+subtitle: "Workshop on Inequality and Stratification Research, PUC"
 author: "Pablo Geraldo (pdgeraldo@g.ucla.edu)"
-date: "05/31/2023"
+date: "06/06/2023"
 format: 
   revealjs:
     theme: simple
@@ -13,13 +13,13 @@ format:
 editor: visual
 ---
 
-
 ## A little bit about my research
+
 . . .
 
 <br> Social and educational stratification, causal inference and quantitative methods <br>
 
-. . . 
+. . .
 
 <br>
 
@@ -31,26 +31,22 @@ editor: visual
 
 -   **Chapter 1**: Moving beyond templates of empirical research
 
-
 -   **Chapter 2**: Tracking before tracking? Effects of vocational high schools on students performance and expectations
 
- 
 -   [**Chapter 3**: Secondary effects of tuition-free college in Chile on students' trajectories]{.fragment .highlight-blue}
 
-
 # Motivation
-
 
 ## Higher education funding is a contentious matter
 
 <br>
 
-. . . 
+. . .
 
-- Who has to pay for it?
-- Increasing costs, diminishing public funding
-- Skyrocketing student debt, debt relief and forgiveness 
-- Implications for inequality and mobility
+-   Who has to pay for it?
+-   Increasing costs, diminishing public funding
+-   Skyrocketing student debt, debt relief and forgiveness
+-   Implications for inequality and mobility
 
 . . .
 
@@ -58,9 +54,9 @@ editor: visual
 
 . . .
 
-- Who would benefit from expding college funding? Who is "at risk"?
-- Tradeoffs between funding higher education versus other levels
-- Who benefits *more* from college?
+-   Who would benefit from expding college funding? Who is "at risk"?
+-   Tradeoffs between funding higher education versus other levels
+-   Who benefits *more* from college?
 
 ## Why *secondary effects*?
 
@@ -72,17 +68,15 @@ College funding policies usually intended to benefit college students
 
 . . .
 
-- But there might be sizable and *unintended* effects on other populations
-  
+-   But there might be sizable and *unintended* effects on other populations
+
 . . .
 
-- One of those potentially affected groups is *secondary students*
+-   One of those potentially affected groups is *secondary students*
 
-. . . 
+. . .
 
-- One outcome in particular, are their decisions of continuing schooling or not (*secondary effects* of social origin in some stratification research)
-
-
+-   One outcome in particular, are their decisions of continuing schooling or not (*secondary effects* of social origin in some stratification research)
 
 # Inequalities in educational trajectories
 
@@ -92,22 +86,21 @@ College funding policies usually intended to benefit college students
 
 Two classic approaches to study inequality in students' trajectories:
 
-  - Status attainment models (Wisconsin)
-  - Rational choice models (Boudon)
-  
+-   Status attainment models (Wisconsin)
+-   Rational choice models (Boudon)
+
 Both would predict adaptation on students' decisions in response to:
-  
-  - Changes in expectations
-  - Changes in costs and probability of success
-  
+
+-   Changes in expectations
+-   Changes in costs and probability of success
+
 . . .
 
 Mare (2006) call for transition models to move beyond:
 
 . . .
 
-> “asociological approaches in which educational stratification results from information processing and rational calculation by atomized families and individuals”, focusing instead on “a broader set of concerns about the multiple interdependent decision makers at various institutional levels who may be responsible for levels and variations in educational attainment”
-
+> "asociological approaches in which educational stratification results from information processing and rational calculation by atomized families and individuals", focusing instead on "a broader set of concerns about the multiple interdependent decision makers at various institutional levels who may be responsible for levels and variations in educational attainment"
 
 ## Predicting student persistence
 
@@ -115,21 +108,21 @@ Mare (2006) call for transition models to move beyond:
 
 Researchers in education usually distinguish between:
 
-  - Status or individual characteristics, mostly unmodifiable
-  - (Mostly alterable) risk factors, in control of institutions
-  
-. . . 
-  
+-   Status or individual characteristics, mostly unmodifiable
+-   (Mostly alterable) risk factors, in control of institutions
+
+. . .
+
 Somewhat related: "pull out" vs "push out"
 
-. . . 
+. . .
 
-- Lifecourse and disruptive events
-- Family, neighborhood, and student factors
-- School experiences 
-  - teacher- and peer-victimization
-  - exclusionary discipline
-  
+-   Lifecourse and disruptive events
+-   Family, neighborhood, and student factors
+-   School experiences
+    -   teacher- and peer-victimization
+    -   exclusionary discipline
+
 . . .
 
 **Are we getting prediction when we want causation?**
@@ -142,27 +135,47 @@ Experimental and quasi-experimental evaluation of policies and interventions mod
 
 . . .
 
-* High school interventions
+-   High school interventions
 
-* Higher education interventions
+-   Higher education interventions
 
 Traditionally, emphasis on *information*:
 
-. . . 
+. . .
 
-* Information only: small and inconsistent effects
+-   Information only: small and inconsistent effects
 
-* Information + counseling: better
+-   Information + counseling: better
 
 . . .
 
-* Financial aid: even better
+-   Financial aid: even better
 
-. . . 
+. . .
 
-* Certainty of funding to rule them all ( Burland et al., 2023, Dynarski et al., 2021)
+-   Certainty of funding to rule them all ( Burland et al., 2023, Dynarski et al., 2021)
 
 # What about anticipatory effects?
+
+## Research on anticipatory effects of higher education funding
+
+<br>
+
+Both status attainment and rational choice models would predict that students' behavior might change in anticipation to future transitions:
+
++ Shock of expectations
++ Shock of funding and costs
+
+But there is little research actually testing this idea. Some examples:
+
++ Cowan (2011): lowering college costs is associated with less risky sexual and drinking behavior in secondary students
+
++ Venkataramani et al. (2019): bans of affirmative action increased risky behaviors among affected adolescents
+
++ Koohi (2017): lowering costs of college for undocumented students decreased dropout rates and teen pregnancy
+
++ Cáceres-Delpiano et al. (2018): access to credit decreased dropout and increased expectations in Chile
+
 
 # Institutional context: Chilean education system
 
@@ -170,36 +183,36 @@ Traditionally, emphasis on *information*:
 
 <br> Organization and funding designed during the military dictatorship (1973-1990), reformed during the 90s:
 
-. . . 
+. . .
 
-- Highly segregated in a three-tier system
+-   Highly segregated in a three-tier system
 
-  - Ownership: private, subsidized, public
-  - Track: academic, vocational, mixed
-  
-. . . 
+    -   Ownership: private, subsidized, public
+    -   Track: academic, vocational, mixed
 
--  Funded by quasi-voucher
+. . .
 
-  - Depends on attendance
-  - Modified in 2008, preferential subsidy
+-   Funded by quasi-voucher
+
+-   Depends on attendance
+
+-   Modified in 2008, preferential subsidy
 
 ## Secondary education
 
 ### Student dropout
 
-<br>
-Still an important issue in Latin America
+<br> Still an important issue in Latin America
 
 . . .
 
-- In Chile, primary school graduation almost universal for three decades
+-   In Chile, primary school graduation almost universal for three decades
 
-- In secondary education, still important:
+-   In secondary education, still important:
 
-  - Especially from 8th to 9th grade
-  - Socioeconomic and gender disparities remain
-  
+    -   Especially from 8th to 9th grade
+    -   Socioeconomic and gender disparities remain
+
 . . .
 
 *Huge* but *temporary* spike due to student mobilization in 2011
@@ -208,32 +221,35 @@ Still an important issue in Latin America
 
 <br> Organization and funding designed during the military dictatorship (1973-1990), reformed during the 90s:
 
-- Self financing institutions (tuition)
-- Competition for public funding (AFD and AFI)
-- Mostly private enrollment
-- Struggle to regulate for-profit and quality
+-   Self financing institutions (tuition)
+-   Competition for public funding (AFD and AFI)
+-   Mostly private enrollment
+-   Struggle to regulate for-profit and quality
 
 . . .
 
 "Massification based on privatization and heterogenisation" (Quaresma and Villalobos, 2022)
 
 ## Tertiary education
+
 ### Public vs private spending (2011)
 
 ![](img/HigherEducationFunding_2011_OECD.png){fig-align="center" width="50%"}
 
-
 ## Tertiary education
+
 ### Student mobilization
 
 ![](img/mov-stu-2011.jpeg){fig-align="center" width="50%"}
 
 ## Tertiary education
+
 ### Student mobilization
 
 ![](img/publica_gratuidad_calidad.jpg){fig-align="center" width="50%"}
 
 ## Tertiary education
+
 ### Tuition-free college
 
 <br>
@@ -242,95 +258,87 @@ Mobilization was instrumental to building a new coalition of old and new parties
 
 . . .
 
-In 2013, student leaders elected for the parliament 
+In 2013, student leaders elected for the parliament
 
 In 2014, the socialist Michelle Bachelet won her (second) presidential election with 62% of votes
 
-- Reforms and tuition-free college in the campaign
+-   Reforms and tuition-free college in the campaign
 
-- Tuition-free college announced (*almost* by surprise) on 2015
+-   Tuition-free college announced (*almost* by surprise) on 2015
 
 ## Tertiary education
+
 ### Tuition-free college
 
-<br>
-Bachelet speech (21st May, 2015)
+<br> Bachelet speech (21st May, 2015)
 
->“The main goal we have established for ourselves in relation to higher education is achieving quality and tuition-free education for everyone. (. . . ) many times scholarships are not enough to cover all fees, so the most vulnerable students and the middle class have to take on excessive debt to pay for the difference. This is why, moving towards our commitment of having tuition-free higher education for the 70% most vulnerable students at the end of my presidential period, starting in 2016 we will guarantee for the most vulnerable 60% of students enrolled in technical education, accredited and non-for-profit professional schools, or traditioinal universities, to have complete and effective tuition-free education, without scholarships or loans”
-
+> "The main goal we have established for ourselves in relation to higher education is achieving quality and tuition-free education for everyone. (. . . ) many times scholarships are not enough to cover all fees, so the most vulnerable students and the middle class have to take on excessive debt to pay for the difference. This is why, moving towards our commitment of having tuition-free higher education for the 70% most vulnerable students at the end of my presidential period, starting in 2016 we will guarantee for the most vulnerable 60% of students enrolled in technical education, accredited and non-for-profit professional schools, or traditioinal universities, to have complete and effective tuition-free education, without scholarships or loans"
 
 ## Tertiary education
+
 ### Tuition-free college
 
 ![](img/GoogleTrends_GratuidadBecas.png){fig-align="center" width="50%"}
 
 ## Tertiary education
+
 ### Tuition-free college
 
 <br>
 
 The policy started in 2016:
 
-  - 30 institutions
-  - Public and non-profit
-  - Students in the lowest 50% of income
-  
+-   30 institutions
+-   Public and non-profit
+-   Students in the lowest 50% of income
+
 . . .
 
-Following year: 
+Following year:
 
-  - more institutions, especially technical
-  - expansion to 60% lowest income
-
+-   more institutions, especially technical
+-   expansion to 60% lowest income
 
 ## Tertiary education
+
 ### Public vs private spending (2019)
 
 ![](img/HigherEducationFunding_2019_OECD.png){fig-align="center" width="50%"}
-
-
 
 # Data and Methods
 
 ## Data and variables
 
-<br>
-Administrative data from the Chilean Ministry of Education open access initiative
+<br> Administrative data from the Chilean Ministry of Education open access initiative
 
-- Enrollment data (April)
-- Promotion data (December)
-- Years 2009-2020
-- Students in the regular system
+-   Enrollment data (April)
+-   Promotion data (December)
+-   Years 2009-2020
+-   Students in the regular system
 
 . . .
 
 **Variables**
 
-- Treatment: exposure to tuition-free college (pre/post 2016)
+-   Treatment: exposure to tuition-free college (pre/post 2016)
 
-- Primary outcome: student dropout
+-   Primary outcome: student dropout
 
-- Secondary outcomes: student grade retention, school abandonment, track choice
+-   Secondary outcomes: student grade retention, school abandonment, track choice
 
-- Subgroup: registry sex, region, grade, school track and ownership
-
+-   Subgroup: registry sex, region, grade, school track and ownership
 
 ## Identification
-
 
 ![](img/DAG_obs.png){fig-align="center" width="40%"}
 
-
 ## Identification
 
-
-![Target](img/DAG_target.png){#fig-target fig-align="left" width="49%"}
-![Testing](img/DAG_test.png){#fig-test fig-align="right" width="49%"}
-
+![Target](img/DAG_target.png){#fig-target fig-align="left" width="49%"} ![Testing](img/DAG_test.png){#fig-test fig-align="right" width="49%"}
 
 ## Estimation
 
-. . . 
+. . .
 
 <br>
 
@@ -344,9 +352,7 @@ Yearly dummies for time dynamics
 
 . . .
 
-
-<br>
-**With comparison group**
+<br> **With comparison group**
 
 . . .
 
@@ -358,7 +364,7 @@ Trajectory balancing
 
 ## Segmented regression
 
-::: {layout-nrow=2}
+::: {layout-nrow="2"}
 ![Dropout](img/dropout_overall_segmented){fig-align="left" width="80%"}
 
 ![Retention](img/retention_overall_segmented){fig-align="left" width="80%"}
@@ -372,18 +378,20 @@ Trajectory balancing
 
 ![](img/dropout_overall.png){fig-align="left" width="60%"}
 
-
 ## Subsample analysis
+
 ### Registry sex
 
 ![](img/dropout_sex.png){fig-align="left" width="60%"}
 
 ## Subsample analysis
+
 ### School track
 
 ![](img/dropout_track.png){fig-align="left" width="60%"}
 
 ## Subsample analysis
+
 ### School ownership
 
 ![](img/dropout_ownership.png){fig-align="left" width="80%"}
@@ -404,14 +412,11 @@ Trajectory balancing
 
 ![](img/dropout_mbal_ATT.png){fig-align="left" width="80%"}
 
-
 ## Conclusions
 
+<br> The introduction of tuition-free college in 2016 seems to have benefited high school students, lowering their dropout rates:
 
-<br>
-The introduction of tuition-free college in 2016 seems to have benefited high school students, lowering their dropout rates:
-
-- As expected, the effect is more pronounced for the most disadvantaged students
+-   As expected, the effect is more pronounced for the most disadvantaged students
 
 . . .
 
@@ -421,12 +426,11 @@ In other outcomes (retention/promotion, school abandonment, track choice) there 
 
 The results highlight the importance of focusing on *broader* impacts of education funding policies, affecting our equity considerations:
 
-- Policies themselves can modify their *at risk* population
+-   Policies themselves can modify their *at risk* population
 
-. . . 
+. . .
 
 Future research should address the trajectories of the *induced* students, beyond high school
-
 
 # Thank you!
 
