@@ -1,8 +1,9 @@
 ---
-title: "Secondary effects of tuition-free college on high school trajectories: Evidence from a Chilean reform"
-subtitle: "Workshop on Inequality and Stratification Research, PUC"
-author: "Pablo Geraldo (pdgeraldo@g.ucla.edu)"
-date: "06/06/2023"
+title: "*Secondary effects* of tuition-free college on high school trajectories: Evidence from a Chilean reform"
+
+subtitle: "Nuffield College Sociology Seminar"
+author: "Pablo Geraldo Bastías"
+date: "09/11/2023"
 format: 
   revealjs:
     theme: simple
@@ -12,28 +13,6 @@ format:
     slide-number: true
 editor: visual
 ---
-
-## A little bit about my research
-
-. . .
-
-<br> Social and educational stratification, causal inference and quantitative methods <br>
-
-. . .
-
-<br>
-
-### Dissertation
-
-<br>
-
-. . .
-
--   **Chapter 1**: Moving beyond templates of empirical research
-
--   **Chapter 2**: Tracking before tracking? Effects of vocational high schools on students performance and expectations
-
--   [**Chapter 3**: Secondary effects of tuition-free college in Chile on students' trajectories]{.fragment .highlight-blue}
 
 # Motivation
 
@@ -163,19 +142,18 @@ Traditionally, emphasis on *information*:
 
 Both status attainment and rational choice models would predict that students' behavior might change in anticipation to future transitions:
 
-+ Shock of expectations
-+ Shock of funding and costs
+-   Shock of expectations
+-   Shock of funding and costs
 
 But there is little research actually testing this idea. Some examples:
 
-+ Cowan (2011): lowering college costs is associated with less risky sexual and drinking behavior in secondary students
+-   Cowan (2011): lowering college costs is associated with less risky sexual and drinking behavior in secondary students
 
-+ Venkataramani et al. (2019): bans of affirmative action increased risky behaviors among affected adolescents
+-   Venkataramani et al. (2019): bans of affirmative action increased risky behaviors among affected adolescents
 
-+ Koohi (2017): lowering costs of college for undocumented students decreased dropout rates and teen pregnancy
+-   Koohi (2017): lowering costs of college for undocumented students decreased dropout rates and teen pregnancy
 
-+ Cáceres-Delpiano et al. (2018): access to credit decreased dropout and increased expectations in Chile
-
+-   Cáceres-Delpiano et al. (2018): access to credit decreased dropout and increased expectations in Chile
 
 # Institutional context: Chilean education system
 
