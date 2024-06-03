@@ -1,20 +1,29 @@
 ---
-title: "*Secondary effects* of tuition-free college on high school trajectories: Evidence from a Chilean reform"
-
-subtitle: "Nuffield College Sociology Seminar"
+title: "Effects if the tuition-free college policy in Chile on high school students' outcomes"
+subtitle: "(Inequality and Policy research - DSPI)"
 author: "Pablo Geraldo Bastías"
-date: "09/11/2023"
+logo: "https://fundit.fr/sites/default/files/styles/max_650x650/public/institutions/capture-decran-2023-07-07-162216.png?itok=1CkwlJEu"
+include-in-header:
+  - text: |
+      <style>
+      .reveal .slide-logo {
+        max-height: unset;
+        height: 100px;
+      }
+      </style>
+date: 06/03/2024
+date-format: long
 format: 
   revealjs:
     theme: simple
     width: 1600
     height: 900
     transition: slide
-    slide-number: true
-editor: visual
+    slide-number: c/t
+callout-appearance: minimal
 ---
 
-# Motivation
+# Motivation {background-color="#00a191"}
 
 ## Higher education funding is a contentious matter
 
@@ -37,7 +46,7 @@ editor: visual
 -   Tradeoffs between funding higher education versus other levels
 -   Who benefits *more* from college?
 
-## Why *secondary effects*?
+## Who benefits from college funding expansion?
 
 <br>
 
@@ -51,17 +60,15 @@ College funding policies usually intended to benefit college students
 
 . . .
 
--   One of those potentially affected groups is *secondary students*
+-   One of those potentially affected groups is *high school students*
 
 . . .
 
--   One outcome in particular, are their decisions of continuing schooling or not (*secondary effects* of social origin in some stratification research)
+-   In particular, are their decisions of continuing schooling or not affected by funding availability for *future* educational transitions?
 
-# Inequalities in educational trajectories
+# Inequalities in educational trajectories {background-color="#00a191"}
 
 ## Status attainment, rational choice, and beyond
-
-<br>
 
 Two classic approaches to study inequality in students' trajectories:
 
@@ -75,11 +82,12 @@ Both would predict adaptation on students' decisions in response to:
 
 . . .
 
-Mare (2006) call for transition models to move beyond:
+:::{.callout-note}
+## Mare (2006) call for transition models to move beyond:
+"approaches in which educational stratification results from information processing and rational calculation by atomized families and individuals", focusing instead on "a broader set of concerns about the multiple interdependent decision makers at various institutional levels who may be responsible for levels and variations in educational attainment"
+:::
 
-. . .
 
-> "approaches in which educational stratification results from information processing and rational calculation by atomized families and individuals", focusing instead on "a broader set of concerns about the multiple interdependent decision makers at various institutional levels who may be responsible for levels and variations in educational attainment"
 
 ## Predicting student persistence
 
@@ -134,18 +142,17 @@ Traditionally, emphasis on *information*:
 
 -   Certainty of funding to rule them all ( Burland et al., 2023, Dynarski et al., 2021)
 
-# What about anticipatory effects?
+# What about anticipatory effects? {background-color="#00a191"}
 
-## Research on anticipatory effects of higher education funding
-
-<br>
+## Anticipatory effects of higher education funding
 
 Both status attainment and rational choice models would predict that students' behavior might change in anticipation to future transitions:
 
 -   Shock of expectations
 -   Shock of funding and costs
 
-But there is little research actually testing this idea. Some examples:
+:::{.callout-note}
+## Surprisingly little research actually testing this idea. Some examples:
 
 -   Cowan (2011): lowering college costs is associated with less risky sexual and drinking behavior in secondary students
 
@@ -154,10 +161,12 @@ But there is little research actually testing this idea. Some examples:
 -   Koohi (2017): lowering costs of college for undocumented students decreased dropout rates and teen pregnancy
 
 -   Cáceres-Delpiano et al. (2018): access to credit decreased dropout and increased expectations in Chile
+:::
 
-# Institutional context: Chilean education system
 
-## Secondary education
+# Institutional context: Chilean education system {background-color="#00a191"}
+
+## Secondary education: Setting
 
 <br> Organization and funding designed during the military dictatorship (1973-1990), reformed during the 90s:
 
@@ -176,11 +185,9 @@ But there is little research actually testing this idea. Some examples:
 
 -   Modified in 2008, preferential subsidy
 
-## Secondary education
+## Secondary education: Outcomes
 
-### Student dropout
-
-<br> Still an important issue in Latin America
+High school dropout still an important issue in Latin America
 
 . . .
 
@@ -195,7 +202,7 @@ But there is little research actually testing this idea. Some examples:
 
 *Huge* but *temporary* spike due to student mobilization in 2011
 
-## Tertiary education
+## Tertiary education: Setting
 
 <br> Organization and funding designed during the military dictatorship (1973-1990), reformed during the 90s:
 
@@ -226,9 +233,8 @@ But there is little research actually testing this idea. Some examples:
 
 ![](img/publica_gratuidad_calidad.jpg){fig-align="center" width="50%"}
 
-## Tertiary education
+## Tertiary education: Tuition-free college
 
-### Tuition-free college
 
 <br>
 
@@ -256,11 +262,15 @@ In 2014, the socialist Michelle Bachelet won her (second) presidential election 
 
 ### Tuition-free college
 
-![](img/GoogleTrends_GratuidadBecas.png){fig-align="center" width="50%"}
+![](img/GoogleTrends_GratuidadBecas.png){fig-align="center" width="90%"}
 
-## Tertiary education
+:::aside
+Red line: search for scholarships and fellowships ("becas")
 
-### Tuition-free college
+Blue line: search for tuition-free college ("gratuidad")
+:::
+
+## Tertiary education: Tuition-free college
 
 <br>
 
@@ -283,7 +293,7 @@ Following year:
 
 ![](img/HigherEducationFunding_2019_OECD.png){fig-align="center" width="50%"}
 
-# Data and Methods
+# Data and Methods {background-color="#00a191"}
 
 ## Data and variables
 
@@ -308,7 +318,7 @@ Following year:
 
 ## Identification
 
-![](img/DAG_obs.png){fig-align="center" width="40%"}
+![](img/DAG_obs.png){fig-align="center" width="30%"}
 
 ## Identification
 
@@ -338,7 +348,7 @@ Difference-in-differences
 
 Trajectory balancing
 
-# Tuition-free college and students' trajectories
+# Main results {background-color="#00a191"}
 
 ## Segmented regression
 
@@ -410,6 +420,6 @@ The results highlight the importance of focusing on *broader* impacts of educati
 
 Future research should address the trajectories of the *induced* students, beyond high school
 
-# Thank you!
+# Thank you! {background-color="#00a191"}
 
 Questions, comments? You can find me at pablo.geraldo\@nuffield.ox.ac.uk
