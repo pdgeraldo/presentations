@@ -353,4 +353,4 @@ Possible ways to deal with these shortcomings:
 
 # Thank you!
 
-Questions, comments? You can find me at pdgeraldo@ucla.edu
+Questions, comments? You can find me at pdgeraldo\@ucla.edu

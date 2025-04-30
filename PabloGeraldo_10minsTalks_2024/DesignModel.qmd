@@ -1,0 +1,251 @@
+---
+title: "Design-based and model-based survey research (and a bit beyond)"
+author: "Pablo Geraldo Bastías"
+logo: "https://fundit.fr/sites/default/files/styles/max_650x650/public/institutions/capture-decran-2023-07-07-162216.png?itok=1CkwlJEu"
+include-in-header:
+  - text: |
+      <style>
+      .reveal .slide-logo {
+        max-height: unset;
+        height: 80px;
+      }
+      </style>
+footer: "Design-based and model-based inference"
+date: 04/30/2025
+date-format: long
+format: 
+  revealjs:
+    theme: simple
+    width: 1600
+    height: 900
+    transition: slide
+    slide-number: c/t
+    chalkboard: true
+    auto-stretch: false
+callout-appearance: minimal
+---
+
+## Design-based vs model-based frameworks
+
+[Design-based]{style="color:blue;"} and [model-based]{style="color:green;"} inferences are alternative conceptual frameworks for addressing statistical questions for many types of investigations:
+
+. . .
+
+* Surveys and sampling
+
+. . .
+
+* Experimental allocation of treatments
+
+. . .
+
+* Observational studies
+
+## Design-based vs model-based frameworks
+###
+
+:::{.r-stack}
+
+![](img/design-based.png){.fragment fig-align="center" width="80%"}
+
+![](img/model-based.png){.fragment fig-align="center" width="80%"}
+
+:::
+
+
+## Design-based vs model-based frameworks
+
+::: {.columns}
+
+::: {.column width="50%"}
+
+### [Design-based analysis]{style="color:blue;"}
+***(What we can control, we should control!)***
+
+* Only assumption is random selection of units (treatment, sample) in the study
+design [(plus perfect implementation of the design!)]{.fragment .highlight-red}
+
+* We use the fact that the only thing we can control is the design of our study
+
+* Strong internal validity and controlled error probability
+
+:::
+
+
+::: {.column width="50%"}
+
+### [Model-based analysis]{style="color:green;"}
+***(What we cannot control, we should model!)***
+
+* Requires assumptions external to the study design
+
+* Posits probability distributions and a data-generating process (DGP)
+
+* Validity of the claim is model dependent (remember George Box!)
+
+:::
+
+:::
+
+
+:::aside
+Based on Erin Hartman's "Research Design, Sampling, Analysis" notes
+:::
+
+
+
+
+## When use one of another?
+
+<br>
+
+Traditionally, the distinction between design-based and model-based analysis in surveys has been motivated by different [levels of control and knowledge]{.fragment .highlight-red} that researchers have over the data collection process.
+
+The distinction also depends on what [sources of uncertainty]{.fragment .highlight-red} we want to account for when conducting inference!
+
+. . .
+
+::: {.callout-important}
+# Be aware!
+
+Design-based does not necessarily imply model-free. 
+
+Model-based does not necessarily imply design-lacking.
+
+We should aim for model-aware and design-aware inferences!
+
+:::
+
+## Design-based vs model-based frameworks
+### (A more complicated picture)
+
+:::{.r-stack}
+
+![](img/model-based-2.png){.fragment fig-align="center" width="80%"}
+
+![](img/model-based-3.png){.fragment fig-align="center" width="80%"}
+
+:::
+
+
+## Beyond ideal types
+
+In practice, and increasingly, design-based considerations are necessary but not sufficient to deal with complex data collection scenarios and informative attrition and non-response. 
+
+* Principle 1: If you can, use your understanding in the design stage
+
+* Principle 2: When implementation departs from design, model how so! 
+
+* Principle 3a: If you don't control the design, be explicit about your model
+
+* Principle 3b: If you know about the design, bring that into your model
+
+
+
+# Thank you! {background-color="#00a191"}
+
+## Comparison: population mean
+
+::: {.columns}
+
+::: {.column width="50%"}
+
+### Design-based
+
+* Population: $X_1,X_2, \dots, X_N$, with large and finite N
+
+* Sample indicator $Z_i \in \{0,1\} \forall i$, with
+
+$$\sum_{i=1}^N Z_i = n$$
+
+$$P(Z_i=1) = \frac{n}{N}$$
+
+:::
+
+::: {.column width="50%"}
+
+### Model-based
+
+* Infinite populated characterized by a probability model
+
+* Model can be parametric ($\cal{F}_{\theta}$) or non-parametric ($\cal{F}$)
+
+* A collection of units of size $n: X_1, X_2, \dots, X_n$
+
+* $X_i$ is $i.i.d$ from $\cal{F}$
+
+:::
+
+:::
+
+
+
+## Comparison: population mean
+
+::: {.columns}
+
+::: {.column width="50%"}
+
+### Design-based
+
+Our target is:
+
+$$
+\bar{X} = \frac{1}{N} \sum_{i=1}^N X_i
+$$
+
+:::
+
+::: {.column width="50%"}
+
+### Model-based
+
+Our target is:
+
+$$
+\mu = E[X_i]
+$$
+
+:::
+
+:::
+
+
+
+
+## Comparison: population mean
+
+::: {.columns}
+
+::: {.column width="50%"}
+
+### Design-based
+
+What we can measure is:
+
+$$
+\bar{x} = \frac{1}{n} \sum_{i=1}^N Z_i X_i
+$$
+
+* What is random in here?
+
+:::
+
+::: {.column width="50%"}
+
+### Model-based
+
+What we can measure is
+
+$$
+\hat{\mu} = \frac{1}{n} \sum_{i=1}^n X_i
+$$
+
+* What is random in here?
+
+:::
+
+:::
+
+
+

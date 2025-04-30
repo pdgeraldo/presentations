@@ -1,0 +1,126 @@
+---
+title: "Research overview and furure plans"
+author: "Pablo Geraldo Bastías"
+logo: "https://fundit.fr/sites/default/files/styles/max_650x650/public/institutions/capture-decran-2023-07-07-162216.png?itok=1CkwlJEu"
+include-in-header:
+  - text: |
+      <style>
+      .reveal .slide-logo {
+        max-height: unset;
+        height: 80px;
+      }
+      </style>
+footer: "Research overview"
+date: 04/30/2025
+date-format: long
+format: 
+  revealjs:
+    theme: simple
+    width: 1600
+    height: 900
+    transition: slide
+    slide-number: c/t
+    chalkboard: true
+    auto-stretch: false
+callout-appearance: minimal
+---
+
+# A little bit about my research
+
+## 
+
+I am a social scientist working across disciplines to understand social stratification and inequality, with a focus on the unintended consequences of institutional design and policy reforms.
+
+Methodologically, my expertise relates to causal inference with observational and (quasi-) experimental data, including flexible estimation using machine learning methods. 
+
+. . .
+
+-   **Academic background**
+    -   Formally: PhD in Sociology and MS in Statistics (UCLA)
+    -   Informally: Collaborations and training across Sociology, PoliSci, Statistics, Epidemiology, Anthropology, Complexity Science, and adding... 
+
+. . .
+
+-   **Affiliations**
+    -   Leverhulme Centre for Demographic Science (Oxford)
+    -   Practical Causal Inference Lab (UCLA)
+    -   Social Data Science Lab (UCLA)
+
+
+
+# Future plans {background-color="#00a191"}
+
+##
+
+My future research covers three main areas:
+
+* **Social stratification and inequality**
+
+  - Mostly education and labor markets
+  - Tuition-free policy: other outcomes, cohort follow-up, other contexts
+  
+* **Quantitative methods**
+
+  - Causal inference beyond toy models
+  - (Why not) prediction using LLMs
+  
+* **Conceptual clarification**
+
+  - Microsimulation: from ABMs to MARL to LLM agents
+  - What is wrong with social genomics
+  - Human vs machine variability and representations
+  
+  
+## Social stratification and inequality
+
+International collaboration with scholars in PUC-Chile
+
+Focus: unintended consequences of policy reforms and institutional designs
+
+Next steps: applying for funding from Chilean institutions
+
+![](img/dropout_overall.png){fig-align="center" width="80%"}
+
+
+## Quantitative methods
+
+International collaboration with scholars from UCLA and Oxford
+
+Focus: developing methods for credible causal inference in complex scenarios
+
+Next steps: Grant applications for causal inference and population dynamics
+
+:::{.r-stack}
+
+![](img/dag_pps.png){.fragment fig-align="center" width="80%"}
+
+![](img/dag_pps2.png){.fragment fig-align="center" width="80%"}
+
+![](img/pps_imbalance.png){.fragment fig-align="center" width="60%"}
+
+![](img/pps_bias.png){.fragment fig-align="center" width="60%"}
+:::
+
+
+## Conceptual clarification
+
+International collaboration with Oxford, SFI, and Purdue
+
+
+This is a bit of a side quest, but (maybe) the most relevant
+
+* Going back to fundamental assumptions in a non-procedural way
+
+* Response to hyped research areas and asking for clarification
+
+
+I would appreciate leads on how to get this funded! Otherwise, it is still a personal project that I am pursuing with like-minded colleagues from across institutions.
+
+
+# Thank you! {background-color="#00a191"}
+
+Questions? Comments? pablo.geraldo@nuffield.ox.ac.uk
+
+
+
+
