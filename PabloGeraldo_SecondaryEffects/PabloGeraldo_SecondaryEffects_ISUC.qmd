@@ -425,21 +425,85 @@ Pearl and Mackenzie (2018)
 
 ## The issue
 
+* Non-existing outcomes (Lundberg and Cho)
+
+![](img/Lundberg_Cho_nonexistent.png){fig-align="center" width="50%"}
+
+## The issue
+
 * Phantom counterfactuals (Slough)
 
 ![](img/PhantomCounterfactuals.png){fig-align="center" width="50%"}
 
 ## Approach 1: Principal Stratification
 
+Define an intermediate variable ($S$), defining the outcome existence. This variable is itself a *potential outcome*: $S_d \in \{0,1\}$ defines the existence (1) or not (0) of the outcome under treatment $d$. 
+
+It can be taken as an outcome itself, and defining the *latent* subgroup of interest (aka *Survivor* causal effect)
+
+
+![](img/Lundberg_Cho_PSestimand.png){fig-align="center" width="40%"}
+
+:::{.aside}
+From Lundberg and Cho (2025)
+:::
+
+* Used in the modern IV framework to target the *compliers*
+
+* Can be identified under conditional exchangeability, monotonicity, or mean dominance
+
 ## Principal Stratification vs Heckman Selection
 
-## Approach 2: Treatment Reactive Effects
+![](img/Lundberg_Cho_PSvsHeckman.png){fig-align="center" width="60%"}
+
+:::{.aside}
+From Lundberg and Cho (2025)
+:::
+
+## Approach 2: Treatment Reactive Effects (TRACE)
+
+![](img/Hazlett_TRACE_estimand.png){fig-align="center" width="60%"}
+
+
+
+* Related to "dilluted" effects in the ITT setting
+
+:::{.aside}
+From Hazlett, McMurry and Shinkre (2025)
+:::
+
+
+
+## Approach 2: Treatment Reactive Effects (TRACE)
+
+![](img/Hazlett_TRACE_table.png){fig-align="center" width="50%"}
+
+:::{.aside}
+From Hazlett, McMurry and Shinkre (2025)
+:::
 
 ## Approach 3: Counterfactual Strata
 
+Study interventions that affect the outcome simultaneously through increasing reach (for example, testing or screening), but with outcomes measured only among the reached
+
+Crucially, both the outcome and the target population are subject to missingness! 
+
+
+![](img/Nakato_DAG.png){fig-align="center" width="45%"}
+
+:::{.aside}
+From Nakato et al. (2025)
+:::
+
 ## Why are existing frameworks problematic?
 
-## What to do?
+* Individual-first vs population-first approaches to causal inference (aggregation issues)
+
+* Not precise about intervention vs counterfactual effects
+
+* Require cross-world independence assumptions (like to natural mediation)
+
+* Overlook model-specification issues (see Heckman selection example)
 
 
 # Thank you! {background-color="#00a191"}

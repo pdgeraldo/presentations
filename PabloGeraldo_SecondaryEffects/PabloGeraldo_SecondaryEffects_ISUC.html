@@ -791,27 +791,91 @@ ATE = E[\tau_i] = E[Y_{1i} - Y_{0i}]\]</span> <span class="math display">\[= E[Y
 <section id="the-issue" class="slide level2">
 <h2>The issue</h2>
 <ul>
+<li>Non-existing outcomes (Lundberg and Cho)</li>
+</ul>
+
+<img data-src="img/Lundberg_Cho_nonexistent.png" class="quarto-figure quarto-figure-center r-stretch" style="width:50.0%"></section>
+<section id="the-issue-1" class="slide level2">
+<h2>The issue</h2>
+<ul>
 <li>Phantom counterfactuals (Slough)</li>
 </ul>
 
 <img data-src="img/PhantomCounterfactuals.png" class="quarto-figure quarto-figure-center r-stretch" style="width:50.0%"></section>
 <section id="approach-1-principal-stratification" class="slide level2">
 <h2>Approach 1: Principal Stratification</h2>
-</section>
+<p>Define an intermediate variable (<span class="math inline">\(S\)</span>), defining the outcome existence. This variable is itself a <em>potential outcome</em>: <span class="math inline">\(S_d \in \{0,1\}\)</span> defines the existence (1) or not (0) of the outcome under treatment <span class="math inline">\(d\)</span>.</p>
+<p>It can be taken as an outcome itself, and defining the <em>latent</em> subgroup of interest (aka <em>Survivor</em> causal effect)</p>
+<div class="quarto-figure quarto-figure-center">
+<figure>
+<p><img data-src="img/Lundberg_Cho_PSestimand.png" class="quarto-figure quarto-figure-center" style="width:40.0%"></p>
+</figure>
+</div>
+
+<ul>
+<li><p>Used in the modern IV framework to target the <em>compliers</em></p></li>
+<li><p>Can be identified under conditional exchangeability, monotonicity, or mean dominance</p></li>
+</ul>
+<aside><div>
+<p>From Lundberg and Cho (2025)</p>
+</div></aside></section>
 <section id="principal-stratification-vs-heckman-selection" class="slide level2">
 <h2>Principal Stratification vs Heckman Selection</h2>
-</section>
-<section id="approach-2-treatment-reactive-effects" class="slide level2">
-<h2>Approach 2: Treatment Reactive Effects</h2>
-</section>
+<div class="quarto-figure quarto-figure-center">
+<figure>
+<p><img data-src="img/Lundberg_Cho_PSvsHeckman.png" class="quarto-figure quarto-figure-center" style="width:60.0%"></p>
+</figure>
+</div>
+
+<aside><div>
+<p>From Lundberg and Cho (2025)</p>
+</div></aside></section>
+<section id="approach-2-treatment-reactive-effects-trace" class="slide level2">
+<h2>Approach 2: Treatment Reactive Effects (TRACE)</h2>
+<div class="quarto-figure quarto-figure-center">
+<figure>
+<p><img data-src="img/Hazlett_TRACE_estimand.png" class="quarto-figure quarto-figure-center" style="width:60.0%"></p>
+</figure>
+</div>
+<ul>
+<li>Related to “dilluted” effects in the ITT setting</li>
+</ul>
+
+<aside><div>
+<p>From Hazlett, McMurry and Shinkre (2025)</p>
+</div></aside></section>
+<section id="approach-2-treatment-reactive-effects-trace-1" class="slide level2">
+<h2>Approach 2: Treatment Reactive Effects (TRACE)</h2>
+<div class="quarto-figure quarto-figure-center">
+<figure>
+<p><img data-src="img/Hazlett_TRACE_table.png" class="quarto-figure quarto-figure-center" style="width:50.0%"></p>
+</figure>
+</div>
+
+<aside><div>
+<p>From Hazlett, McMurry and Shinkre (2025)</p>
+</div></aside></section>
 <section id="approach-3-counterfactual-strata" class="slide level2">
 <h2>Approach 3: Counterfactual Strata</h2>
-</section>
+<p>Study interventions that affect the outcome simultaneously through increasing reach (for example, testing or screening), but with outcomes measured only among the reached</p>
+<p>Crucially, both the outcome and the target population are subject to missingness!</p>
+<div class="quarto-figure quarto-figure-center">
+<figure>
+<p><img data-src="img/Nakato_DAG.png" class="quarto-figure quarto-figure-center" style="width:45.0%"></p>
+</figure>
+</div>
+
+<aside><div>
+<p>From Nakato et al.&nbsp;(2025)</p>
+</div></aside></section>
 <section id="why-are-existing-frameworks-problematic" class="slide level2">
 <h2>Why are existing frameworks problematic?</h2>
-</section>
-<section id="what-to-do" class="slide level2">
-<h2>What to do?</h2>
+<ul>
+<li><p>Individual-first vs population-first approaches to causal inference (aggregation issues)</p></li>
+<li><p>Not precise about intervention vs counterfactual effects</p></li>
+<li><p>Require cross-world independence assumptions (like to natural mediation)</p></li>
+<li><p>Overlook model-specification issues (see Heckman selection example)</p></li>
+</ul>
 </section></section>
 <section id="thank-you" class="title-slide slide level1 center" data-background-color="#00a191">
 <h1>Thank you!</h1>
