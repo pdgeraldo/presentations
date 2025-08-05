@@ -411,18 +411,6 @@ Pearl and Mackenzie (2018)
 :::
 
 
-
-## Back to tuition-free College
-
-![](img/DAG_obs.png){fig-align="center" width="30%"}
-
-
-## Identification
-
-![Target](img/DAG_target.png){#fig-target fig-align="left" width="49%"} ![Testing](img/DAG_test.png){#fig-test fig-align="right" width="49%"}
-
-
-
 ## The issue
 
 * Non-existing outcomes (Lundberg and Cho)
@@ -494,6 +482,21 @@ Crucially, both the outcome and the target population are subject to missingness
 :::{.aside}
 From Nakato et al. (2025)
 :::
+
+
+
+
+## Back to tuition-free College
+
+![](img/DAG_obs.png){fig-align="center" width="30%"}
+
+
+## Identification
+
+![Target](img/DAG_target.png){#fig-target fig-align="left" width="49%"} ![Testing](img/DAG_test.png){#fig-test fig-align="right" width="49%"}
+
+
+
 
 ## Why are existing frameworks problematic?
 
