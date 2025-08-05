@@ -1,7 +1,6 @@
 ---
-title: "Secondary effects of tuition-free college in high
-school trajectories: Evidence from a Chilean reform"
-subtitle: "ECSR - Barcelona"
+title: "Desafíos de estudiar la gratuidad universitaria desde una perspectiva poblacional"
+subtitle: "Workshop Inequality and Stratification - ISUC"
 author: "Pablo Geraldo Bastías"
 logo: "https://fundit.fr/sites/default/files/styles/max_650x650/public/institutions/capture-decran-2023-07-07-162216.png?itok=1CkwlJEu"
 include-in-header:
@@ -12,7 +11,7 @@ include-in-header:
         height: 100px;
       }
       </style>
-date: 09/12/2024
+date: 08/05/2025
 date-format: long
 format: 
   revealjs:
@@ -23,6 +22,208 @@ format:
     slide-number: c/t
 callout-appearance: minimal
 ---
+
+
+## {background-image="img/mov-stu-2011.jpeg"}
+
+## {background-image="img/publica_gratuidad_calidad.jpg"}
+
+## Tuition-free college reform (2015/2016)
+
+![](img/GoogleTrends_GratuidadBecas.png){fig-align="center" width="60%"}
+
+-   Announced in 2015, implemented 2016
+-   Initially 30 institutions
+-   Public and non-profit
+-   Students in lowest 50% of income
+
+
+Following year: More institutions (technical) and coverage (60% lowest income)
+
+## Public vs private spending (2011) {auto-animate=true}
+
+![](img/HigherEducationFunding_2011_OECD.png){fig-align="center" width="90%"}
+
+## Public vs private spending (2019) {auto-animate=true}
+
+![](img/HigherEducationFunding_2019_OECD.png){fig-align="center" width="90%"}
+
+# Framework {background-color="#00a191"}
+
+\newcommand\indep{\perp\!\!\!\perp}
+\newcommand\nindep{\not\!\perp\!\!\!\perp}
+
+
+
+## Why focus on *secondary students*?
+
+College funding policies usually intended to benefit college students, but
+
+. . .
+
+-   There might be sizable *unintended* effects on other populations
+
+
+-   One of those potentially affected groups is *secondary students*
+
+
+-   Their decisions of continuing schooling or not directly affects *who is at risk* of going to college
+
+. . .
+
+**What do we know about anticipatory effects?**
+
+. . .
+
+- Shock to costs and expectations, may be expected to affect students earlier in their trajectories
+
+- Previous research: expectations, dropout, and risk behaviors
+
+:::{.aside}
+Cowan (2011), Venkataramani et al. (2019), Koohi (2017), Cáceres-Delpiano et al. (2018)
+:::
+
+
+
+## Higher education funding is a contentious matter
+
+<br>
+
+. . .
+
+-   Who has to pay for it?
+-   Increasing costs, diminishing public funding
+-   Skyrocketing student debt, debt relief and forgiveness
+-   Implications for inequality and mobility
+
+. . .
+
+**Are these policies progressive or regressive?**
+
+. . .
+
+-   Who would benefit from expanding college funding? Who is "at risk"?
+-   Trade-offs between funding higher education versus other levels
+-   Who benefits *more* from college?
+
+
+
+## What to expect from funding reforms?
+
+<br>
+
+How to modify students' behaviors?
+
+. . .
+
+Traditionally, emphasis on [information]{.fragment .highlight-red}
+
+
+-   Information only: small and inconsistent effects
+
+
+-   Information + counseling: better
+
+
+-   Financial aid: even better
+
+
+-   [Certainty of funding to rule them all]{.fragment .highlight-red} (Burland et al., 2023, Dynarski et al., 2021)
+
+
+
+
+
+# Data and Methods {background-color="#00a191"}
+
+## Chilean education system
+
+::: {.columns}
+
+::: {.column width="50%"}
+**Secondary education**
+
+*   Highly segregated [three-tier system]{.fragment .highlight-red}
+    -   **Ownership**: private, subsidized, public
+    -   **Track**: academic, vocational, mixed
+
+*   Funded by quasi-voucher (attendance-based but preferential subsidy)
+
+*   Student dropout still important issue
+    -   Especially from 8th to 9th grade
+    -   Socioeconomic and gender disparities remain
+    -   [Huge but temporary spike due to 2011 mobilizations]{.fragment .highlight-blue}
+:::
+
+
+::: {.column width="50%"}
+**Tertiary education**
+
+-   Self-financing institutions (tuition)
+-   Private and public institutions competing for public funding
+-   Mostly private enrollment
+-   Among highest private spending in OECD
+
+["Massification based on privatization and heterogenisation"]{.fragment .highlight-blue} (Quaresma and Villalobos, 2022)
+
+
+:::
+
+:::
+
+
+## Data and variables
+
+<br>
+
+**Administrative data 2009-2020:**
+
+-   Enrollment data (April)
+-   Promotion data (December)
+-   Students in regular system
+
+
+**Key variables:**
+
+-   Treatment: exposure to tuition-free college (pre/post 2016)
+
+-   Primary outcome: student dropout
+
+-   Subgroups: sex, region, grade, school track and ownership
+
+
+## Identification and Estimation
+
+$$
+\underbrace{\color{blue}{E[Y_1|Post=1]}]}_{\text{observed}} - \underbrace{\color{red}{E[Y_0|Post=1]}}_{\text{missing}}
+$$
+
+. . .
+
+
+**Single-group event study (aka pre/post)** 
+
+$$
+E[Y_0|Post=0] \approx E[Y_0|Post=1]
+$$
+
+. . .
+
+**With comparison group**
+
+$$
+E[Y_0|Post=1, Public]-E[Y_0|Post=0, Public] =
+$$
+
+$$
+E[Y_0|Post=1, Private]-E[Y_0|Post=0, Private]
+$$
+
+
+
+
+
+
 
 # Motivation {background-color="#00a191"}
 
@@ -420,3 +621,29 @@ Future research should address the trajectories of the *induced* students, beyon
 # Thank you! {background-color="#00a191"}
 
 Questions, comments? You can find me at pablo.geraldo\@nuffield.ox.ac.uk
+
+
+
+# Dealing with population selection {background-color="#00a191"}
+
+## Causal inference 101 (again!)
+
+
+
+## The issue
+
+* Phantom counterfactuals (Slough)
+
+![](img/PhantomCounterfactuals.png){fig-align="center" width="50%"}
+
+## Approach 1: Principal Stratification
+
+## Principal Stratification vs Heckman Selection
+
+## Approach 2: Treatment Reactive Effects
+
+## Approach 3: Counterfactual Strata
+
+## Why are existing frameworks problematic?
+
+## What to do?
