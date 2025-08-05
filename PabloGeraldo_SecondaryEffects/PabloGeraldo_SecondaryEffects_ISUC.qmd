@@ -23,6 +23,7 @@ format:
 callout-appearance: minimal
 ---
 
+# The case {background-color="#00a191"}
 
 ## {background-image="img/mov-stu-2011.jpeg"}
 
@@ -48,71 +49,44 @@ Following year: More institutions (technical) and coverage (60% lowest income)
 
 ![](img/HigherEducationFunding_2019_OECD.png){fig-align="center" width="90%"}
 
-# Framework {background-color="#00a191"}
+
+
+# Theoretical Framework {background-color="#00a191"}
 
 \newcommand\indep{\perp\!\!\!\perp}
 \newcommand\nindep{\not\!\perp\!\!\!\perp}
 
 
-
-## Why focus on *secondary students*?
-
-College funding policies usually intended to benefit college students, but
-
-. . .
-
--   There might be sizable *unintended* effects on other populations
-
-
--   One of those potentially affected groups is *secondary students*
-
-
--   Their decisions of continuing schooling or not directly affects *who is at risk* of going to college
-
-. . .
-
-**What do we know about anticipatory effects?**
-
-. . .
-
-- Shock to costs and expectations, may be expected to affect students earlier in their trajectories
-
-- Previous research: expectations, dropout, and risk behaviors
-
-:::{.aside}
-Cowan (2011), Venkataramani et al. (2019), Koohi (2017), Cáceres-Delpiano et al. (2018)
-:::
-
-
-
+  
+  
 ## Higher education funding is a contentious matter
-
-<br>
-
-. . .
+  
+  <br>
+  
+  . . .
 
 -   Who has to pay for it?
--   Increasing costs, diminishing public funding
+  -   Increasing costs, diminishing public funding
 -   Skyrocketing student debt, debt relief and forgiveness
 -   Implications for inequality and mobility
 
 . . .
 
 **Are these policies progressive or regressive?**
-
-. . .
+  
+  . . .
 
 -   Who would benefit from expanding college funding? Who is "at risk"?
--   Trade-offs between funding higher education versus other levels
+  -   Trade-offs between funding higher education versus other levels
 -   Who benefits *more* from college?
-
-
-
+  
+  
+  
 ## What to expect from funding reforms?
-
-<br>
-
-How to modify students' behaviors?
+  
+  <br>
+  
+  How to modify students' behaviors?
 
 . . .
 
@@ -133,6 +107,34 @@ Traditionally, emphasis on [information]{.fragment .highlight-red}
 
 
 
+## Why focus on *secondary students*?
+
+College funding policies usually intended to benefit college students, but
+
+. . .
+
+-   There might be sizable *unintended* effects on other populations
+
+
+-   One of those potentially affected groups is *secondary students*
+  
+  
+  -   Their decisions of continuing schooling or not directly affects *who is at risk* of going to college
+
+. . .
+
+**What do we know about anticipatory effects?**
+  
+  . . .
+
+- Shock to costs and expectations, may be expected to affect students earlier in their trajectories
+
+- Previous research: expectations, dropout, and risk behaviors
+
+:::{.aside}
+Cowan (2011), Venkataramani et al. (2019), Koohi (2017), Cáceres-Delpiano et al. (2018)
+:::
+  
 
 # Data and Methods {background-color="#00a191"}
 
@@ -192,7 +194,8 @@ Traditionally, emphasis on [information]{.fragment .highlight-red}
 -   Subgroups: sex, region, grade, school track and ownership
 
 
-## Identification and Estimation
+
+## Identification
 
 $$
 \underbrace{\color{blue}{E[Y_1|Post=1]}]}_{\text{observed}} - \underbrace{\color{red}{E[Y_0|Post=1]}}_{\text{missing}}
@@ -224,307 +227,6 @@ $$
 
 
 
-
-# Motivation {background-color="#00a191"}
-
-## Higher education funding is a contentious matter
-
-<br>
-
-. . .
-
--   Who has to pay for it?
--   Increasing costs, diminishing public funding
--   Skyrocketing student debt, debt relief and forgiveness
--   Implications for inequality and mobility
-
-. . .
-
-**Are these policies progressive or regressive?**
-
-. . .
-
--   Who would benefit from expding college funding? Who is "at risk"?
--   Tradeoffs between funding higher education versus other levels
--   Who benefits *more* from college?
-
-## Who benefits from college funding expansion?
-
-<br>
-
-. . .
-
-College funding policies usually intended to benefit college students
-
-. . .
-
--   But there might be sizable and *unintended* effects on other populations
-
-. . .
-
--   One of those potentially affected groups is *high school students*
-
-. . .
-
--   In particular, are their decisions of continuing schooling or not affected by funding availability for *future* educational transitions?
-
-# Inequalities in educational trajectories {background-color="#00a191"}
-
-## Status attainment, rational choice, and beyond
-
-Two classic approaches to study inequality in students' trajectories:
-
--   Status attainment models (Wisconsin)
--   Rational choice models (Boudon)
-
-Both would predict adaptation on students' decisions in response to:
-
--   Changes in expectations
--   Changes in costs and probability of success
-
-. . .
-
-:::{.callout-note}
-## Mare (2006) call for transition models to move beyond:
-"approaches in which educational stratification results from information processing and rational calculation by atomized families and individuals", focusing instead on "a broader set of concerns about the multiple interdependent decision makers at various institutional levels who may be responsible for levels and variations in educational attainment"
-:::
-
-
-
-## Predicting student persistence
-
-<br>
-
-Researchers in education usually distinguish between:
-
--   Status or individual characteristics, mostly unmodifiable
--   (Mostly alterable) risk factors, in control of institutions
-
-. . .
-
-Somewhat related: "pull out" vs "push out"
-
-. . .
-
--   Lifecourse and disruptive events
--   Family, neighborhood, and student factors
--   School experiences
-    -   teacher- and peer-victimization
-    -   exclusionary discipline
-
-. . .
-
-**Are we getting prediction when we want causation?**
-
-## From risk factors to policy and interventions
-
-<br>
-
-Experimental and quasi-experimental evaluation of policies and interventions modifying student behavior
-
-. . .
-
--   High school interventions
-
--   Higher education interventions
-
-Traditionally, emphasis on *information*:
-
-. . .
-
--   Information only: small and inconsistent effects
-
--   Information + counseling: better
-
-. . .
-
--   Financial aid: even better
-
-. . .
-
--   Certainty of funding to rule them all ( Burland et al., 2023, Dynarski et al., 2021)
-
-# What about anticipatory effects? {background-color="#00a191"}
-
-## Anticipatory effects of higher education funding
-
-Both status attainment and rational choice models would predict that students' behavior might change in anticipation to future transitions:
-
--   Shock of expectations
--   Shock of funding and costs
-
-:::{.callout-note}
-## Surprisingly little research actually testing this idea. Some examples:
-
--   Cowan (2011): lowering college costs is associated with less risky sexual and drinking behavior in secondary students
-
--   Venkataramani et al. (2019): bans of affirmative action increased risky behaviors among affected adolescents
-
--   Koohi (2017): lowering costs of college for undocumented students decreased dropout rates and teen pregnancy
-
--   Cáceres-Delpiano et al. (2018): access to credit decreased dropout and increased expectations in Chile
-:::
-
-
-# Institutional context: Chilean education system {background-color="#00a191"}
-
-## Secondary education: Setting
-
-<br> Organization and funding designed during the military dictatorship (1973-1990), reformed during the 90s:
-
-. . .
-
--   Highly segregated in a three-tier system
-
-    -   Ownership: private, subsidized, public
-    -   Track: academic, vocational, mixed
-
-. . .
-
--   Funded by quasi-voucher
-
--   Depends on attendance
-
--   Modified in 2008, preferential subsidy
-
-## Secondary education: Outcomes
-
-High school dropout still an important issue in Latin America
-
-. . .
-
--   In Chile, primary school graduation almost universal for three decades
-
--   In secondary education, still important:
-
-    -   Especially from 8th to 9th grade
-    -   Socioeconomic and gender disparities remain
-
-. . .
-
-*Huge* but *temporary* spike due to student mobilization in 2011
-
-## Tertiary education: Setting
-
-<br> Organization and funding designed during the military dictatorship (1973-1990), reformed during the 90s:
-
--   Self financing institutions (tuition)
--   Competition for public funding (AFD and AFI)
--   Mostly private enrollment
--   Struggle to regulate for-profit and quality
-
-. . .
-
-"Massification based on privatization and heterogenisation" (Quaresma and Villalobos, 2022)
-
-## Tertiary education
-
-### Public vs private spending (2011)
-
-![](img/HigherEducationFunding_2011_OECD.png){fig-align="center" width="50%"}
-
-## Tertiary education
-
-### Student mobilization
-
-![](img/mov-stu-2011.jpeg){fig-align="center" width="50%"}
-
-## Tertiary education
-
-### Student mobilization
-
-![](img/publica_gratuidad_calidad.jpg){fig-align="center" width="50%"}
-
-## Tertiary education: Tuition-free college
-
-
-<br>
-
-Mobilization was instrumental to building a new coalition of old and new parties
-
-. . .
-
-In 2013, student leaders elected for the parliament
-
-In 2014, the socialist Michelle Bachelet won her (second) presidential election with 62% of votes
-
--   Reforms and tuition-free college in the campaign
-
--   Tuition-free college announced (*almost* by surprise) on 2015
-
-## Tertiary education
-
-### Tuition-free college
-
-<br> Bachelet speech (21st May, 2015)
-
-> "The main goal we have established for ourselves in relation to higher education is achieving quality and tuition-free education for everyone. (. . . ) many times scholarships are not enough to cover all fees, so the most vulnerable students and the middle class have to take on excessive debt to pay for the difference. This is why, moving towards our commitment of having tuition-free higher education for the 70% most vulnerable students at the end of my presidential period, starting in 2016 we will guarantee for the most vulnerable 60% of students enrolled in technical education, accredited and non-for-profit professional schools, or traditioinal universities, to have complete and effective tuition-free education, without scholarships or loans"
-
-## Tertiary education
-
-### Tuition-free college
-
-![](img/GoogleTrends_GratuidadBecas.png){fig-align="center" width="90%"}
-
-:::aside
-Red line: search for scholarships and fellowships ("becas")
-
-Blue line: search for tuition-free college ("gratuidad")
-:::
-
-## Tertiary education: Tuition-free college
-
-<br>
-
-The policy started in 2016:
-
--   30 institutions
--   Public and non-profit
--   Students in the lowest 50% of income
-
-. . .
-
-Following year:
-
--   more institutions, especially technical
--   expansion to 60% lowest income
-
-## Tertiary education
-
-### Public vs private spending (2019)
-
-![](img/HigherEducationFunding_2019_OECD.png){fig-align="center" width="50%"}
-
-# Data and Methods {background-color="#00a191"}
-
-## Data and variables
-
-<br> Administrative data from the Chilean Ministry of Education open access initiative
-
--   Enrollment data (April)
--   Promotion data (December)
--   Years 2009-2020
--   Students in the regular system
-
-. . .
-
-**Variables**
-
--   Treatment: exposure to tuition-free college (pre/post 2016)
-
--   Primary outcome: student dropout
-
--   Secondary outcomes: student grade retention, school abandonment, track choice
-
--   Subgroup: registry sex, region, grade, school track and ownership
-
-## Identification
-
-![](img/DAG_obs.png){fig-align="center" width="30%"}
-
-## Identification
-
-![Target](img/DAG_target.png){#fig-target fig-align="left" width="49%"} ![Testing](img/DAG_test.png){#fig-test fig-align="right" width="49%"}
 
 ## Estimation
 
@@ -618,15 +320,106 @@ The results highlight the importance of focusing on *broader* impacts of educati
 
 Future research should address the trajectories of the *induced* students, beyond high school
 
-# Thank you! {background-color="#00a191"}
-
-Questions, comments? You can find me at pablo.geraldo\@nuffield.ox.ac.uk
 
 
 
 # Dealing with population selection {background-color="#00a191"}
 
 ## Causal inference 101 (again!)
+
+To think *causally*, we need to go [beyond]{style="color:red;"} what we can observe. We need to hypothesize about possible worlds (*what if*s)!
+
+. . .
+
+To do this, let's *postulate* the existence of [potential outcomes]{style="color:red;"}
+
+<br>
+
+Let's start with some definitions:
+
+. . .
+
+$Y$ is the outcome variable *as we observe it*
+
+$D$ is the variable whose effect we want to study (treatment, exposure)
+
+$Y_d$ is the potential outcome when we [**set**]{.fragment .highlight-red} $D=d$. For example, when $D \in \{0,1\}$:
+
+-   $Y_1$ is the potential outcome under "treatment"
+
+-   $Y_0$ is the potential outcome under "control"
+
+------------------------------------------------------------------------
+
+
+## Causal estimands
+
+The first thing that potential outcomes allow us to do is to formalize the causal effects we may want to estimate.
+
+Some frequently invoked estimands are the following: 
+
+<br>
+
+[[Individual treatment effect]{style="color:blue;"}
+$$ITE = \tau_i = Y_{1i} - Y_{0i}$$]{.fragment .fade-in}
+
+. . .
+
+[Average treatment effect]{style="color:blue;"}
+$$
+ATE = E[\tau_i] = E[Y_{1i} - Y_{0i}]$$ $$= E[Y_{1i}] - E[Y_{0i}]
+$$
+
+
+
+## What is your estimand?
+
+<br>
+
+::: callout-tip
+"The first step of quantitative empirical research—whether descriptive, predictive, or causal—is to state a theoretical estimand that exists outside of the statistical model. We propose that the goal is often a quantity involving two components: a unit-specific quantity subscripted by $i$ aggregated over a target population of units." (Lundberg et al.)
+:::
+
+. . .
+
+![](img/Lundberg_unit_pop.png){fig-align="left" width="70%"}
+
+## The ladder of causation 
+
+:::{.panel-tabset}
+
+## Association
+
+| Estimand | Activity | Field/Discipline | Questions | Example |
+| ---- | --- | --- | ----- | ------ |
+| $\mathbf{P(Y \vert X)}$ | Seeing, Observing | Stats, Machine Learning | *What would I believe about Y if I see X?* | What is the expected income of a college graduate in a given field? |
+
+## Interventions
+| Estimand | Activity | Field/Discipline | Questions | Example |
+| --- | --- | --- | ----- | ------ |
+| $\mathbf{P(Y \vert do(x))}$ | Doing, Intervening | Experiments, Policy evaluation | *What would happen with Y if I change X?* | How would income levels change in response to college expansion? |
+
+## Counterfactuals
+
+| Estimand | Activity | Field/Discipline | Questions | Example |
+| --- | --- | --- | ----- | ------ |
+| $\mathbf{P(Y_x \vert x',y')}$ | Imagining, Retrospecting | Structural Models | *What would have happened with Y have I done X instead of X'? Why?* | What would have my parents' income been, have they graduated from college, given that they didn't go?| 
+:::
+
+::: aside
+Pearl and Mackenzie (2018)
+:::
+
+
+
+## Back to tuition-free College
+
+![](img/DAG_obs.png){fig-align="center" width="30%"}
+
+
+## Identification
+
+![Target](img/DAG_target.png){#fig-target fig-align="left" width="49%"} ![Testing](img/DAG_test.png){#fig-test fig-align="right" width="49%"}
 
 
 
@@ -647,3 +440,9 @@ Questions, comments? You can find me at pablo.geraldo\@nuffield.ox.ac.uk
 ## Why are existing frameworks problematic?
 
 ## What to do?
+
+
+# Thank you! {background-color="#00a191"}
+
+Questions, comments? You can find me at pablo.geraldo\@nuffield.ox.ac.uk
+
