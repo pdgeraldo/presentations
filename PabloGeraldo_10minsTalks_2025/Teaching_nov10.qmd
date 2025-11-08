@@ -1,0 +1,36 @@
+---
+title: "Research"
+author: "Pablo Geraldo Bastías"
+logo: "https://fundit.fr/sites/default/files/styles/max_650x650/public/institutions/capture-decran-2023-07-07-162216.png?itok=1CkwlJEu"
+include-in-header:
+  - text: |
+      <style>
+      .reveal .slide-logo {
+        max-height: unset;
+        height: 80px;
+      }
+      </style>
+footer: "Research presentation - UCL QSS"
+date: 11/10/2025
+date-format: long
+format: 
+  revealjs:
+    theme: simple
+    width: 1600
+    height: 900
+    #transition: slide
+    slide-number: c/t
+    chalkboard: true
+    auto-stretch: false
+callout-appearance: minimal
+---
+
+
+## Research presentation
+
+
+# Thank you! {background-color="#00a191"}
+
+
+
+
