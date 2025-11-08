@@ -1,16 +1,23 @@
 ---
-title: "Research"
-author: "Pablo Geraldo Bastías"
-logo: "https://fundit.fr/sites/default/files/styles/max_650x650/public/institutions/capture-decran-2023-07-07-162216.png?itok=1CkwlJEu"
-include-in-header:
-  - text: |
-      <style>
-      .reveal .slide-logo {
-        max-height: unset;
-        height: 80px;
-      }
-      </style>
-footer: "Research presentation - UCL QSS"
+title: "`Educational stratification meets causal machine learning`"
+author: "Pablo Geraldo Bastías \n
+
+(pablo.geraldo@nuffield.ox.ac.uk)"
+#logo: "https://fundit.fr/sites/default/files/styles/max_650x650/public/institutions/capture-decran-2023-07-07-162216.png?itok=1CkwlJEu"
+#include-in-header:
+#  - text: |
+#      <style>
+#      .reveal .slide-logo {
+#        max-height: unset;
+#        height: 80px;
+#      }
+#      </style>
+#footer: "Research presentation - UCL QSS"
+title-slide-attributes:
+  data-background-image: ./img/pexels-carolyn-1539564-3346028.jpg
+  # Picture originally from pexels.com
+  data-background-opacity: "0.5"
+  data-background-size: cover
 date: 11/10/2025
 date-format: long
 format: 
@@ -23,10 +30,116 @@ format:
     chalkboard: true
     auto-stretch: false
 callout-appearance: minimal
+
+## Colors
+# Blueish: #49B6FF
+# Greenish: #00AAB4
+# Redish: #E6007E
 ---
 
+## Three pillars of my research
 
-## Research presentation
+::: {.columns}
+
+::: {.column width="33%" .fragment}
+:::: {style="background-color: #B9D6F2"}
+
+[**Social stratification**]{fig-align="center"}
+
+- High-quality data, admin records (often restricted)
+- Policy-relevant contexts
+- Sophisticated methods for robust empirical evidence 
+
+:::
+:::
+
+::: {.column width="33%" .fragment}
+:::: {style="background-color: #65E5AE"}
+
+**Quantitative methods**
+
+- Credible causal inference in complex settings
+- Machine learning for flexible estimation
+
+![](img/Brand_etal_SM.png){fig-align="center"}
+
+![](img/Koch_etal_SMR.png){fig-align="center"}
+
+:::
+:::
+
+::: {.column width="33%" .fragment}
+::: {style="background-color: #ED9390"}
+
+**Conceptual clarification**
+
+* Is there a credibility ladder in research methods?
+
+* How to assess empirical evidence with the aid of graphical models
+
+:::
+:::
+
+:::
+
+# Illustration: School tracking in Chile {background-color="#00a191"}
+
+# Future research plans {background-color="#00a191"}
+
+## Three pillars of my research
+
+::: {.columns}
+
+::: {.column width="33%" .fragment}
+:::: {style="background-color: #B9D6F2"}
+
+**Social stratification**
+
+* Grant funding to continue research on tuition-free college in Chile
+  + Conjoint experiment
+  + Labour market data
+  
+* Comparative focus
+  + School resources in HK
+  + HE expansion in Thailand
+
+* Focus on funding reforms and school climate 
+
+
+:::
+:::
+
+::: {.column width="33%" .fragment}
+:::: {style="background-color: #65E5AE"}
+
+**Quantitative methods**
+
+* Causal inference without propensity scores
+
+* Bridging causal inference and population dynamics
+  + When treatments impact "potential populations"
+
+* Bridging robustness checks and sensitivity analysis
+
+:::
+:::
+
+::: {.column width="33%" .fragment}
+::: {style="background-color: #ED9390"}
+
+**Conceptual clarification**
+
+* Multi-agent models: from ABMs to LLMs
+  + What is the price of "realism" in simulations?
+  + How does the "generative" in GenAI affect the "generative" in "generative social science"?
+  
+* Interpretation issues in Socio-genomics
+
+:::
+:::
+
+:::
+
 
 
 # Thank you! {background-color="#00a191"}
