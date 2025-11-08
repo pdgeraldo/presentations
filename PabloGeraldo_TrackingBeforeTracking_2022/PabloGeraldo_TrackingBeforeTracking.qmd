@@ -10,7 +10,7 @@ format:
     height: 900
     transition: slide
     slide-number: true
-editor: visual
+editor: source
 ---
 
 # A little bit about my research
