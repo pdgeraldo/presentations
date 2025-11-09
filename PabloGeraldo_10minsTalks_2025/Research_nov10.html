@@ -154,6 +154,11 @@ Pablo Geraldo Bastías<br>
 <li>Policy-relevant contexts</li>
 <li>Sophisticated methods for robust empirical evidence</li>
 </ul>
+<div class="quarto-figure quarto-figure-center">
+<figure>
+<p><img data-src="img/ReportTPa.png" class="quarto-figure quarto-figure-center"></p>
+</figure>
+</div>
 </div>
 </div><div class="column fragment" style="width:33%;">
 <div style="background-color: #65E5AE">
@@ -180,21 +185,155 @@ Pablo Geraldo Bastías<br>
 <li><p>Is there a credibility ladder in research methods?</p></li>
 <li><p>How to assess empirical evidence with the aid of graphical models</p></li>
 </ul>
+<div class="quarto-figure quarto-figure-center">
+<figure>
+<p><img data-src="img/Geraldo_Mindthegap.png" class="quarto-figure quarto-figure-center"></p>
+</figure>
+</div>
+<div class="quarto-figure quarto-figure-center">
+<figure>
+<p><img data-src="img/Gen2Lab.png" class="quarto-figure quarto-figure-center" style="width:70.0%"></p>
+</figure>
+</div>
 </div>
 </div></div>
 </section>
+<section>
 <section id="illustration-school-tracking-in-chile" class="title-slide slide level1 center" data-background-color="#00a191">
 <h1>Illustration: School tracking in Chile</h1>
 
 </section>
-
+<section id="the-rise-of-horizontal-stratification" class="slide level2">
+<h2>The rise of horizontal stratification</h2>
+<ul>
+<li><p>Conflicting expectations</p></li>
+<li><p>EMI: inequality founds its way</p></li>
+</ul>
+</section>
+<section id="institutional-context" class="slide level2">
+<h2>Institutional context</h2>
+<ul>
+<li><p>40% of students attend vocational schools</p></li>
+<li><p>Specialized schools, Incomplete reform</p></li>
+<li><p>Institutional and curricular mismatch</p></li>
+</ul>
+</section>
+<section id="identification-opportunities-and-challenges" class="slide level2">
+<h2>Identification opportunities and challenges</h2>
+<ul>
+<li><p>Selection on observables</p></li>
+<li><p>Difference-in-difference</p></li>
+<li><p>Machine learning for heterogeneous effects</p></li>
+<li><p>Sensitivity and falsification checks</p></li>
+</ul>
+</section>
+<section id="identification" class="slide level2">
+<h2>Identification</h2>
+<div class="quarto-figure quarto-figure-center">
+<figure>
+<p><img data-src="img/DAG_tracking_soo.png" class="quarto-figure quarto-figure-center" style="width:70.0%"></p>
+</figure>
+</div>
+</section>
+<section id="identification-1" class="slide level2">
+<h2>Identification</h2>
+<div class="quarto-figure quarto-figure-center">
+<figure>
+<p><img data-src="img/DAG_tracking_fe.png" class="quarto-figure quarto-figure-center" style="width:70.0%"></p>
+</figure>
+</div>
+</section>
+<section id="identification-2" class="slide level2">
+<h2>Identification</h2>
+<div class="quarto-figure quarto-figure-center">
+<figure>
+<p><img data-src="img/DAG_tracking_tv.png" class="quarto-figure quarto-figure-center" style="width:70.0%"></p>
+</figure>
+</div>
+</section>
+<section id="identification-3" class="slide level2">
+<h2>Identification</h2>
+<div class="quarto-figure quarto-figure-center">
+<figure>
+<p><img data-src="img/DAG_tracking_ovb.png" class="quarto-figure quarto-figure-center" style="width:70.0%"></p>
+</figure>
+</div>
+</section>
+<section id="effects-of-vocational-schools-on-learning-and-expectations" class="slide level2">
+<h2>Effects of vocational schools on learning and expectations</h2>
+<div class="quarto-figure quarto-figure-center">
+<figure>
+<p><img data-src="img/ebal_outcomes_same_8th.png" class="quarto-figure quarto-figure-center" style="width:70.0%"></p>
+</figure>
+</div>
+</section>
+<section id="double-ml-estimation-plr" class="slide level2">
+<h2>Double ML estimation: PLR</h2>
+<p>We use machine learning algorithms to estimate two auxiliary models, <span class="math inline">\(m_0\)</span> and <span class="math inline">\(g_0\)</span>, and specify a partially linear model (PLR) as follows:</p>
+<p><span class="math display">\[
+D = m_0(X) + V, ~ E[V|X] = 0
+\]</span></p>
+<p><span class="math display">\[
+Y = D\theta_0 + g_0(X) + \zeta, ~ E[\zeta|D,X] = 0
+\]</span></p>
+<p><br></p>
+<p>The assignment mechanism for treatment <span class="math inline">\(D\)</span> is flexibly estimated based on covariates <span class="math inline">\(X\)</span></p>
+<p>The outcome model for <span class="math inline">\(Y\)</span> is flexibly estimated based on covariates <span class="math inline">\(X\)</span></p>
+<p>Importantly, <span class="fragment highlight-blue">we assume the treatment effect is not heterogeneous!</span></p>
+</section>
+<section id="double-ml-estimation-plr-1" class="slide level2">
+<h2>Double ML estimation: PLR</h2>
+<p>We use machine learning algorithms to estimate two auxiliary models, <span class="math inline">\(m_0\)</span> and <span class="math inline">\(g_0\)</span>, and specify an interactive regression model (IRM) as follows:</p>
+<p><span class="math display">\[
+D = m_0(X) + V, ~ E[V|X] = 0
+\]</span></p>
+<p><span class="math display">\[
+Y = g_0(D,X) + U, ~ E[U|D,X] = 0
+\]</span></p>
+<p><br></p>
+<p>The assignment mechanism for treatment <span class="math inline">\(D\)</span> is flexibly estimated based on covariates <span class="math inline">\(X\)</span></p>
+<p>The outcome model for <span class="math inline">\(Y\)</span> is flexibly estimated based on covariates <span class="math inline">\(X\)</span></p>
+<p>Importantly, <span class="fragment highlight-red">we allow the treatment effect to be fully heterogeneous!</span></p>
+</section>
+<section id="vocational-schools-decrease-student-math-scores" class="slide level2">
+<h2>Vocational schools decrease student math scores</h2>
+<div class="quarto-figure quarto-figure-center">
+<figure>
+<p><img data-src="img/dml_math.png" class="quarto-figure quarto-figure-center" style="width:60.0%"></p>
+</figure>
+</div>
+</section>
+<section id="vocational-schools-decrease-student-math-scores-1" class="slide level2">
+<h2>Vocational schools decrease student math scores</h2>
+<div class="quarto-figure quarto-figure-center">
+<figure>
+<p><img data-src="img/dml_irm_math.png" class="quarto-figure quarto-figure-center" style="width:60.0%"></p>
+</figure>
+</div>
+</section>
+<section id="vocational-schools-decrease-educational-expectations" class="slide level2">
+<h2>Vocational schools decrease educational expectations</h2>
+<div class="quarto-figure quarto-figure-center">
+<figure>
+<p><img data-src="img/dml_expectations.png" class="quarto-figure quarto-figure-center" style="width:60.0%"></p>
+</figure>
+</div>
+</section>
+<section id="vocational-schools-decrease-educational-expectations-1" class="slide level2">
+<h2>Vocational schools decrease educational expectations</h2>
+<div class="quarto-figure quarto-figure-center">
+<figure>
+<p><img data-src="img/dml_irm_expectations.png" class="quarto-figure quarto-figure-center" style="width:60.0%"></p>
+</figure>
+</div>
+</section></section>
 <section>
 <section id="future-research-plans" class="title-slide slide level1 center" data-background-color="#00a191">
 <h1>Future research plans</h1>
 
 </section>
-<section id="three-pillars-of-my-research-1" class="slide level2">
-<h2>Three pillars of my research</h2>
+<section id="section" class="slide level2">
+<h2></h2>
 <div class="columns">
 <div class="column fragment" style="width:33%;">
 <div style="background-color: #B9D6F2">
@@ -208,7 +347,7 @@ Pablo Geraldo Bastías<br>
 <li>Comparative focus
 <ul>
 <li>School resources in HK</li>
-<li>HE expansion in Thailand</li>
+<li>HE expansion in Philippines</li>
 </ul></li>
 <li>Focus on funding reforms and school climate</li>
 </ul>
@@ -239,10 +378,52 @@ Pablo Geraldo Bastías<br>
 </div>
 </div></div>
 </section></section>
+<section>
 <section id="thank-you" class="title-slide slide level1 center" data-background-color="#00a191">
 <h1>Thank you!</h1>
 
 </section>
+<section id="balance-after-optmatch" class="slide level2">
+<h2>Balance after optmatch</h2>
+<div class="quarto-figure quarto-figure-center">
+<figure>
+<p><img data-src="img/bal_student_rm.png" class="quarto-figure quarto-figure-center"></p>
+</figure>
+</div>
+</section>
+<section id="balance-after-optmatch-1" class="slide level2">
+<h2>Balance after optmatch</h2>
+<div class="quarto-figure quarto-figure-center">
+<figure>
+<p><img data-src="img/bal_student2_rm.png" class="quarto-figure quarto-figure-center"></p>
+</figure>
+</div>
+</section>
+<section id="balance-after-optmatch-2" class="slide level2">
+<h2>Balance after optmatch</h2>
+<div class="quarto-figure quarto-figure-center">
+<figure>
+<p><img data-src="img/bal_school_rm.png" class="quarto-figure quarto-figure-center"></p>
+</figure>
+</div>
+</section>
+<section id="sensitivity-analysis-mathematics" class="slide level2">
+<h2>Sensitivity analysis mathematics</h2>
+<div class="quarto-figure quarto-figure-center">
+<figure>
+<p><img data-src="img/reg_sensplot_math_8th.png" class="quarto-figure quarto-figure-center" style="width:50.0%"></p>
+</figure>
+</div>
+</section>
+<section id="sensitivity-analysis-expectations" class="slide level2">
+<h2>Sensitivity analysis expectations</h2>
+<div class="quarto-figure quarto-figure-center">
+<figure>
+<p><img data-src="img/reg_sensplot_expect_8th.png" class="quarto-figure quarto-figure-center" style="width:50.0%"></p>
+</figure>
+</div>
+
+</section></section>
     </div>
   <div class="quarto-auto-generated-content" style="display: none;">
 <div class="footer footer-default">

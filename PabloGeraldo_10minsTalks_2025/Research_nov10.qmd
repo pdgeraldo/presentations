@@ -50,6 +50,9 @@ callout-appearance: minimal
 - Policy-relevant contexts
 - Sophisticated methods for robust empirical evidence 
 
+![](img/ReportTPa.png){fig-align="center"}
+
+
 :::
 :::
 
@@ -77,6 +80,10 @@ callout-appearance: minimal
 
 * How to assess empirical evidence with the aid of graphical models
 
+![](img/Geraldo_Mindthegap.png){fig-align="center"}
+
+![](img/Gen2Lab.png){fig-align="center" width="70%"}
+
 :::
 :::
 
@@ -84,9 +91,114 @@ callout-appearance: minimal
 
 # Illustration: School tracking in Chile {background-color="#00a191"}
 
+## The rise of horizontal stratification
+
+* Conflicting expectations
+
+* EMI: inequality founds its way
+
+## Institutional context
+
+* 40% of students attend vocational schools
+
+* Specialized schools, Incomplete reform
+
+* Institutional and curricular mismatch
+
+## Identification opportunities and challenges
+
+* Selection on observables
+
+* Difference-in-difference
+
+* Machine learning for heterogeneous effects
+
+* Sensitivity and falsification checks
+
+## Identification
+
+![](img/DAG_tracking_soo.png){fig-align="center" width="70%"}
+
+## Identification
+
+![](img/DAG_tracking_fe.png){fig-align="center" width="70%"}
+
+## Identification
+
+![](img/DAG_tracking_tv.png){fig-align="center" width="70%"}
+
+## Identification
+
+![](img/DAG_tracking_ovb.png){fig-align="center" width="70%"}
+
+
+## Effects of vocational schools on learning and expectations
+
+![](img/ebal_outcomes_same_8th.png){fig-align="center" width="70%"}
+
+## Double ML estimation: PLR
+
+We use machine learning algorithms to estimate two auxiliary models, $m_0$ and $g_0$, and specify a partially linear model (PLR) as follows:
+
+$$
+D = m_0(X) + V, ~ E[V|X] = 0
+$$
+
+
+$$
+Y = D\theta_0 + g_0(X) + \zeta, ~ E[\zeta|D,X] = 0
+$$
+
+<br>
+
+The assignment mechanism for treatment $D$ is flexibly estimated based on covariates $X$
+
+The outcome model for $Y$ is flexibly estimated based on covariates $X$
+
+Importantly, [we assume the treatment effect is not heterogeneous!]{.fragment .highlight-blue}
+
+
+
+## Double ML estimation: PLR
+
+We use machine learning algorithms to estimate two auxiliary models, $m_0$ and $g_0$, and specify an interactive regression model (IRM) as follows:
+
+$$
+D = m_0(X) + V, ~ E[V|X] = 0
+$$
+
+
+$$
+Y = g_0(D,X) + U, ~ E[U|D,X] = 0
+$$
+
+<br>
+
+The assignment mechanism for treatment $D$ is flexibly estimated based on covariates $X$
+
+The outcome model for $Y$ is flexibly estimated based on covariates $X$
+
+Importantly, [we allow the treatment effect to be fully heterogeneous!]{.fragment .highlight-red}
+
+## Vocational schools decrease student math scores
+
+![](img/dml_math.png){fig-align="center" width="60%"}
+
+## Vocational schools decrease student math scores
+
+![](img/dml_irm_math.png){fig-align="center" width="60%"}
+
+## Vocational schools decrease educational expectations
+
+![](img/dml_expectations.png){fig-align="center" width="60%"}
+
+## Vocational schools decrease educational expectations
+
+![](img/dml_irm_expectations.png){fig-align="center" width="60%"}
+
 # Future research plans {background-color="#00a191"}
 
-## Three pillars of my research
+## 
 
 ::: {.columns}
 
@@ -101,7 +213,7 @@ callout-appearance: minimal
   
 * Comparative focus
   + School resources in HK
-  + HE expansion in Thailand
+  + HE expansion in Philippines
 
 * Focus on funding reforms and school climate 
 
@@ -144,6 +256,27 @@ callout-appearance: minimal
 
 # Thank you! {background-color="#00a191"}
 
+
+## Balance after optmatch
+
+![](img/bal_student_rm.png){fig-align="center"}
+
+## Balance after optmatch
+
+![](img/bal_student2_rm.png){fig-align="center" }
+
+## Balance after optmatch
+
+![](img/bal_school_rm.png){fig-align="center"}
+
+
+## Sensitivity analysis mathematics
+
+![](img/reg_sensplot_math_8th.png){fig-align="center" width="50%"}
+
+## Sensitivity analysis expectations
+
+![](img/reg_sensplot_expect_8th.png){fig-align="center" width="50%"}
 
 
 
