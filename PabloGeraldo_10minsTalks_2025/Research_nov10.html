@@ -198,33 +198,125 @@ Pablo Geraldo Bastías<br>
 </div>
 </div></div>
 </section>
-<section>
-<section id="illustration-school-tracking-in-chile" class="title-slide slide level1 center" data-background-color="#00a191">
-<h1>Illustration: School tracking in Chile</h1>
-
-</section>
 <section id="the-rise-of-horizontal-stratification" class="slide level2">
 <h2>The rise of horizontal stratification</h2>
+<p><br> The expansion of compulsory education during the 20th century was accompanied by contrasting expectations:</p>
 <ul>
-<li><p>Conflicting expectations</p></li>
-<li><p>EMI: inequality founds its way</p></li>
+<li><p><span class="fragment highlight-blue">Equalizing effect on attainment and skills due to enrollment and attendance</span></p></li>
+<li><p><span class="fragment highlight-blue">Persistent inequality due to constrained decisions and qualitative differences</span></p></li>
 </ul>
+<p>Between-school tracking is a particularly relevant example of the latter</p>
+<p>It has been argues to have detrimental effects both in learning and educational expectations</p>
+<p><span class="fragment highlight-red">Its effects are challenging to study due to self-selection!</span></p>
+
+<aside><div>
+<p>(Brand &amp; Xie, 2010; Breen &amp; Goldthorpe, 1997; Domina et al.&nbsp;2017; Grodsky &amp; Riegle-Clumb, 2010; Lucas 2001; Raftery and Hout 1993; Raudenbush and Eschmann 2015; Van der Wefhorst and Mijs 2010)</p>
+</div></aside></section>
+<section>
+<section id="illustration-school-tracking-in-chile" class="title-slide slide level1 center" data-background-color="#00a191">
+<h1>Illustration: School Tracking in Chile</h1>
+
 </section>
 <section id="institutional-context" class="slide level2">
 <h2>Institutional context</h2>
 <ul>
-<li><p>40% of students attend vocational schools</p></li>
-<li><p>Specialized schools, Incomplete reform</p></li>
-<li><p>Institutional and curricular mismatch</p></li>
+<li><p>40% of students attend vocational secondary schools</p>
+<ul>
+<li><p>70% of students wants to follow tertiary education (independent of track)</p></li>
+<li><p>Around 40% does within 5 years, much less completions</p></li>
+</ul></li>
+</ul>
+<div class="fragment">
+<ul>
+<li><p>Vocational schools are fewer but bigger, and they specialise</p>
+<ul>
+<li>Few mixed track schools mostly in the state sector</li>
+</ul></li>
+</ul>
+</div>
+<div class="fragment">
+<ul>
+<li><p>Institutional and curricular mismatch</p>
+<ul>
+<li>Common curriculum in separate institutions!</li>
+</ul></li>
+</ul>
+</div>
+</section>
+<section id="institutional-context-1" class="slide level2">
+<h2>Institutional context</h2>
+<div class="quarto-figure quarto-figure-center">
+<figure>
+<p><img data-src="img/TVET_Chile.drawio.svg" class="quarto-figure quarto-figure-center" style="width:300.0%"></p>
+</figure>
+</div>
+</section>
+<section id="institutional-context-2" class="slide level2">
+<h2>Institutional context</h2>
+<div class="quarto-figure quarto-figure-center">
+<figure>
+<p><img data-src="img/TVET_Chile_post.drawio.svg" class="quarto-figure quarto-figure-center" style="width:300.0%"></p>
+</figure>
+</div>
+</section>
+<section id="challenges-and-opportunities" class="slide level2">
+<h2>Challenges and opportunities</h2>
+<p><br></p>
+<p><span class="fragment highlight-red">Main challenge: (maybe) students in general and vocational schools are not comparable!</span></p>
+<div class="fragment">
+<p>The case of Chilean school tracking offers several theoretical and practical opportunities, making it a compelling case study:</p>
+<ul>
+<li><p><span class="fragment highlight-blue">Institutional/curricular mismatch allow to estimate the effect of attending a vocational school <em>net of curricular differentiation</em></span></p></li>
+<li><p><span class="fragment highlight-blue">High-quality administrative and survey data allow for extensive confounding adjustment</span></p>
+<ul>
+<li>Students followed from 4th to 10th grade</li>
+<li>Parental background, previous performance, previous expectations</li>
+</ul></li>
+<li><p><span class="fragment highlight-blue">Comparatively less selected assignment</span></p>
+<ul>
+<li>High proportion of students attend vocational schools</li>
+</ul></li>
+</ul>
+</div>
+</section>
+<section id="identification-strategy" class="slide level2">
+<h2>Identification strategy</h2>
+<p><span class="math inline">\(\newcommand\indep{\perp\!\!\!\perp}\)</span></p>
+<p><strong>Approach</strong>: conduct the study under different identification assumptions to deal with uncertainty about the “true causal model”</p>
+<ul>
+<li><span class="fragment highlight-blue"><strong>Selection on observables</strong>:</span> <span class="math inline">\(\{Y_0, Y_1\} \indep \text{Vocational} ~\mid \text{ X}\)</span></li>
+</ul>
+<p>Where <span class="math inline">\(X\)</span> denotes students’, parental and schools <em>observed</em> characteristics. Implemented using regression, matching, weighting, and DoubleML for estimation</p>
+<ul>
+<li><span class="fragment highlight-blue"><strong>Selection on time-invariant confounders</strong></span>: <span class="math inline">\(\{Y_0, Y_1\} \indep \text{Vocational} ~\mid \text{ X, U}\)</span></li>
+</ul>
+<p>Where <span class="math inline">\(U\)</span> denotes students’ characteristics that are <em>unobserved</em> but constant over time. Implemented using difference-in-differences</p>
+</section>
+<section id="identification-strategy-1" class="slide level2">
+<h2>Identification strategy</h2>
+<ul>
+<li><span class="fragment highlight-blue"><strong>Selection on time-varying confounding</strong></span></li>
+</ul>
+<p>It is possible to deal with <em>observed</em> time-varying confounding using g-methods (Robins et al.), but <em>unobserved</em> time varying confounding is basically impossible to deal with. This is the main weakness of observational causal inference.</p>
+<p>There are, however, ways to incorporate at least partially this possibility:</p>
+<ul>
+<li><p><span class="fragment highlight-blue"><strong>Sensitivity Analysis</strong></span>: How strong should unobserved confounding be to change our study’s conclusions?</p></li>
+<li><p><span class="fragment highlight-blue"><strong>Falsification/Placebo Test</strong></span>: Use a placebo outcome that should not be affected by the exposure of interest, but that one would expect to be affected by time-varying unobserved confounding. I used parental income and education at the time the outcome was measured.</p></li>
 </ul>
 </section>
-<section id="identification-opportunities-and-challenges" class="slide level2">
-<h2>Identification opportunities and challenges</h2>
+<section id="identification-strategy-2" class="slide level2">
+<h2>Identification strategy</h2>
+<p>I employ several complementary empirical strategies:</p>
 <ul>
-<li><p>Selection on observables</p></li>
-<li><p>Difference-in-difference</p></li>
-<li><p>Machine learning for heterogeneous effects</p></li>
-<li><p>Sensitivity and falsification checks</p></li>
+<li><span class="fragment highlight-blue">Selection on observables</span></li>
+</ul>
+<div class="fragment fade-in-then-out">
+
+</div>
+<ul>
+<li><p><span class="fragment highlight-blue">Difference-in-difference</span></p></li>
+<li><p><span class="fragment highlight-blue">Machine learning for heterogeneous effects</span></p></li>
+<li><p><span class="fragment highlight-blue">Sensitivity and falsification checks</span></p></li>
 </ul>
 </section>
 <section id="identification" class="slide level2">

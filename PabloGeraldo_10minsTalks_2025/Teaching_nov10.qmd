@@ -12,7 +12,7 @@ author: "Pablo Geraldo Bastías \n
 #         height: 80px;
 #       }
 #       </style>
-footer: "Teaching presentation - UCL QSS"
+#footer: "Teaching presentation - UCL QSS"
 date: 11/10/2025
 date-format: long
 title-slide-attributes:
@@ -35,14 +35,136 @@ callout-appearance: minimal
 
 ## Learning objectives
 
+* Understand the basic *ingredients* of Supervised Machine Learning: 
+
+  - A collection of labelled examples
+  - [A learning algorithm]{.fragment .highlight-blue} 
+  - [An evaluation metric]{.fragment .highlight-red}
+  - [A testing procedure]{.fragment .highlight-green}
+  
+. . .
+  
+* Understand how classification and regression trees work:
+
+  - [Recursive partitioning]{.fragment .highlight-blue}
+  - [Information gain]{.fragment .highlight-red} 
+  - [Cross-validation loss]{.fragment .highlight-green}
+  
+. . .
+
+* A brief preview of regularization and ensemble methods
+
 
 # Supervised Learning {background-color="#00a191"}
 
-## The ingredients of Supervised Learning
+## Types of Machine Learning
 
 <br>
 
-[**Goal**: building a prediction machine `Input` $\rightarrow$ `Output`]{.fragment .highlight-blue}
+Machine learning is usually divided into three categories
+
+::: {.columns}
+
+::: {.column width="33%"}
+
+[*Supervised* learning]{.fragment .highlight-blue}
+
+::: {.r-stack}
+
+![](img/doodle_SL1.png){.fragment fig-align="left" width="40%"}
+
+![](img/doodle_SL2.png){.fragment fig-align="left" width="40%"}
+:::
+
+[`Input` $\rightarrow$ `Output`]{.fragment}
+
+:::
+
+::: {.column width="33%"}
+[*Unsupervised* learning]{.fragment .highlight-blue}
+
+::: {.r-stack}
+
+![](img/doodle_UL1.png){.fragment fig-align="left" width="40%"}
+
+![](img/doodle_UL2.png){.fragment fig-align="left" width="40%"}
+
+:::
+
+[`Input` $\rightarrow$ `Structure`]{.fragment}
+
+:::
+
+::: {.column width="33%"}
+[*Reinforcement* learning]{.fragment .highlight-blue}
+
+
+::: {.r-stack}
+
+![](img/doodle_RL1.png){.fragment fig-align="left" width="40%"}
+
+![](img/doodle_RL2.png){.fragment fig-align="left" width="45%"}
+
+:::
+
+[`Action` $\rightarrow$ `Reward` $\rightarrow$ `Action'`]{.fragment}
+
+:::
+
+:::
+
+  
+## How does a Machine Learn?
+
+<br>
+
+
+[**Training**: showing the machine a collection of examples that *includes* the correct solution]{.fragment .highlight-blue}
+  
+  + **Requirement**: a metric of how bad our guesses are ("loss")
+  
+  
+::: {.columns}
+
+::: {.column width="50%" .fragment}
+
+  
+```{r}
+#| echo: false
+#| code-fold: true
+
+library(knitr)
+
+df <- data.frame(X1 = rnorm(10),
+                 X2 = rnorm(10, mean = 5, sd = 2),
+                 y = rbinom(10, 2, 0.5))
+
+kable(head(df))
+```
+
+:::
+
+::: {.column width="50%" .fragment}
+
+A common error metric is the Mean Squared Error:
+
+$$
+MSE = \frac{1}{n} \sum_i^n (y_i - \hat{y_i})^2
+$$
+
+:::
+
+:::
+
+
+# `Lesson 1: the basic ingredient of SL is labelled data`
+
+
+## What is Supervised Learning for?
+
+<br>
+
+[**Goal**: building a prediction machine `(Input` $\rightarrow$ `Output)`]{.fragment .highlight-blue}
 
   + **Requirement**: select an *algorithm* from the class of available machines
   + In other words, define the "hypothesis space"
@@ -66,9 +188,8 @@ $$
 ::: {.column width="50%" .fragment}
 
 ```{r}
-#| echo: true
+#| echo: false
 #| code-fold: true
-#| code-summary: "expand for code"
 
 library(dplyr)
 library(ggplot2)
@@ -104,37 +225,139 @@ p
 :::
 
   
-  
-
-
+# `Lesson 2: the focus of SL is predicting the correct output`
 
   
-## The ingredients of Supervised Learning
+## How do we check our Machine?
 
 <br>
 
 
-[**Method**: training the machine to learn the right "$\rightarrow$" from examples]{.fragment .highlight-blue}
-  
-  + **Requirement**: a collection of examples that *includes* the solution
-  + $(\textbf{x}_i,y_i)$ for $i=1, \dots, n$
-  
-  
-## The ingredients of Supervised Learning
-
-<br>
-
-
-[**Evaluation**: assessing how good our predictions are. Can we do better?]{.fragment .highlight-blue}
+[**Testing**: assessing how good our predictions are in *unseen* examples]{.fragment .highlight-blue}
 
   + **Requirement**: `newData` so we can test `newInput` $\rightarrow$ `newOutput` 
   + There are some tricks for this!
+  
+
+::: {.columns}
+
+::: {.column width="50%" .fragment}
+
+Explain train / test split
+
+:::
+
+::: {.column width="50%" .fragment}
+
+Explain K-fold CV
+
+:::
+
+:::
+
+
+
+# `Lesson 3: the key to good SL is testing our predictions`
+
+
 
 # Tree-based methods {background-color="#00a191"}
 
+## Recursive partitioning
+
+## Computing information gain
+
+## Growing the tree
+
+## Evaluating the tree
+
+## Strenghts and weaknesses
+
+* Risk of overfitting 
+
+* Better for non linear relationships
+
 # Extensions {background-color="#00a191"}
+
+## Tree regularization
+
+## Ensembles of trees
+
+## Uses beyond prediction
+
+* Explainability
+
+* Heterogeneous treatment effects
 
 # Summary {background-color="#00a191"}
 
+
+
+
+## Three(*) news about Supervised Learning
+
+<br>
+
+The good news: you have already been doing it!
+
+::: {.columns}
+
+::: {.column width="50%"}
+[*Regression*: predict numerical outcome]{.fragment .highlight-blue}
+
+`reg <- lm(y ~ X, data = Data)`
+`summary(reg)`
+
+```{r, echo=FALSE}
+set.seed(1234)
+n <- 10
+X <- rnorm(n)
+y <- 2.5 * X + rnorm(n)
+reg <- lm(y ~ X)
+summary(reg)
+```
+:::
+
+::: {.column width="50%"}
+[*Classification*: predict categories]{.fragment .highlight-blue}
+
+`class <- glm(y ~ X, data = Data, family = binomial)`
+`summary(class)`
+
+
+```{r}
+set.seed(1234)
+n <- 10
+b <- 2.5
+X <- rnorm(n)
+prob <- exp(b*X) / (1 + exp(b*X))
+y <- 1*(runif(n)<prob)
+class <- glm(y ~ X, family = binomial)
+summary(class)
+```
+:::
+
+:::
+
+
+## Three(*) news about Supervised Learning
+
+<br>
+
+The bad news: it gets more complicated!
+
+  * Switch focus from $\beta$s to $\hat{Y}$
+  * What is wrong here?
+  
+
+
+## Three(*) news about Supervised Learning
+
+* [The better news: the building blocks remain simple!]{.fragment .highlight-blue}
+
+
+::: aside
+(*) No pun intended
+:::
 
 

@@ -89,31 +89,127 @@ callout-appearance: minimal
 
 :::
 
-# Illustration: School tracking in Chile {background-color="#00a191"}
 
 ## The rise of horizontal stratification
 
-* Conflicting expectations
+<br> The expansion of compulsory education during the 20th century was accompanied by contrasting expectations:
 
-* EMI: inequality founds its way
+* [Equalizing effect on attainment and skills due to enrollment and attendance]{.fragment .highlight-blue}
+
+* [Persistent inequality due to constrained decisions and qualitative differences]{.fragment .highlight-blue}
+
+    
+Between-school tracking is a particularly relevant example of the latter 
+
+It has been argues to have detrimental effects both in learning and educational expectations
+
+[Its effects are challenging to study due to self-selection!]{.fragment .highlight-red}
+    
+::: aside
+(Brand & Xie, 2010; Breen & Goldthorpe, 1997; Domina et al. 2017; Grodsky & Riegle-Clumb, 2010; Lucas 2001; Raftery and Hout 1993; Raudenbush and Eschmann 2015; Van der Wefhorst and Mijs 2010)
+:::
+
+
+# Illustration: School Tracking in Chile {background-color="#00a191"}
+
 
 ## Institutional context
 
-* 40% of students attend vocational schools
+* 40% of students attend vocational secondary schools
+  
+  - 70% of students wants to follow tertiary education (independent of track)
+  
+  - Around 40% does within 5 years, much less completions
+  
+. . .
 
-* Specialized schools, Incomplete reform
+* Vocational schools are fewer but bigger, and they specialise 
+
+  - Few mixed track schools mostly in the state sector
+  
+. . . 
+
 
 * Institutional and curricular mismatch
+  
+  - Common curriculum in separate institutions!
+  
+## Institutional context
 
-## Identification opportunities and challenges
+![](img/TVET_Chile.drawio.svg){fig-align="center" width="300%"}
 
-* Selection on observables
+## Institutional context
 
-* Difference-in-difference
+![](img/TVET_Chile_post.drawio.svg){fig-align="center" width="300%"}
 
-* Machine learning for heterogeneous effects
 
-* Sensitivity and falsification checks
+## Challenges and opportunities
+
+<br>
+
+[Main challenge: (maybe) students in general and vocational schools are not comparable!]{.fragment .highlight-red}
+
+. . .
+
+The case of Chilean school tracking offers several theoretical and practical opportunities, making it a compelling case study:
+
+
+* [Institutional/curricular mismatch allow to estimate the effect of attending a vocational school *net of curricular differentiation*]{.fragment .highlight-blue}
+
+
+* [High-quality administrative and survey data allow for extensive confounding adjustment]{.fragment .highlight-blue}
+
+  - Students followed from 4th to 10th grade
+  - Parental background, previous performance, previous expectations
+
+
+* [Comparatively less selected assignment]{.fragment .highlight-blue}
+  
+  - High proportion of students attend vocational schools
+
+
+## Identification strategy
+
+$\newcommand\indep{\perp\!\!\!\perp}$ 
+
+**Approach**: conduct the study under different identification assumptions to deal with uncertainty about the "true causal model"
+
+-   [**Selection on observables**:]{.fragment .highlight-blue} $\{Y_0, Y_1\} \indep \text{Vocational} ~\mid \text{ X}$
+
+Where $X$ denotes students', parental and schools *observed* characteristics. Implemented using regression, matching, weighting, and DoubleML for estimation
+
+-   [**Selection on time-invariant confounders**]{.fragment .highlight-blue}: $\{Y_0, Y_1\} \indep \text{Vocational} ~\mid \text{ X, U}$
+
+Where $U$ denotes students' characteristics that are *unobserved* but constant over time. Implemented using difference-in-differences
+
+## Identification strategy
+
+-   [**Selection on time-varying confounding**]{.fragment .highlight-blue}
+
+It is possible to deal with *observed* time-varying confounding using g-methods (Robins et al.), but *unobserved* time varying confounding is basically impossible to deal with. This is the main weakness of observational causal inference.
+
+There are, however, ways to incorporate at least partially this possibility:
+
+-   [**Sensitivity Analysis**]{.fragment .highlight-blue}: How strong should unobserved confounding be to change our study's conclusions? 
+
+-   [**Falsification/Placebo Test**]{.fragment .highlight-blue}: Use a placebo outcome that should not be affected by the exposure of interest, but that one would expect to be affected by time-varying unobserved confounding. I used parental income and education at the time the outcome was measured.
+
+
+## Identification strategy
+
+I employ several complementary empirical strategies:
+
+* [Selection on observables]{.fragment .highlight-blue}
+
+::: {.fragment .fade-in-then-out}
+
+:::
+
+* [Difference-in-difference]{.fragment .highlight-blue}
+
+* [Machine learning for heterogeneous effects]{.fragment .highlight-blue}
+
+* [Sensitivity and falsification checks]{.fragment .highlight-blue}
 
 ## Identification
 
