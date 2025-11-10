@@ -205,8 +205,8 @@ Pablo Geraldo Bastías<br>
 <li><p><span class="fragment highlight-blue">Equalizing effect on attainment and skills due to enrollment and attendance</span></p></li>
 <li><p><span class="fragment highlight-blue">Persistent inequality due to constrained decisions and qualitative differences</span></p></li>
 </ul>
-<p>Between-school tracking is a particularly relevant example of the latter</p>
-<p>It has been argues to have detrimental effects both in learning and educational expectations</p>
+<p>Between-school vocational tracking is a particularly relevant example of the latter</p>
+<p>It has been argued to have detrimental effects both in learning and educational expectations</p>
 <p><span class="fragment highlight-red">Its effects are challenging to study due to self-selection!</span></p>
 
 <aside><div>
@@ -222,8 +222,9 @@ Pablo Geraldo Bastías<br>
 <ul>
 <li><p>40% of students attend vocational secondary schools</p>
 <ul>
+<li><p>“Tracks” are not fixed/pipelined: one can go from vocational to general as long as you meet the academic requirements</p></li>
 <li><p>70% of students wants to follow tertiary education (independent of track)</p></li>
-<li><p>Around 40% does within 5 years, much less completions</p></li>
+<li><p>Around 40% does within 5 years, much less completion</p></li>
 </ul></li>
 </ul>
 <div class="fragment">
@@ -297,67 +298,43 @@ Pablo Geraldo Bastías<br>
 <ul>
 <li><span class="fragment highlight-blue"><strong>Selection on time-varying confounding</strong></span></li>
 </ul>
-<p>It is possible to deal with <em>observed</em> time-varying confounding using g-methods (Robins et al.), but <em>unobserved</em> time varying confounding is basically impossible to deal with. This is the main weakness of observational causal inference.</p>
+<p>This is the main weakness of observational causal inference: <em>unobserved</em> time varying confounding is basically impossible to deal with.</p>
 <p>There are, however, ways to incorporate at least partially this possibility:</p>
 <ul>
 <li><p><span class="fragment highlight-blue"><strong>Sensitivity Analysis</strong></span>: How strong should unobserved confounding be to change our study’s conclusions?</p></li>
-<li><p><span class="fragment highlight-blue"><strong>Falsification/Placebo Test</strong></span>: Use a placebo outcome that should not be affected by the exposure of interest, but that one would expect to be affected by time-varying unobserved confounding. I used parental income and education at the time the outcome was measured.</p></li>
+<li><p><span class="fragment highlight-blue"><strong>Falsification/Placebo Test</strong></span>: Use an outcome that should not be affected by the exposure of interest, but that one would expect to be affected by time-varying unobserved confounding.</p></li>
 </ul>
-</section>
-<section id="identification-strategy-2" class="slide level2">
-<h2>Identification strategy</h2>
-<p>I employ several complementary empirical strategies:</p>
-<ul>
-<li><span class="fragment highlight-blue">Selection on observables</span></li>
-</ul>
-<div class="fragment fade-in-then-out">
+<p>I use parental income and education at the time the outcome was measured.</p>
+</section></section>
+<section>
+<section id="results" class="title-slide slide level1 center" data-background-color="#00a191">
+<h1>Results</h1>
 
-</div>
-<ul>
-<li><p><span class="fragment highlight-blue">Difference-in-difference</span></p></li>
-<li><p><span class="fragment highlight-blue">Machine learning for heterogeneous effects</span></p></li>
-<li><p><span class="fragment highlight-blue">Sensitivity and falsification checks</span></p></li>
-</ul>
 </section>
-<section id="identification" class="slide level2">
-<h2>Identification</h2>
+<section id="balancing-weights" class="slide level2">
+<h2>Balancing weights</h2>
 <div class="quarto-figure quarto-figure-center">
 <figure>
-<p><img data-src="img/DAG_tracking_soo.png" class="quarto-figure quarto-figure-center" style="width:70.0%"></p>
-</figure>
-</div>
-</section>
-<section id="identification-1" class="slide level2">
-<h2>Identification</h2>
-<div class="quarto-figure quarto-figure-center">
-<figure>
-<p><img data-src="img/DAG_tracking_fe.png" class="quarto-figure quarto-figure-center" style="width:70.0%"></p>
-</figure>
-</div>
-</section>
-<section id="identification-2" class="slide level2">
-<h2>Identification</h2>
-<div class="quarto-figure quarto-figure-center">
-<figure>
-<p><img data-src="img/DAG_tracking_tv.png" class="quarto-figure quarto-figure-center" style="width:70.0%"></p>
-</figure>
-</div>
-</section>
-<section id="identification-3" class="slide level2">
-<h2>Identification</h2>
-<div class="quarto-figure quarto-figure-center">
-<figure>
-<p><img data-src="img/DAG_tracking_ovb.png" class="quarto-figure quarto-figure-center" style="width:70.0%"></p>
+<p><img data-src="img/ebal_balance.png" class="quarto-figure quarto-figure-center" style="width:60.0%"></p>
 </figure>
 </div>
 </section>
 <section id="effects-of-vocational-schools-on-learning-and-expectations" class="slide level2">
 <h2>Effects of vocational schools on learning and expectations</h2>
+<div class="columns">
+<div class="column" style="width:50%;">
 <div class="quarto-figure quarto-figure-center">
 <figure>
-<p><img data-src="img/ebal_outcomes_same_8th.png" class="quarto-figure quarto-figure-center" style="width:70.0%"></p>
+<p><img data-src="img/math_baseline.png" class="quarto-figure quarto-figure-center"></p>
 </figure>
 </div>
+</div><div class="column" style="width:50%;">
+<div class="quarto-figure quarto-figure-center">
+<figure>
+<p><img data-src="img/exp_baseline.png" class="quarto-figure quarto-figure-center"></p>
+</figure>
+</div>
+</div></div>
 </section>
 <section id="double-ml-estimation-plr" class="slide level2">
 <h2>Double ML estimation: PLR</h2>
@@ -391,15 +368,7 @@ Y = g_0(D,X) + U, ~ E[U|D,X] = 0
 <h2>Vocational schools decrease student math scores</h2>
 <div class="quarto-figure quarto-figure-center">
 <figure>
-<p><img data-src="img/dml_math.png" class="quarto-figure quarto-figure-center" style="width:60.0%"></p>
-</figure>
-</div>
-</section>
-<section id="vocational-schools-decrease-student-math-scores-1" class="slide level2">
-<h2>Vocational schools decrease student math scores</h2>
-<div class="quarto-figure quarto-figure-center">
-<figure>
-<p><img data-src="img/dml_irm_math.png" class="quarto-figure quarto-figure-center" style="width:60.0%"></p>
+<p><img data-src="img/math_comparison.png" class="quarto-figure quarto-figure-center" style="width:60.0%"></p>
 </figure>
 </div>
 </section>
@@ -407,17 +376,38 @@ Y = g_0(D,X) + U, ~ E[U|D,X] = 0
 <h2>Vocational schools decrease educational expectations</h2>
 <div class="quarto-figure quarto-figure-center">
 <figure>
-<p><img data-src="img/dml_expectations.png" class="quarto-figure quarto-figure-center" style="width:60.0%"></p>
+<p><img data-src="img/exp_comparison.png" class="quarto-figure quarto-figure-center" style="width:60.0%"></p>
 </figure>
 </div>
 </section>
-<section id="vocational-schools-decrease-educational-expectations-1" class="slide level2">
-<h2>Vocational schools decrease educational expectations</h2>
+<section id="heterogeneity-by-previous-performance-math-scores" class="slide level2">
+<h2>Heterogeneity by previous performance: math scores</h2>
 <div class="quarto-figure quarto-figure-center">
 <figure>
-<p><img data-src="img/dml_irm_expectations.png" class="quarto-figure quarto-figure-center" style="width:60.0%"></p>
+<p><img data-src="img/dml_irm_hte_math_by_math.png" class="quarto-figure quarto-figure-center" style="width:60.0%"></p>
 </figure>
 </div>
+</section>
+<section id="heterogeneity-by-previous-performance-expectations" class="slide level2">
+<h2>Heterogeneity by previous performance: expectations</h2>
+<div class="quarto-figure quarto-figure-center">
+<figure>
+<p><img data-src="img/dml_irm_hte_exp_by_math.png" class="quarto-figure quarto-figure-center" style="width:60.0%"></p>
+</figure>
+</div>
+</section>
+<section id="summary-of-results" class="slide level2">
+<h2>Summary of results</h2>
+<p><br></p>
+<ul>
+<li><p>Attending an exclusively vocational high school decreases students performance in mathematics, <em>even before the curricular differentiation</em></p></li>
+<li><p>Attending an exclusively vocational high school decreases students educational expectations, <em>even before the curricular differentiation</em></p></li>
+<li><p>Some heterogeneity by previous performance:</p>
+<ul>
+<li><p>Scores of formerly high achievers decreased the most</p></li>
+<li><p>Expectations of formerly high achievers decreased the least, but unclear</p></li>
+</ul></li>
+</ul>
 </section></section>
 <section>
 <section id="future-research-plans" class="title-slide slide level1 center" data-background-color="#00a191">
@@ -469,33 +459,57 @@ Y = g_0(D,X) + U, ~ E[U|D,X] = 0
 </ul>
 </div>
 </div></div>
+</section>
+<section id="tuition-free-college-effects-overall" class="slide level2">
+<h2>Tuition-free college effects: overall</h2>
+<div class="quarto-figure quarto-figure-center">
+<figure>
+<p><img data-src="img/dropout_overall.png" class="quarto-figure quarto-figure-center"></p>
+</figure>
+</div>
+</section>
+<section id="tuition-free-college-effects-school-ownership" class="slide level2">
+<h2>Tuition-free college effects: school ownership</h2>
+<div class="quarto-figure quarto-figure-center">
+<figure>
+<p><img data-src="img/dropout_ownership.png" class="quarto-figure quarto-figure-center"></p>
+</figure>
+</div>
 </section></section>
 <section>
 <section id="thank-you" class="title-slide slide level1 center" data-background-color="#00a191">
 <h1>Thank you!</h1>
 
 </section>
-<section id="balance-after-optmatch" class="slide level2">
-<h2>Balance after optmatch</h2>
+<section id="identification" class="slide level2">
+<h2>Identification</h2>
 <div class="quarto-figure quarto-figure-center">
 <figure>
-<p><img data-src="img/bal_student_rm.png" class="quarto-figure quarto-figure-center"></p>
+<p><img data-src="img/DAG_tracking_soo.png" class="quarto-figure quarto-figure-center" style="width:70.0%"></p>
 </figure>
 </div>
 </section>
-<section id="balance-after-optmatch-1" class="slide level2">
-<h2>Balance after optmatch</h2>
+<section id="identification-1" class="slide level2">
+<h2>Identification</h2>
 <div class="quarto-figure quarto-figure-center">
 <figure>
-<p><img data-src="img/bal_student2_rm.png" class="quarto-figure quarto-figure-center"></p>
+<p><img data-src="img/DAG_tracking_fe.png" class="quarto-figure quarto-figure-center" style="width:70.0%"></p>
 </figure>
 </div>
 </section>
-<section id="balance-after-optmatch-2" class="slide level2">
-<h2>Balance after optmatch</h2>
+<section id="identification-2" class="slide level2">
+<h2>Identification</h2>
 <div class="quarto-figure quarto-figure-center">
 <figure>
-<p><img data-src="img/bal_school_rm.png" class="quarto-figure quarto-figure-center"></p>
+<p><img data-src="img/DAG_tracking_tv.png" class="quarto-figure quarto-figure-center" style="width:70.0%"></p>
+</figure>
+</div>
+</section>
+<section id="identification-3" class="slide level2">
+<h2>Identification</h2>
+<div class="quarto-figure quarto-figure-center">
+<figure>
+<p><img data-src="img/DAG_tracking_ovb.png" class="quarto-figure quarto-figure-center" style="width:70.0%"></p>
 </figure>
 </div>
 </section>
@@ -512,6 +526,54 @@ Y = g_0(D,X) + U, ~ E[U|D,X] = 0
 <div class="quarto-figure quarto-figure-center">
 <figure>
 <p><img data-src="img/reg_sensplot_expect_8th.png" class="quarto-figure quarto-figure-center" style="width:50.0%"></p>
+</figure>
+</div>
+</section>
+<section id="section-1" class="slide level2">
+<h2></h2>
+<div class="quarto-figure quarto-figure-center">
+<figure>
+<p><img data-src="img/effect_did.png" class="quarto-figure quarto-figure-center" style="width:50.0%"></p>
+</figure>
+</div>
+</section>
+<section id="section-2" class="slide level2">
+<h2></h2>
+<div class="quarto-figure quarto-figure-center">
+<figure>
+<p><img data-src="img/diff_in_diff_models.png" class="quarto-figure quarto-figure-center" style="width:50.0%"></p>
+</figure>
+</div>
+</section>
+<section id="section-3" class="slide level2">
+<h2></h2>
+<div class="quarto-figure quarto-figure-center">
+<figure>
+<p><img data-src="img/falsification.png" class="quarto-figure quarto-figure-center" style="width:50.0%"></p>
+</figure>
+</div>
+</section>
+<section id="section-4" class="slide level2">
+<h2></h2>
+<div class="quarto-figure quarto-figure-center">
+<figure>
+<p><img data-src="img/dropout_did.png" class="quarto-figure quarto-figure-center"></p>
+</figure>
+</div>
+</section>
+<section id="section-5" class="slide level2">
+<h2></h2>
+<div class="quarto-figure quarto-figure-center">
+<figure>
+<p><img data-src="img/dropout_mbal_ATT.png" class="quarto-figure quarto-figure-center"></p>
+</figure>
+</div>
+</section>
+<section id="section-6" class="slide level2">
+<h2></h2>
+<div class="quarto-figure quarto-figure-center">
+<figure>
+<p><img data-src="img/dropout_mbal_cf.png" class="quarto-figure quarto-figure-center"></p>
 </figure>
 </div>
 

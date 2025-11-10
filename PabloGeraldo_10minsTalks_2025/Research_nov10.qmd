@@ -99,9 +99,9 @@ callout-appearance: minimal
 * [Persistent inequality due to constrained decisions and qualitative differences]{.fragment .highlight-blue}
 
     
-Between-school tracking is a particularly relevant example of the latter 
+Between-school vocational tracking is a particularly relevant example of the latter 
 
-It has been argues to have detrimental effects both in learning and educational expectations
+It has been argued to have detrimental effects both in learning and educational expectations
 
 [Its effects are challenging to study due to self-selection!]{.fragment .highlight-red}
     
@@ -116,10 +116,12 @@ It has been argues to have detrimental effects both in learning and educational 
 ## Institutional context
 
 * 40% of students attend vocational secondary schools
+
+  - "Tracks" are not fixed/pipelined: one can go from vocational to general as long as you meet the academic requirements
   
   - 70% of students wants to follow tertiary education (independent of track)
   
-  - Around 40% does within 5 years, much less completions
+  - Around 40% does within 5 years, much less completion
   
 . . .
 
@@ -186,51 +188,39 @@ Where $U$ denotes students' characteristics that are *unobserved* but constant o
 
 -   [**Selection on time-varying confounding**]{.fragment .highlight-blue}
 
-It is possible to deal with *observed* time-varying confounding using g-methods (Robins et al.), but *unobserved* time varying confounding is basically impossible to deal with. This is the main weakness of observational causal inference.
+This is the main weakness of observational causal inference: *unobserved* time varying confounding is basically impossible to deal with.
 
 There are, however, ways to incorporate at least partially this possibility:
 
 -   [**Sensitivity Analysis**]{.fragment .highlight-blue}: How strong should unobserved confounding be to change our study's conclusions? 
 
--   [**Falsification/Placebo Test**]{.fragment .highlight-blue}: Use a placebo outcome that should not be affected by the exposure of interest, but that one would expect to be affected by time-varying unobserved confounding. I used parental income and education at the time the outcome was measured.
+-   [**Falsification/Placebo Test**]{.fragment .highlight-blue}: Use an outcome that should not be affected by the exposure of interest, but that one would expect to be affected by time-varying unobserved confounding.
+
+I use parental income and education at the time the outcome was measured.
 
 
-## Identification strategy
+# Results {background-color="#00a191"}
 
-I employ several complementary empirical strategies:
+## Balancing weights
 
-* [Selection on observables]{.fragment .highlight-blue}
-
-::: {.fragment .fade-in-then-out}
-
-:::
-
-* [Difference-in-difference]{.fragment .highlight-blue}
-
-* [Machine learning for heterogeneous effects]{.fragment .highlight-blue}
-
-* [Sensitivity and falsification checks]{.fragment .highlight-blue}
-
-## Identification
-
-![](img/DAG_tracking_soo.png){fig-align="center" width="70%"}
-
-## Identification
-
-![](img/DAG_tracking_fe.png){fig-align="center" width="70%"}
-
-## Identification
-
-![](img/DAG_tracking_tv.png){fig-align="center" width="70%"}
-
-## Identification
-
-![](img/DAG_tracking_ovb.png){fig-align="center" width="70%"}
+![](img/ebal_balance.png){fig-align="center" width="60%"}
 
 
 ## Effects of vocational schools on learning and expectations
 
-![](img/ebal_outcomes_same_8th.png){fig-align="center" width="70%"}
+::: {.columns}
+
+::: {.column width="50%"}
+![](img/math_baseline.png){fig-align="center"}
+:::
+
+::: {.column width="50%"}
+![](img/exp_baseline.png){fig-align="center"}
+:::
+
+:::
+
+
 
 ## Double ML estimation: PLR
 
@@ -278,19 +268,35 @@ Importantly, [we allow the treatment effect to be fully heterogeneous!]{.fragmen
 
 ## Vocational schools decrease student math scores
 
-![](img/dml_math.png){fig-align="center" width="60%"}
+![](img/math_comparison.png){fig-align="center" width="60%"}
 
-## Vocational schools decrease student math scores
-
-![](img/dml_irm_math.png){fig-align="center" width="60%"}
 
 ## Vocational schools decrease educational expectations
 
-![](img/dml_expectations.png){fig-align="center" width="60%"}
+![](img/exp_comparison.png){fig-align="center" width="60%"}
 
-## Vocational schools decrease educational expectations
+## Heterogeneity by previous performance: math scores
 
-![](img/dml_irm_expectations.png){fig-align="center" width="60%"}
+![](img/dml_irm_hte_math_by_math.png){fig-align="center" width="60%"}
+
+## Heterogeneity by previous performance: expectations
+
+![](img/dml_irm_hte_exp_by_math.png){fig-align="center" width="60%"}
+
+## Summary of results
+
+<br>
+
+* Attending an exclusively vocational high school decreases students performance in mathematics, *even before the curricular differentiation*
+
+* Attending an exclusively vocational high school decreases students educational expectations, *even before the curricular differentiation*
+
+* Some heterogeneity by previous performance:
+
+  + Scores of formerly high achievers decreased the most
+  
+  + Expectations of formerly high achievers decreased the least, but unclear
+
 
 # Future research plans {background-color="#00a191"}
 
@@ -349,21 +355,35 @@ Importantly, [we allow the treatment effect to be fully heterogeneous!]{.fragmen
 :::
 
 
+## Tuition-free college effects: overall
+
+![](img/dropout_overall.png){fig-align="center"}
+
+## Tuition-free college effects: school ownership
+
+![](img/dropout_ownership.png){fig-align="center"}
+
+
 
 # Thank you! {background-color="#00a191"}
 
 
-## Balance after optmatch
+## Identification
 
-![](img/bal_student_rm.png){fig-align="center"}
+![](img/DAG_tracking_soo.png){fig-align="center" width="70%"}
 
-## Balance after optmatch
+## Identification
 
-![](img/bal_student2_rm.png){fig-align="center" }
+![](img/DAG_tracking_fe.png){fig-align="center" width="70%"}
 
-## Balance after optmatch
+## Identification
 
-![](img/bal_school_rm.png){fig-align="center"}
+![](img/DAG_tracking_tv.png){fig-align="center" width="70%"}
+
+## Identification
+
+![](img/DAG_tracking_ovb.png){fig-align="center" width="70%"}
+
 
 
 ## Sensitivity analysis mathematics
@@ -375,4 +395,29 @@ Importantly, [we allow the treatment effect to be fully heterogeneous!]{.fragmen
 ![](img/reg_sensplot_expect_8th.png){fig-align="center" width="50%"}
 
 
+##
+
+![](img/effect_did.png){fig-align="center" width="50%"}
+
+##
+
+![](img/diff_in_diff_models.png){fig-align="center" width="50%"}
+
+
+##
+
+![](img/falsification.png){fig-align="center" width="50%"}
+
+##
+
+![](img/dropout_did.png){fig-align="center"}
+
+##
+
+![](img/dropout_mbal_ATT.png){fig-align="center"}
+
+
+##
+
+![](img/dropout_mbal_cf.png){fig-align="center"}
 
