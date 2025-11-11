@@ -113,6 +113,8 @@ Machine learning is usually divided into three categories
 
 :::
 
+
+# `Lesson 1: the basic ingredient of SL is labelled data`
   
 ## How does a Machine Learn?
 
@@ -128,24 +130,6 @@ Machine learning is usually divided into three categories
 
 ::: {.column width="50%" .fragment}
 
-  
-```{r}
-#| echo: false
-#| code-fold: true
-
-library(knitr)
-
-df <- data.frame(X1 = rnorm(10),
-                 X2 = rnorm(10, mean = 5, sd = 2),
-                 y = rbinom(10, 2, 0.5))
-
-kable(head(df))
-```
-
-:::
-
-::: {.column width="50%" .fragment}
-
 A common error metric is the Mean Squared Error:
 
 $$
@@ -154,11 +138,44 @@ $$
 
 :::
 
+::: {.column width="50%" .fragment}
+
+  
+```{r}
+#| echo: false
+#| code-fold: true
+
+library(knitr)
+
+set.seed(1234)
+n <- 10
+b <- 2.5
+X1 <- rnorm(n)
+X2 <- rnorm(n, mean = 5, sd = 2)
+prob <- exp(b*(X1+X2)) / (1 + exp(b*(X1+X2)))
+#y_class <- 1*(runif(n)<prob)
+y_num <- 0.5 + X1*0.2 - X2*0.8 + rnorm(n)
+
+#class <- glm(y ~ X, family = binomial)
+#summary(class)
+
+df <- data.frame(X1 = X1, X2 = X2,
+                 #y_class = y_class,
+                 y_num = y_num)
+m1 <- lm(y_num ~ X1 + X2, data = df)
+df$y_hat <- predict(m1, data = df)
+df$sq_err <- (df$y_num - df$y_hat)^2
+
+kable(round(head(df), 2))
+```
+
 :::
 
 
-# `Lesson 1: the basic ingredient of SL is labelled data`
+:::
 
+
+# `Lesson 2: the focus of SL is predicting the correct output`
 
 ## What is Supervised Learning for?
 
@@ -211,22 +228,28 @@ p_no_points <- true_conditional_mean |>
   ggplot(aes(x = x, color = z, y = mu)) +
   geom_line(linetype = "dashed", size = 1.2) +
   labs(
-    x = "Numeric Predictor X",
+    x = "Numeric Predictor X1",
     y = "Numeric Outcome Y",
-    color = "Binary Predictor Z"
+    color = "Binary Predictor 2"
   ) +
   theme_bw()
 p <- p_no_points +
   geom_point(data = simulated_data, aes(y = y), size = .2, alpha = .3)
-p
+
+best_linear_fit <- lm(mu ~ x + z, data = true_conditional_mean)
+p +
+  geom_line(
+    data = true_conditional_mean |>
+      mutate(mu = predict(best_linear_fit))
+  ) +
+  theme_bw() +
+  ggtitle("An additive linear model (solid lines) poorly approximates\nthe true conditional mean function (dashed lines)")
 ```
 :::
 
 :::
 
-  
-# `Lesson 2: the focus of SL is predicting the correct output`
-
+# `Lesson 3: the key to good SL is testing our predictions`
   
 ## How do we check our Machine?
 
@@ -243,21 +266,18 @@ p
 
 ::: {.column width="50%" .fragment}
 
-Explain train / test split
+![](img/train_test.png){.fragment fig-align="left" width="45%"}
 
 :::
 
 ::: {.column width="50%" .fragment}
 
-Explain K-fold CV
+![](img/kfold_cv.png){.fragment fig-align="left" width="40%"}
 
 :::
 
 :::
 
-
-
-# `Lesson 3: the key to good SL is testing our predictions`
 
 
 
@@ -265,99 +285,177 @@ Explain K-fold CV
 
 ## Recursive partitioning
 
-## Computing information gain
 
-## Growing the tree
+<br>
 
-## Evaluating the tree
+[In decision trees, our purpose is to split the data in partitions that are *disimilar* between each other, but *similar* within]{.fragment .highlight-blue}
+  
+  
+::: {.columns}
+
+::: {.column width="50%" .fragment}
+
+* The Gini Coefficient
+
+$$
+Gini = 1 - \sum (p_i)^2
+$$
+
+* Entropy
+
+$$
+H(t) = -\sum \{P[t = i] \times \log_2 (P[t=i])\}
+$$
+
+:::
+
+::: {.column width="50%" .fragment}
+
+![](img/entropy_cards.png){.fragment fig-align="left" width="70%"}
+
+:::
+
+
+:::
+
+
+## Evaluate these partitions
+
+![](img/guess_who_long.png)
+
+## Evaluate these partitions
+
+![](img/guess_who_short.png)
+
+
+## Tree depth
+
+![](img/tree_d2.png)
+
+## Tree depth
+
+![](img/tree_d4.png)
+
+## Decision rules
+
+![](img/tree_rep.png)
+
 
 ## Strenghts and weaknesses
 
-* Risk of overfitting 
-
-* Better for non linear relationships
-
-# Extensions {background-color="#00a191"}
-
-## Tree regularization
-
-## Ensembles of trees
-
-## Uses beyond prediction
-
-* Explainability
-
-* Heterogeneous treatment effects
-
-# Summary {background-color="#00a191"}
-
-
-
-
-## Three(*) news about Supervised Learning
-
-<br>
-
-The good news: you have already been doing it!
 
 ::: {.columns}
 
-::: {.column width="50%"}
-[*Regression*: predict numerical outcome]{.fragment .highlight-blue}
+::: {.column width="50%" .fragment}
 
-`reg <- lm(y ~ X, data = Data)`
-`summary(reg)`
+[The good]{.fragment .highlight-blue}
 
-```{r, echo=FALSE}
-set.seed(1234)
-n <- 10
-X <- rnorm(n)
-y <- 2.5 * X + rnorm(n)
-reg <- lm(y ~ X)
-summary(reg)
-```
-:::
+* Very easy to explain
 
-::: {.column width="50%"}
-[*Classification*: predict categories]{.fragment .highlight-blue}
+* Interpretable decision rules
 
-`class <- glm(y ~ X, data = Data, family = binomial)`
-`summary(class)`
+* Handles well categorical variables
 
+* Handles well non linearities
 
-```{r}
-set.seed(1234)
-n <- 10
-b <- 2.5
-X <- rnorm(n)
-prob <- exp(b*X) / (1 + exp(b*X))
-y <- 1*(runif(n)<prob)
-class <- glm(y ~ X, family = binomial)
-summary(class)
-```
-:::
+* Cheap to run
 
 :::
 
 
-## Three(*) news about Supervised Learning
+::: {.column width="50%" .fragment}
 
-<br>
+[The bad]{.fragment .highlight-blue}
 
-The bad news: it gets more complicated!
+* High variance predictions
 
-  * Switch focus from $\beta$s to $\hat{Y}$
-  * What is wrong here?
+* Greedy algorithm
+
+* Doesn't handle well linear relationships
+
+* Limited accuracy
+
+:::
+
+
+:::
+
+
+## Extensions: Regularization and Ensembles
+
+::: {.columns}
+
+::: {.column width="50%" .fragment}
+
+[Regularization]{.fragment .highlight-blue}
+
+To control for high variance, we can do different things:
+
+* Stop the tree from growing!
+
+  + Maximum number of steps
+  
+  + Minimum number of obs in a leaf
+  
+  + Maximum number of nodes
+  
+  + Minimum decrease in loss
   
 
+* Or let of grow and pune it back! 
 
-## Three(*) news about Supervised Learning
-
-* [The better news: the building blocks remain simple!]{.fragment .highlight-blue}
-
-
-::: aside
-(*) No pun intended
 :::
+
+::: {.column width="50%" .fragment}
+
+[Ensembles]{.fragment .highlight-blue}
+
+Better than a tree... in many trees!
+
+* *Bagging*: Random Forest
+
+  - "Bootstrap aggregation"
+  
+  - Train in subsamples, then aggregate
+  
+  - Can also sample covariates
+  
+  - More bias, less variance
+  
+* *Boosting*: XGboost, Adaboost
+
+  - Feed predictions back to tree
+  
+  - Partition to predict difficult cases
+
+:::
+
+:::
+
+# Summary {background-color="#00a191"}
+
+## Review
+
+
+* Understand the basic *ingredients* of Supervised Machine Learning: 
+
+  - A collection of labelled examples
+  - [A learning algorithm]{.fragment .highlight-blue} 
+  - [An evaluation metric]{.fragment .highlight-red}
+  - [A testing procedure]{.fragment .highlight-green}
+  
+. . .
+  
+* Understand how classification and regression trees work:
+
+  - [Recursive partitioning]{.fragment .highlight-blue}
+  - [Information gain]{.fragment .highlight-red} 
+  - [Cross-validation loss]{.fragment .highlight-green}
+  
+. . .
+
+* A brief preview of regularization and ensemble methods
+
+
 
 
