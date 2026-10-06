@@ -1,0 +1,43 @@
+---
+title: "Life course research -- HT 2027"
+subtitle: "Induction week"
+author: "Pablo Geraldo Bastías \n
+
+(pablo.geraldo@sociology.ox.ac.uk)"
+date: 10/06/2026
+date-format: long
+title-slide-attributes:
+  data-background-image: /Users/pdgeraldo/Documents/Github/presentations/PabloGeraldo_10minsTalks_2025/img/pexels-carolyn-1539564-3346028.jpg
+  data-background-opacity: "0.4"
+  data-background-size: cover
+format:
+  revealjs:
+    theme: simple
+    width: 1600
+    height: 900
+    slide-number: c/t
+    embed-resources: true
+callout-appearance: minimal
+execute:
+  echo: false
+  warning: false
+  message: false
+  cache: false
+---
+
+## `What is life course research?`
+
+<br>
+
+LCR is a **core concept** in sociology and an **interdisciplinary approach** that studies [interconnected]{.fragment .highlight-red} life [domains]{.fragment .highlight-red} over [time]{.fragment .highlight-red},  acknowledging how human decisions are embedded within social structures, institutions, and historical periods and places.
+
+## `Course outline`
+
+<br>
+
+The class will have a threefold focus:
+
+* Understand the interdisciplinary conceptual foundations of LCR
+
+* Familiarise yourself with substantive LC research 
+

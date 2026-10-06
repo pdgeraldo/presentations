@@ -1,0 +1,96 @@
+---
+title: "Replication paper -- MT 2026"
+subtitle: "Induction week"
+author: "Pablo Geraldo Bastías \n
+
+(pablo.geraldo@sociology.ox.ac.uk)"
+date: 10/06/2026
+date-format: long
+title-slide-attributes:
+  data-background-image: /Users/pdgeraldo/Documents/Github/presentations/PabloGeraldo_10minsTalks_2025/img/pexels-carolyn-1539564-3346028.jpg
+  data-background-opacity: "0.4"
+  data-background-size: cover
+format:
+  revealjs:
+    theme: simple
+    width: 1600
+    height: 900
+    slide-number: c/t
+    embed-resources: true
+callout-appearance: minimal
+execute:
+  echo: false
+  warning: false
+  message: false
+  cache: false
+---
+
+## `The problem`
+
+<br>
+
+:::{.r-stack}
+
+![](img/ariely_gino.png){.fragment}
+
+![](img/lacour_science.png){.fragment .center width="750"}
+
+![](img/lacour_wiki.png){.fragment}
+
+![](img/broockman_kalla.png){.fragment}
+
+![](img/images_review.png){.fragment}
+
+![](img/images_ai.png){.fragment}
+
+![](img/alzheimer.png){.fragment}
+
+
+:::
+
+. . .
+
+Fraud is probably the fastest way to a press cover ... and even your own Wikipedia page!
+
+## `But it's mostly not fraud`
+
+<br>
+
+:::{.r-stack}
+
+![](img/legewie.png){.fragment .center width="750"}
+
+![](img/dekadt.png){.fragment}
+
+:::
+
+. . . 
+
+Honest mistakes are possible, and so are theoretical and methodological disagreements 
+
+## `A roadmap`
+
+![](img/estimand.jpeg){fig-align="center" width=70%}
+
+
+## `Course outline`
+
+<br>
+
+We aim to develop a research workflow that makes reproducibility feels natural and promotes conceptual clarity about the questions we ask, the route we take, and the answers we find
+
+. . .
+
+* [`Show how you do it`: Using Quarto and R]{.fragment .fade-in}
+
+* [`Track while you do it`: Using Git and GitHub]{.fragment .fade-in}
+
+* [`Say what you do`: Using (causal) diagrams]{.fragment .fade-in}
+
+* [`Do what you say`: Using robust and flexible approaches]{.fragment .fade-in}
+* [`Doubt what you do`: Using sensitivity analysis]{.fragment .fade-in}
+
+* [`Did we even do it?` On the uses of AI-agents]{.fragment .fade-in}
+
+
+
