@@ -6,6 +6,7 @@ author: "Pablo Geraldo Bastías \n
 (pablo.geraldo@sociology.ox.ac.uk)"
 date: 10/06/2026
 date-format: long
+bibliography: references.bib
 title-slide-attributes:
   data-background-image: /Users/pdgeraldo/Documents/Github/presentations/PabloGeraldo_10minsTalks_2025/img/pexels-carolyn-1539564-3346028.jpg
   data-background-opacity: "0.4"
@@ -43,6 +44,28 @@ The class will have a threefold focus:
 
 * Develop awareness of classical and recent methodological developments for the modelling of life trajectories and time-dependent processes
 
+
+## `Conceptual foundations`
+
+<br>
+
+**Timing** and **Time dependancy**: Life course is **not a random flow of events**. [@konietzkaLifeCourseSociology2021]. e.g. does parental leave hampers women's occupational career? [@jonssonCradleGraveLifecourse2002]
+
+**Historical time and place**: Context matters, behaviour that is located in time [@mayerNewDirectionsLife2009; @elderEmergenceDevelopmentLife2003]. e.g., How has the transformation of today's society into a digital one affects differently people in their 20s vs those in their 50s? 
+
+**Linked lives and outcomes**: Lives are interconnected [@mortimerHandbookLifeCourse2004; @dipreteCumulativeAdvantageMechanism2006]. e.g., Can schooling reforms oriented to increase maternal schooling affect child mortality? [@andrianoCausalEffectMaternal2019] 
+
+
+## `Conceptual foundations`
+
+<br>
+
+
+**Cohort**: Group of people who share a common starting point in a life domain and are followed over time to examine how their trajectories unfold [@mortimerHandbookLifeCourse2004]. e.g, birth cohort; school-entry cohort; migration cohort.
+
+**Period**: A specific point or span in calendar time (e.g., the year 2020 or the decade 2010–2020) during which data are collected or events occur, affecting people across different cohorts [@prestonDemographyMeasuringModeling2001]. e.g, COVID-19.
+
+
 ## `Course outline`
 
 <br>
@@ -63,3 +86,8 @@ The class will have a threefold focus:
 
 `Course assessment`: Assessment consists of one essay (50%) and an in-person, closed-book examination (50%). The essay will be due by noon on Friday of Week 10 of Hilary Term, and the examination will take place in Week 0 of Trinity Term.
 
+
+
+##
+
+##
