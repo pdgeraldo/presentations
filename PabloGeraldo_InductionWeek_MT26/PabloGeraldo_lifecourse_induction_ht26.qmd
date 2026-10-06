@@ -31,7 +31,7 @@ execute:
 
 LCR is a **core concept** in sociology and an **interdisciplinary approach** that studies [interconnected]{.fragment .highlight-red} life [domains]{.fragment .highlight-red} over [time]{.fragment .highlight-red},  acknowledging how human decisions are embedded within social structures, institutions, and historical periods and places.
 
-## `Course outline`
+## `Aim of the course`
 
 <br>
 
@@ -39,5 +39,27 @@ The class will have a threefold focus:
 
 * Understand the interdisciplinary conceptual foundations of LCR
 
-* Familiarise yourself with substantive LC research 
+* Familiarise yourself with empirical LCR through examples from health, family, and socioeconomic outcomes
+
+* Develop awareness of classical and recent methodological developments for the modelling of life trajectories and time-dependent processes
+
+## `Course outline`
+
+<br>
+
+●	Introduction: Why life course research? (W1)
+
+●	Describing life courses: Patterns, trends, and associations (W2–W3)
+
+●	Predicting life courses: What will happen, when, and to whom? (W4–W5)
+
+●	Causes and consequences: How trajectories shape and are shaped by life outcomes (W6–W7)
+
+●	Conclusion: Old and new directions in life course research (W8)
+
+. . .
+
+<br>
+
+`Course assessment`: Assessment consists of one essay (50%) and an in-person, closed-book examination (50%). The essay will be due by noon on Friday of Week 10 of Hilary Term, and the examination will take place in Week 0 of Trinity Term.
 
